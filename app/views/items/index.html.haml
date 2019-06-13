@@ -5,11 +5,11 @@
         .top-page-pc-header__inner__top
           %h1.top-page-pc-header__inner__top__logo
             = link_to image_tag('top-header-logo.svg', class: "header-logo" ), root_path
-          = form_for @item, html: {class: "header-search-form"}, url: items_path do |f|
-            = f.text_field :name,placeholder: "何かお探しですか？", autofocus: true,  class:  'header-search-form__input'
-            = button_tag type: "submit", class:"header-search-button " do
-              .header-button-wrapper
-                = fa_icon 'search 2x', class: "search"
+          .header-search-form
+            %input{class: "header-search-form__input", placeholder: "何かお探しですか？"}
+              = link_to root_path, class:"header-search-button"  do
+                .header-button-wrapper
+                  = fa_icon 'search 2x', class: "search"
         .top-page-header-icon-lists
           .top-icon-list-left
             %ul.header-category-wrapper
