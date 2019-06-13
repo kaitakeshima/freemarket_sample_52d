@@ -111,7 +111,41 @@ h3 {
   height: 100%;
   margin: 0;
   padding: 0;
-  width: 50%;
+  .header-login-nav{
+    list-style: none;
+    &__login-button{
+      float: right;
+      margin: 8px 0 0 12px;
+      display: inline-block;
+      &__text{
+        background: #fff;
+        height: 100%;
+        border: 1px solid #0099e8;
+        color: #0099e8;
+        padding: 0 10px;
+        line-height: 30px;
+        border-radius: 4px;
+        text-align: center;
+        font-size: inherit;
+        box-sizing: inherit;
+        float: right
+      }
+    }
+    &__registration-button{
+      display: inline-block;
+      margin: 8px 0 0 8px;
+      &__text{
+        background: #ea352d;
+        border: 1px solid #ea352d;
+        color: #fff;
+        float: left;
+        padding: 0 10px;
+        line-height: 30px;
+        border-radius: 4px;
+        text-align: center;
+      }
+    }
+  }
 }
 .header-user-nav{
   list-style: none;
