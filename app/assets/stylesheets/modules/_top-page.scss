@@ -297,6 +297,7 @@ h3 {
           font-size: 12px;
           line-height: 1.5em;
           opacity: .7;
+          cursor: pointer;
         }
         &__normal{
           color: #fff;
@@ -316,6 +317,7 @@ h3 {
             line-height: 1.5em;
             opacity: 1;
             margin: 16px 18px 0 0;
+            cursor: pointer;
           }
         }
       }
@@ -392,6 +394,7 @@ h3 {
     color: #fff;
     font-size: 16px;
     font-weight: 100;
+    cursor: pointer;
   }
 }
 .footer-head-jp{
