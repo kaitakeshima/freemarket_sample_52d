@@ -212,6 +212,10 @@ h3 {
           text-align: center;
           color: #0099e8;
           text-decoration: none;
+          cursor: pointer;
+          &:hover{
+            text-decoration: underline;
+          }
         }
         .item-box-content{
           width: auto;
@@ -275,7 +279,6 @@ h3 {
     background: #212121;
     color: #fff;
     height: 390px;
-
     .footer-box{
       width: 1020px;
 
@@ -298,6 +301,9 @@ h3 {
           line-height: 1.5em;
           opacity: .7;
           cursor: pointer;
+          &:hover{
+            text-decoration: underline;
+          }
         }
         &__normal{
           color: #fff;
@@ -306,6 +312,9 @@ h3 {
           margin-top: 14px;
           opacity: .7;
           cursor: pointer;
+          &:hover{
+            text-decoration: underline;
+          }
         }
         &__sns-link{
           margin: 14px 0 0;
@@ -341,6 +350,10 @@ h3 {
           color: #fff;
           font-size: 16px;
           font-weight: 100;
+          cursor: pointer;
+          &:hover{
+            text-decoration: underline;
+          }
         }
       }
   }
@@ -356,6 +369,9 @@ h3 {
         display: block;
         opacity: .7;
         cursor: pointer;
+        &:hover{
+          text-decoration: underline;
+        }
       }
       &__normal{
         color: #fff;
@@ -364,6 +380,9 @@ h3 {
         margin-top: 14px;
         opacity: .7;
         cursor: pointer;
+        &:hover{
+          text-decoration: underline;
+        }
       }
     }
     &__cell-right{
@@ -375,6 +394,9 @@ h3 {
         display: block;
         opacity: .7;
         cursor: pointer;
+        &:hover{
+          text-decoration: underline;
+        }
       }
       &__normal{
         color: #fff;
@@ -383,52 +405,63 @@ h3 {
         margin-top: 14px;
         opacity: .7;
         cursor: pointer;
+        &:hover{
+          text-decoration: underline;
+        }
       }
     }
-}
-.fotter-cell-lang{
-  margin-top: 18px;
-  display: block;
-  width: auto;
-  .footer-head{
-    color: #fff;
-    font-size: 16px;
-    font-weight: 100;
-    cursor: pointer;
   }
-}
-.footer-head-jp{
-  margin: 16px 0 0;
-  color: #fff;
-  opacity: .7;
-  display: block;
-}
-.footer-head-us{
-  margin: 16px 0 0;
-  color: #fff;
-  opacity: .7;
-  display: block;
-}
-.footer-bottom{
-  margin: 30px auto 20px;
-  width: 1020px;
-
-}
-.footer-logo-link{
-  display: inline-block;
-}
-.footer-logo-link-image{
-  vertical-align: middle;
-}
-.footer-copyrifght{
-  width: 745px;
-  display: inline-block;
-  margin: 8px 0 0;
-  text-align: center;
-  vertical-align: sub;
-  font-size: 12px;
-}
-
+  .fotter-cell-lang{
+    margin-top: 18px;
+    display: block;
+    width: auto;
+    .footer-head{
+      color: #fff;
+      font-size: 16px;
+      font-weight: 100;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  .footer-head-jp{
+    margin: 16px 0 0;
+    color: #fff;
+    opacity: .7;
+    display: block;
+    cursor: pointer;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  .footer-head-us{
+    margin: 16px 0 0;
+    color: #fff;
+    opacity: .7;
+    display: block;
+    cursor: pointer;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  .footer-bottom{
+    margin: 30px auto 20px;
+    width: 1020px;
+  }
+  .footer-logo-link{
+    display: inline-block;
+  }
+  .footer-logo-link-image{
+    vertical-align: middle;
+  }
+  .footer-copyrifght{
+    width: 745px;
+    display: inline-block;
+    margin: 8px 0 0;
+    text-align: center;
+    vertical-align: sub;
+    font-size: 12px;
+  }
 }
  .top-page-header-icon-lists{
   margin-top: 8px;
