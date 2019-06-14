@@ -1,0 +1,42 @@
+= render partial: './shared/new-header'
+.check-contents
+  .check-contents__container
+    %h2 
+    .check-contents__container__head 購入内容の確認
+    .check-contents__container__item
+      .check-contents__container__item__inner
+        .check-contents__container__item__inner__image 
+          = image_tag "item.jpg", class:"image", alt:"merucari",  size: "128x128"
+        .check-contents__container__item__inner__name  bobino コード巻き取り
+        .check-contents__container__item__inner__kingaku
+          .check-contents__container__item__inner__kingaku__price
+            %p  ¥ 300 
+            .check-contents__container__item__inner__kingaku__price__shipping-fee  送料込み
+        .check-contents__container__item__inner__buy-accordion
+          .check-contents__container__item__inner__buy-accordion__parent
+          .check-contents__container__item__inner__buy-accordion__toggle  ポイントはありません
+        .check-contents__container__item__inner__table
+          .check-contents__container__item__inner__table__cell  支払い金額
+          .check-contents__container__item__inner__table__price  ¥ 300
+        .check-contents__container__item__inner__btn  購入する     
+    .check-contents__container__info
+      .check-contents__container__info__inner  配送先 
+      .check-contents__container__info__text
+        .check-contents__container__info__yuubin  〒541-0059 
+        .check-contents__container__info__adress  大阪府 大阪市中央区博労町１町目７−９プレサンス心斎橋ブライト５０３号室
+        .check-contents__container__info__name  吉田 優作
+        .check-contents__container__info__fix
+          = link_to  do
+            %span  変更する
+    .check-contents__container__user-info
+      .check-contents__container__user-info__inner
+        %h3  支払い方法
+        .check-contents__container__user-info__inner__text  
+          ************4967 
+          %br  06 / 23
+        .check-contents__container__user-info__inner__figure 
+          = image_tag "master-card.svg", class:"image", alt:"merucari",  size: "34x20"
+        .check-contents__container__user-info__inner__fix
+          = link_to  do
+            %span  変更する
+= render partial: './shared/new-footer'
