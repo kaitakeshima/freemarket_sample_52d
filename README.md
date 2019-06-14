@@ -3,7 +3,6 @@
 ## usersテーブル
 |  column |   type|option   |
 |---|---|---|
-|  buyer_number |integer   |  null:false|
 | nickname  |  string |  null:false |
 |image| string||
 |  email |  string |  null:false, unique: true |
@@ -12,9 +11,9 @@
 |  first_name |  string | null:false  |
 |family_name_kana   |  string |   null:false|
 |  first_name_kana | string  |  null:false |
-|  birthday |  string | null:false  |
-|   phone_number|   string|  null:false, unique: true |
-| prefecture  | string  |  null:false |
+|  birthday |  integer | null:false  |
+|   phone_number|   integer|  null:false, unique: true |
+| prefecture  | integer  |  null:false |
 |city|string|null:false|
 |address|string|null:false|
 |building|string||
@@ -36,6 +35,7 @@
 ## itemsテーブル
 |colmn|type|option   |
 |---|---|---|
+|  buyer_number |integer   |  null:false|
 |  name |  string |  null:false |
 |   discription|string   |null:falsae   |
 |condition   |   | null:false  |
