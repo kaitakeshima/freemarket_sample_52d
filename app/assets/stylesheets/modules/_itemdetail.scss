@@ -1,0 +1,449 @@
+.karinav{
+  position: relative;
+  height: 50px;
+  background: #fff;
+  border-top: 1px solid #eee;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
+    ul{
+      margin: 0px 147.5px;
+      color: #333333;
+      padding: 16px 0px;
+      li{
+        display: inline-block;
+        .navmerkari{
+          color: #333333;
+          font-size: 14px;
+        }
+        .navsyousai{
+          font-size: 14px;
+          font-weight: bold;
+          
+        }
+      }
+
+    }
+  
+}
+.owaku{
+  color: #333333;
+  background-color:#f0f0f0 ;
+  height: 3500px;
+  width: 100%;
+  .haku{
+    height: 50px;
+    background-color: #f0f0f0;
+  }
+
+  .item{
+    height: 1226px;
+    width: 700px;
+    background-color: #ffffff;
+    margin: auto;
+    box-sizing: border-box;
+    &__name{
+      text-align: center;
+      padding-top: 30px;
+      font-size: 22px;
+      font-weight: bold;
+      height: 66px;
+      width: 620px;
+      margin: auto;
+      padding-bottom: 20px;
+    }
+    &__main{
+      height: 420px;
+      width:620px;
+      margin: auto;
+      padding-top: 40px;
+      
+      &__fotos{
+        height: 375px;
+        width: 300px;
+        background-color: #f0f0f0;
+        display: inline-block;
+         
+        &__ue{
+          width: 300px;
+          height: 300px;
+          background-color: pink;
+        }
+        &__shita{
+          height: 60px;
+          width: 300px;
+          background-color: purple;
+          font-size:25px; 
+        }
+      }
+      &__detail{
+        height: 420px;
+        width: 300px;
+        font-size: 12px;
+        float: right;
+        margin: auto;
+        &__ratings{
+          float: left;
+          margin: auto;
+          &__user{
+            display:inline-block;
+            padding: 3px;
+          }
+        }
+      }
+    }
+    &__pricebox{
+      height: 50px;
+      width: 620px;
+      margin: 30px auto 0 ;
+      text-align: center;
+      padding-bottom: 20px;
+      padding-top: 50px;
+      &__price{
+        font-size: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+      }
+      &__tax{
+        font-size: 10px;
+        margin-left:10px;
+      }
+      &__shipping{
+        font-size: 16px;
+      }
+    }
+    &__btn{
+      margin: auto;
+      height: 60px;
+      width: 620px;
+      position: relative;
+      padding-top: 50px;
+    }
+    &__description{
+      width: 620px;
+      margin: auto;
+      height: 450px;
+      padding-top: 120px;
+      font-size: 18px;
+    }
+    &__buttons{
+      width: 620px;
+      height: 33px;
+      font-size: 14px;
+      margin: 16px auto 0 auto;
+      padding-top: 40px;
+      &__left{
+        width: 314px;
+        margin: auto;
+        font-size: 14px;
+        display: inline-block;
+        &__nice{
+          background-color: #f5f5f5;
+          width: 118px;
+          height: 33px;
+          padding: 8px 16px;
+          border-radius: 15px;
+          border:0
+        }
+        &__flag{
+          background-color: #f5f5f5;
+          border-radius: 15px;
+          width: 180px;
+          height: 33px;
+          padding: 8px 16px;
+          border:0;
+        }
+      } 
+      &__right{
+        float: right;
+        margin-top: 5px;
+        margin-right: 10px;
+      }
+    }
+  }
+  .item2{
+    height: 262px;
+    width: 700px;
+    background-color: #ffffff;
+    margin: auto;
+    box-sizing: border-box;
+    margin-top: 10px;
+    &__message{
+      
+      &__box{
+
+        &__form{
+          height: 214px;
+          width: 652px;
+          margin: auto;
+          &__caution{
+            font-size: 13px;
+            background-color: #fff6de;
+            padding: 8px;
+            display: inline-block;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            height: 33px;
+          }
+          &__main{
+            height: 104px;
+            width: 652px;
+            margin-bottom: 5px;
+            border:solid 1px #e8e8e8;
+          }
+          &__btn{
+            width: 654px;
+            height: 50px;
+            margin: auto;
+            font-size: 14px;
+            color: white;
+            background-color: #AAAAAA;
+            text-align: center; 
+          }
+        }
+      }
+    }
+  }
+  .navitem{
+    width: 700px;
+    height: 28px;
+    margin: auto;
+    font-size: 14px;
+    margin-top:20px; 
+    &__pre{
+      display: inline-block;
+      width: 315px;
+    }
+    &__next{
+      float: right;
+      width: 315px;
+      text-align: right;
+    }
+  }
+  .snsbox{
+    width: 700px;
+    height: 138px;
+    background-color: white;
+    margin: 20px auto 0;
+    &__contents{
+      height: 52px;
+      width: 700px;
+      padding-top:45px; 
+      margin: auto;
+      list-style-type: none;
+      text-align: center;
+      &__icons{
+        display: inline;
+        margin: auto;
+        &__icon{
+          margin: auto;
+        }
+
+      }
+    }
+  }
+  .bottomitems{
+    height: 1524px;
+    width: 700px;
+    margin: auto;
+    &__users{
+      height: 762px;
+      width: 700px;
+      &__title{
+        height: 28px;
+        font-size: 22px;
+        font-weight: bold;
+        padding-top: 40px;
+        margin-bottom: 15px;
+        padding-bottom: 20px;
+      }
+      &__contents{
+        height: 700px;
+        width: 700px;
+
+        &__content{
+          height: 330px;
+          width: 220px;
+          float: left;
+          margin-bottom: 30px;
+          &__link{
+            width: 220px;
+            display: inline-block;
+          }
+          &__photo{
+            height: 220px;
+            width: 220px;
+            clear: both;
+            display: inline-block;
+            margin: 0 0 0 0 ;
+            padding: 0 0 0 0 ;
+          }
+          &__body{
+            height: 116px;
+            width: 220px;
+            background-color: white;
+            color: #333333;
+            margin-top: 0;
+            padding: 8px;
+            &__name{
+              overflow: hidden;
+              width: 188px;
+              height: 35px;
+              font-size: 16px;
+              padding: 5px;
+              position: relative;
+              margin: auto;
+            }
+            &__name::after{
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              z-index: 2;
+              content: '';
+              width: 20%;
+              height: 50%;
+              background: linear-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.7) 30%, rgba(255,255,255,1) 70%);
+            }
+            &__num{
+              display: inline-block;
+              width: 188px;
+              height: 17px;
+              padding-top: 35px;
+              margin-left:10px; 
+              &__price{
+                font-weight: 580;
+
+              }
+              &__icon{
+                
+              }
+            }
+            &__tax{
+              font-size: 10px;
+              margin-left: 25px;
+            }
+          }
+        }
+        .haku2{
+          width: 20px;
+          height: 330px;
+          float: left;
+        }
+      }
+    }
+    &__sonota{
+      height: 762px;
+      width: 700px;
+      margin-top: 40px;
+      &__title{
+        height: 28px;
+        font-size: 22px;
+        font-weight: bold;
+        padding-top: 40px;
+        margin-bottom: 15px;
+        padding-bottom: 20px;
+      }
+      &__contents{
+        height: 700px;
+        width: 700px;
+        &__content{
+          height: 330px;
+          width: 220px;
+          float: left;
+          margin-bottom: 30px;
+          &__link{
+            width: 220px;
+            display: inline-block;
+          }
+          &__photo{
+            height: 220px;
+            width: 220px;
+            clear: both;
+            display: inline-block;
+            margin: 0 0 0 0 ;
+            padding: 0 0 0 0 ;
+          }
+          &__body{
+            height: 116px;
+            width: 220px;
+            background-color: white;
+            color: #333333;
+            margin-top: 0;
+            padding: 8px;
+            &__name{
+              overflow: hidden;
+              width: 188px;
+              height: 35px;
+              font-size: 16px;
+              padding: 5px;
+              position: relative;
+              margin: auto; 
+            }
+            &__name::after{
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              z-index: 2;
+              content: '';
+              width: 20%;
+              height: 50%;
+              background: linear-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.7) 30%, rgba(255,255,255,1) 70%);
+            }
+            &__num{
+              display: inline-block;
+              width: 188px;
+              height: 17px;
+              padding-top: 35px;
+              margin-left:10px; 
+              &__price{
+                font-weight: 580;
+              }
+              &__icon{
+                
+              }
+            }
+            &__tax{
+              font-size: 10px;
+              margin-left: 25px;
+            }
+          }
+        }
+        .haku2{
+          width: 20px;
+          height: 330px;
+          float: left;
+        }
+      }
+    } 
+  }  
+}
+
+
+table{
+  border: solid 0.5px;
+  border-color: #f0f0f0;
+}
+table th{
+  padding: 8px;
+  width: 117px;
+  background-color: #fafafa;
+  border: solid 0.5px;
+  border-color: #f0f0f0;  
+}
+table td{
+  padding: 8px;
+  border: solid 0.5px;
+  border-color: #f0f0f0;
+}
+.btn-square-pop {
+  height: 60px;
+  width: 620px;
+  margin: auto;
+  display: inline-block;
+  color: #FFF;
+  background:red;
+  border-radius: 4px;/*角の丸み*/
+  font-weight: bold;
+  text-align: center;
+  line-height: 60px;
+  font-size: 25px;
+}
+
