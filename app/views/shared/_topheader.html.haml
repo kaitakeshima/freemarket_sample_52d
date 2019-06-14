@@ -1,0 +1,39 @@
+%body
+  .default-container
+    %header.top-page-pc-header
+      .top-page-pc-header__inner
+        .top-page-pc-header__inner__top
+          %h1.top-page-pc-header__inner__top__logo
+            = link_to image_tag('top-header-logo.svg', class: "header-logo" ), root_path
+          .header-search-form
+            %input{class: "header-search-form__input", placeholder: "何かお探しですか？"}
+              = link_to root_path, class:"header-search-button"  do
+                .header-button-wrapper
+                  = fa_icon 'search 2x', class: "search"
+        .top-page-header-icon-lists
+          .top-icon-list-left
+            %ul.header-category-wrapper
+              %li.header-icons
+                %h2
+                  = link_to root_path class:"pc-header-nav-rootlist-parent" do
+                    = fa_icon("list-ul", class: "header-left-icon-logo")
+                    %span.header-bold カテゴリーから探す
+              %li.header-icons
+                %h2
+                  = link_to root_path class:"pc-header-nav-root list-parent" do
+                    = fa_icon("tag", class: "header-left-icon-logo")
+                    %span.header-bold ブランドから探す
+          .top-page-list-right
+            %ul.header-user-nav
+              %li.header-info
+                = link_to root_path class: "header-info-link" do
+                  = fa_icon("bell-o ")
+                  %span.header-user-nav-text お知らせ
+              %li.header-to-do
+                = link_to root_path class: "to_do-link" do
+                  = fa_icon("check")
+                  %span.header-user-nav-text やることリスト
+              %li.header-mypage
+                = link_to root_path class: "header-my-page-link" do
+                  = image_tag "mypage-image.png", class: "header-mypage-icon-image"
+                  %span.header-user-nav-text-mypage マイページ
