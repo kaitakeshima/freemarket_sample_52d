@@ -37,310 +37,274 @@
                 = link_to root_path class: "header-my-page-link" do
                   = image_tag "mypage-image.png", class: "header-mypage-icon-image"
                   %span.header-user-nav-text-mypage マイページ
-%nav.karinav
-  %ul
-    %li{:itemscope => "", :itemtype => "http://data-vocabulary.org/Breadcrumb"}
-      %a{:href => "https://www.mercari.com/jp/", :itemprop => "url"}
-        %span.navmerkari{:itemprop => "title"} メルカリ  ＞
-      %i.icon-arrow-right
-    %li{:itemscope => "", :itemtype => "http://data-vocabulary.org/Breadcrumb"}
-      %span.navsyousai{:itemprop => "title"} 新品 タグ付き babyGAP ベビーギャップ 襟付き 長袖 カットソー 80
-.owaku
-  .haku
-  %section.item
-    %h1.item__name
-      新品 タグ付き babyGAP ベビーギャップ 襟付き 長袖 カットソー 80
-    .item__main
-      .item__main__fotos
-        .item__main__fotos__ue
-          %ul.slider
-            %li= image_tag "mersample.jpg", :size =>'300x300'
-            %li= image_tag "mersample.jpg", :size =>'300x300'
-            %li= image_tag "mersample.jpg", :size =>'300x300'
-            %li= image_tag "mersample.jpg", :size =>'300x300'
-            %li= image_tag "mersample.jpg", :size =>'300x300'
-        .item__main__fotos__shita
-          %ul.thumb
-            %li= image_tag "mersample.jpg", :size =>'60x60'
-            %li= image_tag "mersample.jpg", :size =>'60x60'
-            %li= image_tag "mersample.jpg", :size =>'60x60'
-            %li= image_tag "mersample.jpg", :size =>'60x60'
-            %li= image_tag "mersample.jpg", :size =>'60x60'
-      %table.item__main__detail
-        %tr
-          %th 出品者
-          %td
-            %a{:href => "https://www.mercari.com/jp/u/414242538/"} S☆ぬいぐるみまとめ買い割引中‼️
-            .item__main__detail__ratings
-              .item__main__detail__ratings__user
-                %i.fa.fa-smile-o.fa-lg{:style => "color:red;"}
-                %span 2249
-              .item__main__detail__ratings__user
-                %i.fa.fa-meh-o.fa-lg{:style => "color:orange;"}
-                %span 7
-              .item__main__detail__ratings__user
-                %i.fa.fa-frown-o.fa-lg{:style => "color:blue;"}
-                %span 0
-        %tr
-          %th カテゴリー
-          %td
-            %a{:href => "https://www.mercari.com/jp/category/3/"}
-              %div ベビー・キッズ
-            %a{:href => "https://www.mercari.com/jp/category/44/"}
-              .item-detail-table-sub-category
-                %i.icon-arrow-right
-                ベビー服(女の子用)  ~95cm
-            %a{:href => "https://www.mercari.com/jp/category/431/"}
-              .item-detail-table-sub-sub-category
-                %i.icon-arrow-right
-                トップス
-        %tr
-          %th ブランド
-          %td
-            %a{:href => "https://www.mercari.com/jp/brand/2330/"}
-              %div
-                ベビーギャップ
-        %tr
-          %th 商品のサイズ
-          %td 80cm
-        %tr
-          %th 商品の状態
-          %td 新品、未使用
-        %tr
-          %th 配送料の負担
-          %td 送料込み(出品者負担)
-        %tr
-          %th 配送の方法
-          %td 未定
-        %tr
-          %th 配送元地域
-          %td
-            %a{:href => "https://www.mercari.com/jp/area/33/"} 岡山県
-        %tr
-          %th 発送日の目安
-          %td 2~3日で発送
-    .item__pricebox
-      %span.item__pricebox__price ¥ 2,290
-      %span.item__pricebox__tax (税込)
-      %span.item__pricebox__shipping 送料込み
-    .item__btn
-      %a.btn-square-pop{:href => "mypages#index"} 購入画面に進む
-    .item__description
-      %p.item__description__inner
-        説明欄・プロフィールを必ずお読みくださいますようにお願い致します(*&gt;ω&lt;*)
-        %br/
-        %br/
-        新品 タグ付き babyGAP ベビーギャップ 襟付き 長袖 カットソー 80 12〜18Mです。
-        %br/
-        %br/
-        \#Sギャップ80サイズ出品一覧
-        %br/
-        %br/
-        神経質な方は入札をご遠慮下さい。
-        %br/
-        %br/
-        見落としなどあるかもしれませんが、ご了承いただける方のみお願いいたします。
-        %br/
-        %br/
-        \#カバーオール #ギャップ #gap #長袖カットソー #襟付き#カットソー #トップス #長袖 #ロンT #キッズ #女の子
-        %br/
-    .item__buttons
-      .item__buttons__left
-        %button.item__buttons__left__nice{:type => "button"}
-          %i.fa.fa-heart-o.fa-lg
-          %span  いいね! 
-          %span.fade-in-down{"data-num" => "like"} 0
-        %button.item__buttons__left__flag{:type => "button"}
-          %i.fa.fa-flag-o.fa-lg
-          %span  不適切な商品の報告 
-      .item__buttons__right
-        %a{:href => "https://www.mercari.com/jp/safe/description/", :target => "_blank"}
-          %i.fa.fa-lock
-          %span あんしん・あんぜんへの取り組み
-  .item2
-    .item2__message
-      .item2__message__box
-        %form.item2__message__box__form{:action => "https://www.mercari.com/jp/comment/add/", :method => "POST"}
-          %p.item2__message__box__form__caution
-            相手のことを考え丁寧なコメントを心がけましょう。
-            不快な言葉遣いなどは利用制限や退会処分となることがあります。
-          %textarea.item2__message__box__form__main{:name => "body", :style => "color:gray;", :type => "text", :value => ""}
-          %button.item2__message__box__form__btn{:type => "submit"}
-            %span コメントする
-  %ul.navitem
-    %li.navitem__pre
-      %a{:href => "https://item.mercari.com/jp/m81704841881/"}
-        %i.icon-arrow-left
-        ＜ 金麦 あいあい皿2019 シール120点
-    %li.navitem__next
-      %a{:href => "https://item.mercari.com/jp/m15749712779/"}
-        【新品】マイメロディ＆ピアノちゃん クッキー型2個セット ＞
-        %i.icon-arrow-right
-  .snsbox
-    %ul.snsbox__contents
-      %li.snsbox__contents__icons
-        %a.snsbox__contents__icons__icon{"data-window-name" => "facebook_window", :href => "http://www.facebook.com/share.php?u=https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm28099348410%2F", :target => "_blank"}
-          %i.fa.fa-facebook-square.fa-4x{:style => "color:#3B5998"}
-      %li.snsbox__contents__icons
-        %a.snsbox__contents__icons__icon{"data-window-name" => "twitter_window", :href => "http://twitter.com/share?count=horizontal&original_referer=https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm28099348410%2F&text=%E6%96%B0%E5%93%81%20%E3%82%BF%E3%82%B0%E4%BB%98%E3%81%8D%20babyG%E2%80%A6%20%28%C2%A5%202%2C290%29%20https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm28099348410%2F%20%E3%83%95%E3%83%AA%E3%83%9E%E3%82%A2%E3%83%97%E3%83%AA%E3%80%8C%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%E3%80%8D%E3%81%A7%E8%B2%A9%E5%A3%B2%E4%B8%AD%E2%99%AA%20%23%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%20%40mercari_jp%E3%81%95%E3%82%93%E3%81%8B%E3%82%89", :target => "_blank"}
-          %i.fa.fa-twitter-square.fa-4x
-      %li.snsbox__contents__icons
-        %a.snsbox__contents__icons__icon{"data-window-name" => "pinterest_window", :href => "http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm28099348410%2F&media=https%3A%2F%2Fstatic.mercdn.net%2Fitem%2Fdetail%2Forig%2Fphotos%2Fm28099348410_1.jpg%3F1558742410&description=%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%E5%95%86%E5%93%81%3A%20%E6%96%B0%E5%93%81%20%E3%82%BF%E3%82%B0%E4%BB%98%E3%81%8D%20babyGAP%20%E3%83%99%E3%83%93%E3%83%BC%E3%82%AE%E3%83%A3%E3%83%83%E3%83%97%20%E8%A5%9F%E4%BB%98%E3%81%8D%20%E9%95%B7%E8%A2%96%20%E3%82%AB%E3%83%83%E3%83%88%E3%82%BD%E3%83%BC%2080%20%23%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA", :target => "_blank"}
-          %i.fa.fa-pinterest-square.fa-4x{:style => "color:#CC3333"}
-  .bottomitems
-    %section.bottomitems__users
-      %h2.bottomitems__users__title
-        %a{:href => "https://www.mercari.com/jp/u/414242538/"}
-          S☆ぬいぐるみまとめ買い割引中‼️さんのその他の出品
-      .bottomitems__users__contents
-        %section.bottomitems__users__contents__content
-          %a.bottomitems__users__contents__content__link{:href => "https://item.mercari.com/jp/m99673450604/"}
-            %figure.bottomitems__users__contents__content__photo
-              = image_tag "m99673450604_1.jpg",:size =>'220x220'
-            .bottomitems__users__contents__content__body
-              %h3.bottomitems__users__contents__content__body__name
-                新品 おさるのジョージ ぬいぐるみ ショルダー ポーチ ジョージ
-              .bottomitems__users__contents__content__body__num
-                .bottomitems__users__contents__content__body__num__price
-                  ¥ 2,790           &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;♡３
-              %p.bottomitems__users__contents__content__body__tax
-                (税込)
-        .haku2
-        %section.bottomitems__users__contents__content
-          %a.bottomitems__users__contents__content__link{:href => "https://item.mercari.com/jp/m99673450604/"}
-            %figure.bottomitems__users__contents__content__photo
-              = image_tag "m99673450604_1.jpg",:size =>'220x220'
-            .bottomitems__users__contents__content__body
-              %h3.bottomitems__users__contents__content__body__name
-                新品 おさるのジョージ ぬいぐるみ ショルダー ポーチ ジョージ
-              .bottomitems__users__contents__content__body__num
-                .bottomitems__users__contents__content__body__num__price
-                  ¥ 2,790           &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;♡３
-              %p.bottomitems__users__contents__content__body__tax
-                (税込)
-        .haku2
-        %section.bottomitems__users__contents__content
-          %a.bottomitems__users__contents__content__link{:href => "https://item.mercari.com/jp/m99673450604/"}
-            %figure.bottomitems__users__contents__content__photo
-              = image_tag "m99673450604_1.jpg",:size =>'220x220'
-            .bottomitems__users__contents__content__body
-              %h3.bottomitems__users__contents__content__body__name
-                新品 おさるのジョージ ぬいぐるみ ショルダー ポーチ ジョージ
-              .bottomitems__users__contents__content__body__num
-                .bottomitems__users__contents__content__body__num__price
-                  ¥ 2,790           &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;♡３
-              %p.bottomitems__users__contents__content__body__tax
-                (税込)
-        %section.bottomitems__users__contents__content
-          %a.bottomitems__users__contents__content__link{:href => "https://item.mercari.com/jp/m99673450604/"}
-            %figure.bottomitems__users__contents__content__photo
-              = image_tag "m99673450604_1.jpg",:size =>'220x220'
-            .bottomitems__users__contents__content__body
-              %h3.bottomitems__users__contents__content__body__name
-                新品 おさるのジョージ ぬいぐるみ ショルダー ポーチ ジョージ
-              .bottomitems__users__contents__content__body__num
-                .bottomitems__users__contents__content__body__num__price
-                  ¥ 2,790           &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;♡３
-              %p.bottomitems__users__contents__content__body__tax
-                (税込)
-        .haku2
-        %section.bottomitems__users__contents__content
-          %a.bottomitems__users__contents__content__link{:href => "https://item.mercari.com/jp/m99673450604/"}
-            %figure.bottomitems__users__contents__content__photo
-              = image_tag "m99673450604_1.jpg",:size =>'220x220'
-            .bottomitems__users__contents__content__body
-              %h3.bottomitems__users__contents__content__body__name
-                新品 おさるのジョージ ぬいぐるみ ショルダー ポーチ ジョージ
-              .bottomitems__users__contents__content__body__num
-                .bottomitems__users__contents__content__body__num__price
-                  ¥ 2,790           &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;♡３
-              %p.bottomitems__users__contents__content__body__tax
-                (税込)
-        .haku2
-        %section.bottomitems__users__contents__content
-          %a.bottomitems__users__contents__content__link{:href => "https://item.mercari.com/jp/m99673450604/"}
-            %figure.bottomitems__users__contents__content__photo
-              = image_tag "m99673450604_1.jpg",:size =>'220x220'
-            .bottomitems__users__contents__content__body
-              %h3.bottomitems__users__contents__content__body__name
-                新品 おさるのジョージ ぬいぐるみ ショルダー ポーチ ジョージ
-              .bottomitems__users__contents__content__body__num
-                .bottomitems__users__contents__content__body__num__price
-                  ¥ 2,790           &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;♡３
-              %p.bottomitems__users__contents__content__body__tax
-                (税込)
-    %section.bottomitems__sonota
-      %h2.bottomitems__sonota__title
-        %a{:href => "https://www.mercari.com/jp/u/414242538/"}
-          ベビーギャップのトップス　その他の商品
-      .bottomitems__sonota__contents
-        %section.bottomitems__sonota__contents__content
-          %a.bottomitems__sonota__contents__content__link{:href => "https://item.mercari.com/jp/m99673450604/"}
-            %figure.bottomitems__sonota__contents__content__photo
-              = image_tag "m99673450604_1.jpg",:size =>'220x220'
-            .bottomitems__sonota__contents__content__body
-              %h3.bottomitems__sonota__contents__content__body__name
-                新品 おさるのジョージ ぬいぐるみ ショルダー ポーチ ジョージ
-              .bottomitems__sonota__contents__content__body__num
-                .bottomitems__sonota__contents__content__body__num__price
-                  ¥ 2,790           &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;♡３
-              %p.bottomitems__sonota__contents__content__body__tax
-                (税込)
-        .haku2
-        %section.bottomitems__sonota__contents__content
-          %a.bottomitems__sonota__contents__content__link{:href => "https://item.mercari.com/jp/m99673450604/"}
-            %figure.bottomitems__sonota__contents__content__photo
-              = image_tag "m99673450604_1.jpg",:size =>'220x220'
-            .bottomitems__sonota__contents__content__body
-              %h3.bottomitems__sonota__contents__content__body__name
-                新品 おさるのジョージ ぬいぐるみ ショルダー ポーチ ジョージ
-              .bottomitems__sonota__contents__content__body__num
-                .bottomitems__sonota__contents__content__body__num__price
-                  ¥ 2,790           &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;♡３
-              %p.bottomitems__sonota__contents__content__body__tax
-                (税込)
-        .haku2
-        %section.bottomitems__sonota__contents__content
-          %a.bottomitems__sonota__contents__content__link{:href => "https://item.mercari.com/jp/m99673450604/"}
-            %figure.bottomitems__sonota__contents__content__photo
-              = image_tag "m99673450604_1.jpg",:size =>'220x220'
-            .bottomitems__sonota__contents__content__body
-              %h3.bottomitems__sonota__contents__content__body__name
-                新品 おさるのジョージ ぬいぐるみ ショルダー ポーチ ジョージ
-              .bottomitems__sonota__contents__content__body__num
-                .bottomitems__sonota__contents__content__body__num__price
-                  ¥ 2,790           &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;♡３
-              %p.bottomitems__sonota__contents__content__body__tax
-                (税込)
-        %section.bottomitems__sonota__contents__content
-          %a.bottomitems__sonota__contents__content__link{:href => "https://item.mercari.com/jp/m99673450604/"}
-            %figure.bottomitems__sonota__contents__content__photo
-              = image_tag "m99673450604_1.jpg",:size =>'220x220'
-            .bottomitems__sonota__contents__content__body
-              %h3.bottomitems__sonota__contents__content__body__name
-                新品 おさるのジョージ ぬいぐるみ ショルダー ポーチ ジョージ
-              .bottomitems__sonota__contents__content__body__num
-                .bottomitems__sonota__contents__content__body__num__price
-                  ¥ 2,790           &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;♡３
-              %p.bottomitems__sonota__contents__content__body__tax
-                (税込)
-        .haku2
-        %section.bottomitems__sonota__contents__content
-          %a.bottomitems__sonota__contents__content__link{:href => "https://item.mercari.com/jp/m99673450604/"}
-            %figure.bottomitems__sonota__contents__content__photo
-              = image_tag "m99673450604_1.jpg",:size =>'220x220'
-            .bottomitems__sonota__contents__content__body
-              %h3.bottomitems__sonota__contents__content__body__name
-                新品 おさるのジョージ ぬいぐるみ ショルダー ポーチ ジョージ
-              .bottomitems__sonota__contents__content__body__num
-                .bottomitems__sonota__contents__content__body__num__price
-                  ¥ 2,790           &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;♡３
-              %p.bottomitems__sonota__contents__content__body__tax
-                (税込)
-
-%body
-  .default-container
     .content-footer
+      %section.content-footer__slide-box
+        = image_tag "mercaricamp.png", class: "content-footer__slide-box__img"
+      %section.pickup-container
+        %h2.pickup-container__head
+          ピックアップカテゴリー
+        %section.item-box-container
+          = link_to root_path do
+            %h3.item-box-container__text-center レディース新着アイテム
+          .item-box-content
+            %section.item-box
+              = link_to root_path  do
+                %figure.item-box__content-photo
+                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
+                .item-box__content-body
+                  %h3.item-box__content-body__item-name ケイトスペード ショルダーバッグ
+                  .item-box__content-body__num
+                    .item-box__content-body__num__price
+                      %p.item-box__content-body__num__price__text ¥ 2900
+                    %div
+                      %p.item-box__content-body__tax (税込)
+            %section.item-box
+              = link_to root_path  do
+                %figure.item-box__content-photo
+                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
+                .item-box__content-body
+                  %h3.item-box__content-body__item-name ショルダーバッグ
+                  .item-box__content-body__num
+                    .item-box__content-body__num__price
+                      %p.item-box__content-body__num__price__text ¥ 2900
+                    %div
+                      %p.item-box__content-body__tax (税込)
+            %section.item-box
+              = link_to root_path  do
+                %figure.item-box__content-photo
+                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
+                .item-box__content-body
+                  %h3.item-box__content-body__item-name ショルダーバッグ
+                  .item-box__content-body__num
+                    .item-box__content-body__num__price
+                      %p.item-box__content-body__num__price__text ¥ 2900
+                    %div
+                      %p.item-box__content-body__tax (税込)
+            %section.item-box
+              = link_to root_path  do
+                %figure.item-box__content-photo
+                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
+                .item-box__content-body
+                  %h3.item-box__content-body__item-name ショルダーバッグ
+                  .item-box__content-body__num
+                    .item-box__content-body__num__price
+                      %p.item-box__content-body__num__price__text ¥ 2900
+                    %div
+                      %p.item-box__content-body__tax (税込)
+          = link_to root_path do
+            .item-box-content-view
+              %p.item-box-content-view-all
+                全ての商品を見る
+                %section.item-box-container
+          = link_to root_path do
+            %h3.item-box-container__text-center メンズ 新着アイテム
+          .item-box-content
+            %section.item-box
+              = link_to root_path  do
+                %figure.item-box__content-photo
+                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
+                .item-box__content-body
+                  %h3.item-box__content-body__item-name ケイトスペード ショルダーバッグ
+                  .item-box__content-body__num
+                    .item-box__content-body__num__price
+                      %p.item-box__content-body__num__price__text ¥ 2900
+                    %div
+                      %p.item-box__content-body__tax (税込)
+            %section.item-box
+              = link_to root_path  do
+                %figure.item-box__content-photo
+                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
+                .item-box__content-body
+                  %h3.item-box__content-body__item-name ショルダーバッグ
+                  .item-box__content-body__num
+                    .item-box__content-body__num__price
+                      %p.item-box__content-body__num__price__text ¥ 2900
+                    %div
+                      %p.item-box__content-body__tax (税込)
+            %section.item-box
+              = link_to root_path  do
+                %figure.item-box__content-photo
+                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
+                .item-box__content-body
+                  %h3.item-box__content-body__item-name ショルダーバッグ
+                  .item-box__content-body__num
+                    .item-box__content-body__num__price
+                      %p.item-box__content-body__num__price__text ¥ 2900
+                    %div
+                      %p.item-box__content-body__tax (税込)
+            %section.item-box
+              = link_to root_path  do
+                %figure.item-box__content-photo
+                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
+                .item-box__content-body
+                  %h3.item-box__content-body__item-name ショルダーバッグ
+                  .item-box__content-body__num
+                    .item-box__content-body__num__price
+                      %p.item-box__content-body__num__price__text ¥ 2900
+                    %div
+                      %p.item-box__content-body__tax (税込)
+          = link_to root_path do
+            .item-box-content-view
+              %p.item-box-content-view-all
+                全ての商品を見る
+                %section.item-box-container
+          = link_to root_path do
+            %h3.item-box-container__text-center ベビー・キッズ 新着アイテム
+          .item-box-content
+            %section.item-box
+              = link_to root_path  do
+                %figure.item-box__content-photo
+                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
+                .item-box__content-body
+                  %h3.item-box__content-body__item-name ケイトスペード ショルダーバッグ
+                  .item-box__content-body__num
+                    .item-box__content-body__num__price
+                      %p.item-box__content-body__num__price__text ¥ 2900
+                    %div
+                      %p.item-box__content-body__tax (税込)
+            %section.item-box
+              = link_to root_path  do
+                %figure.item-box__content-photo
+                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
+                .item-box__content-body
+                  %h3.item-box__content-body__item-name ショルダーバッグ
+                  .item-box__content-body__num
+                    .item-box__content-body__num__price
+                      %p.item-box__content-body__num__price__text ¥ 2900
+                    %div
+                      %p.item-box__content-body__tax (税込)
+            %section.item-box
+              = link_to root_path  do
+                %figure.item-box__content-photo
+                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
+                .item-box__content-body
+                  %h3.item-box__content-body__item-name ショルダーバッグ
+                  .item-box__content-body__num
+                    .item-box__content-body__num__price
+                      %p.item-box__content-body__num__price__text ¥ 2900
+                    %div
+                      %p.item-box__content-body__tax (税込)
+            %section.item-box
+              = link_to root_path  do
+                %figure.item-box__content-photo
+                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
+                .item-box__content-body
+                  %h3.item-box__content-body__item-name ショルダーバッグ
+                  .item-box__content-body__num
+                    .item-box__content-body__num__price
+                      %p.item-box__content-body__num__price__text ¥ 2900
+                    %div
+                      %p.item-box__content-body__tax (税込)
+          = link_to root_path do
+            .item-box-content-view
+              %p.item-box-content-view-all
+                全ての商品を見る
+        %section.item-box-container
+          = link_to root_path do
+            %h3.item-box-container__text-center コスメ・香水・美容 新着アイテム
+          .item-box-content
+            %section.item-box
+              = link_to root_path  do
+                %figure.item-box__content-photo
+                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
+                .item-box__content-body
+                  %h3.item-box__content-body__item-name ケイトスペード ショルダーバッグ
+                  .item-box__content-body__num
+                    .item-box__content-body__num__price
+                      %p.item-box__content-body__num__price__text ¥ 2900
+                    %div
+                      %p.item-box__content-body__tax (税込)
+            %section.item-box
+              = link_to root_path  do
+                %figure.item-box__content-photo
+                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
+                .item-box__content-body
+                  %h3.item-box__content-body__item-name ショルダーバッグ
+                  .item-box__content-body__num
+                    .item-box__content-body__num__price
+                      %p.item-box__content-body__num__price__text ¥ 2900
+                    %div
+                      %p.item-box__content-body__tax (税込)
+            %section.item-box
+              = link_to root_path  do
+                %figure.item-box__content-photo
+                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
+                .item-box__content-body
+                  %h3.item-box__content-body__item-name ショルダーバッグ
+                  .item-box__content-body__num
+                    .item-box__content-body__num__price
+                      %p.item-box__content-body__num__price__text ¥ 2900
+                    %div
+                      %p.item-box__content-body__tax (税込)
+            %section.item-box
+              = link_to root_path  do
+                %figure.item-box__content-photo
+                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
+                .item-box__content-body
+                  %h3.item-box__content-body__item-name ショルダーバッグ
+                  .item-box__content-body__num
+                    .item-box__content-body__num__price
+                      %p.item-box__content-body__num__price__text ¥ 2900
+                    %div
+                      %p.item-box__content-body__tax (税込)
+          = link_to root_path do
+            .item-box-content-view
+              %p.item-box-content-view-all
+                全ての商品を見る
+        %h2.pickup-container__head
+          ピックアップブランド
+        %section.item-box-container
+          = link_to root_path do
+            %h3.item-box-container__text-center シャネル 新着アイテム
+          .item-box-content
+            %section.item-box
+              = link_to root_path  do
+                %figure.item-box__content-photo
+                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
+                .item-box__content-body
+                  %h3.item-box__content-body__item-name ケイトスペード ショルダーバッグ
+                  .item-box__content-body__num
+                    .item-box__content-body__num__price
+                      %p.item-box__content-body__num__price__text ¥ 2900
+                    %div
+                      %p.item-box__content-body__tax (税込)
+            %section.item-box
+              = link_to root_path  do
+                %figure.item-box__content-photo
+                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
+                .item-box__content-body
+                  %h3.item-box__content-body__item-name ショルダーバッグ
+                  .item-box__content-body__num
+                    .item-box__content-body__num__price
+                      %p.item-box__content-body__num__price__text ¥ 2900
+                    %div
+                      %p.item-box__content-body__tax (税込)
+            %section.item-box
+              = link_to root_path  do
+                %figure.item-box__content-photo
+                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
+                .item-box__content-body
+                  %h3.item-box__content-body__item-name ショルダーバッグ
+                  .item-box__content-body__num
+                    .item-box__content-body__num__price
+                      %p.item-box__content-body__num__price__text ¥ 2900
+                    %div
+                      %p.item-box__content-body__tax (税込)
+            %section.item-box
+              = link_to root_path  do
+                %figure.item-box__content-photo
+                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
+                .item-box__content-body
+                  %h3.item-box__content-body__item-name ショルダーバッグ
+                  .item-box__content-body__num
+                    .item-box__content-body__num__price
+                      %p.item-box__content-body__num__price__text ¥ 2900
+                    %div
+                      %p.item-box__content-body__tax (税込)
+          = link_to root_path do
+            .item-box-content-view
+              %p.item-box-content-view-all
+                全ての商品を見る
       .app-banner
         = image_tag "banar-image.png", class: "app-banar-img"
       %footer.footer-top-page
@@ -389,9 +353,6 @@
             %ul
               %li.footer-head-jp 日本
               %li.footer-head-us United Status
-        
-        
-        
         .footer-bottom
           = link_to root_path class:"footer-logo-link" do
             - image_tag "logo-white.svg", class: "footer-logo-link-image"
@@ -399,4 +360,3 @@
       = link_to root_path, class: "footer-sell-btn" do
         .footer-sell-btn__text 出品
         = fa_icon "camera", class: "camera-icon"
-
