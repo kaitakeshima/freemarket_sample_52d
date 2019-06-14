@@ -30,7 +30,7 @@
 .owaku{
   color: #333333;
   background-color:#f0f0f0 ;
-  height: 4138px;
+  height: 3500px;
   width: 100%;
   .haku{
     height: 50px;
@@ -285,13 +285,15 @@
             background-color: white;
             color: #333333;
             margin-top: 0;
+            padding: 8px;
             &__name{
               overflow: hidden;
               width: 188px;
-              height: 46px;
+              height: 35px;
               font-size: 16px;
               padding: 5px;
               position: relative;
+              margin: auto;
             }
             &__name::after{
               position: absolute;
@@ -307,7 +309,7 @@
               display: inline-block;
               width: 188px;
               height: 17px;
-              padding-top: 20px;
+              padding-top: 35px;
               margin-left:10px; 
               &__price{
                 font-weight: 580;
@@ -368,13 +370,15 @@
             background-color: white;
             color: #333333;
             margin-top: 0;
+            padding: 8px;
             &__name{
               overflow: hidden;
               width: 188px;
-              height: 46px;
+              height: 35px;
               font-size: 16px;
               padding: 5px;
               position: relative;
+              margin: auto; 
             }
             &__name::after{
               position: absolute;
@@ -390,7 +394,7 @@
               display: inline-block;
               width: 188px;
               height: 17px;
-              padding-top: 20px;
+              padding-top: 35px;
               margin-left:10px; 
               &__price{
                 font-weight: 580;
