@@ -1,6 +1,6 @@
 <h2>Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= form_for(resource, as: resource_name, url:  do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
@@ -8,51 +8,49 @@
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
   <div class="field">
-    <%= f.label "パスワード" %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> 文字以上入力してください)</em>
+    <%= f.label :password %>
+    <% if @minimum_password_length %> v
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.password_field :password  %>
   </div>
 
   <div class="field">
-    <%= f.label "パスワード (確認) " %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation  %>
   </div>
 
   <div class="field">
     <%= f.label "姓 (半角)" %><br />
-    <%= f.text_field ,:family_name, autocomplete: "new-password" %>
+    <%= f.text_field :family_name  %>
   </div>
 
   <div class="field">
     <%= f.label "名 (半角)" %><br />
-    <%= f.text_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.text_field :first_name %>
   </div>
 
   <div class="field">
     <%= f.label "姓カナ (半角) " %><br />
-    <%= f.text_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.text_field :family_name_kana %>
   </div>
 
   <div class="field">
     <%= f.label "名カナ (半角) " %><br />
-    <%= f.text_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.text_field :first_name_kana %>
   </div>
 
   <div class="field">
     <%= f.label "ニックネーム"%><br />
     <%= f.text_field :nickname%>
-
   </div>
 
   <div class="field">
-    <%= f.label "buyer id"%>
-    <%= f.text_field :buyer_number %>
+    <%= f.label "誕生日" %>
+    <%= f.text_field :birthday %>
   </div>
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up"  %>
   </div>
 <% end %>
-
 <%= render "devise/shared/links" %>
