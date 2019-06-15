@@ -1,4 +1,5 @@
 @import "reset.scss";
+@import "mixin/registration-mixin.scss";
 @import "clearfix.scss";
 @import "modules/top-page.scss";
 @import "font-awesome";
@@ -6,4 +7,6 @@
 @import "modules/itemdetail.scss";
 @import "./new-header";
 @import "./new-footer";
+@import "modules/registration04.scss";
+@import "modules/registration05.scss";
 @import "modules/buy-detail";
