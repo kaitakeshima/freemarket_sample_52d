@@ -1,0 +1,26 @@
+.pay-page-single-main{
+  display: block;
+  .pay-conatainer{
+    @include pay-conatainer();
+    &__head{
+      @include pay-head();
+    }
+    &__inner{
+      @include registration-head-inner;
+      &__content{
+        @include registration-inner-content();
+        &__margin-box{
+          width: 100%;
+          height: 80px;
+        }
+        &__text-box{
+          text-align: center;
+          font-size: 18px;
+          &__text{
+            padding: 0.3rem 0;
+          }
+        }
+      }
+    }
+  }
+}

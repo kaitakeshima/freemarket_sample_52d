@@ -1,362 +1,70 @@
-%body
-  .default-container
-    %header.top-page-pc-header
-      .top-page-pc-header__inner
-        .top-page-pc-header__inner__top
-          %h1.top-page-pc-header__inner__top__logo
-            = link_to image_tag('top-header-logo.svg', class: "header-logo" ), root_path
-          .header-search-form
-            %input{class: "header-search-form__input", placeholder: "何かお探しですか？"}
-              = link_to root_path, class:"header-search-button"  do
-                .header-button-wrapper
-                  = fa_icon 'search 2x', class: "search"
-        .top-page-header-icon-lists
-          .top-icon-list-left
-            %ul.header-category-wrapper
-              %li.header-icons
-                %h2
-                  = link_to root_path class:"pc-header-nav-rootlist-parent" do
-                    = fa_icon("list-ul", class: "header-left-icon-logo")
-                    %span.header-bold カテゴリーから探す
-              %li.header-icons
-                %h2
-                  = link_to root_path class:"pc-header-nav-root list-parent" do
-                    = fa_icon("tag", class: "header-left-icon-logo")
-                    %span.header-bold ブランドから探す
-          .top-page-list-right
-            %ul.header-user-nav
-              %li.header-info
-                = link_to root_path class: "header-info-link" do
-                  = fa_icon("bell-o ")
-                  %span.header-user-nav-text お知らせ
-              %li.header-to-do
-                = link_to root_path class: "to_do-link" do
-                  = fa_icon("check")
-                  %span.header-user-nav-text やることリスト
-              %li.header-mypage
-                = link_to root_path class: "header-my-page-link" do
-                  = image_tag "mypage-image.png", class: "header-mypage-icon-image"
-                  %span.header-user-nav-text-mypage マイページ
-    .content-footer
-      %section.content-footer__slide-box
-        = image_tag "mercaricamp.png", class: "content-footer__slide-box__img"
-      %section.pickup-container
-        %h2.pickup-container__head
-          ピックアップカテゴリー
-        %section.item-box-container
-          = link_to root_path do
-            %h3.item-box-container__text-center レディース新着アイテム
-          .item-box-content
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ケイトスペード ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-          = link_to root_path do
-            .item-box-content-view
-              %p.item-box-content-view-all
-                全ての商品を見る
-                %section.item-box-container
-          = link_to root_path do
-            %h3.item-box-container__text-center メンズ 新着アイテム
-          .item-box-content
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ケイトスペード ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-          = link_to root_path do
-            .item-box-content-view
-              %p.item-box-content-view-all
-                全ての商品を見る
-                %section.item-box-container
-          = link_to root_path do
-            %h3.item-box-container__text-center ベビー・キッズ 新着アイテム
-          .item-box-content
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ケイトスペード ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-          = link_to root_path do
-            .item-box-content-view
-              %p.item-box-content-view-all
-                全ての商品を見る
-        %section.item-box-container
-          = link_to root_path do
-            %h3.item-box-container__text-center コスメ・香水・美容 新着アイテム
-          .item-box-content
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ケイトスペード ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-          = link_to root_path do
-            .item-box-content-view
-              %p.item-box-content-view-all
-                全ての商品を見る
-        %h2.pickup-container__head
-          ピックアップブランド
-        %section.item-box-container
-          = link_to root_path do
-            %h3.item-box-container__text-center シャネル 新着アイテム
-          .item-box-content
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ケイトスペード ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-          = link_to root_path do
-            .item-box-content-view
-              %p.item-box-content-view-all
-                全ての商品を見る
-      .app-banner
-        = image_tag "banar-image.png", class: "app-banar-img"
-      %footer.footer-top-page
-        .footer-box
-          .footer-cell
-            %h2.footer-cell__head メルカリについて
-            %ul
-              %li.footer-cell__footer-top-text-normal 会社概要 (運営会社)
-              %li.footer-cell__normal 採用情報
-              %li.footer-cell__normal プレリリース
-              %li.footer-cell__normal 公式ブログ
-              %li.footer-cell__normal メルカリロゴ利用ガイドライン
-              %li.footer-cell__sns-link
-                = fa_icon 'twitter', class: "twitter-logo"
-              %li.footer-cell__sns-link
-                = fa_icon 'facebook-square', class: "twitter-logo"
-          .footer-cell
-            %h2.footer-cell__head ヘルプ＆ガイド
-            %ul
-              %li.footer-cell__footer-top-text-normal メルカリガイド
-              %li.footer-cell__normal 楽々メルカリ便
-              %li.footer-cell__normal ゆうゆうメルカリ便
-              %li.footer-cell__normal 大型メルカリ便
-              %li.footer-cell__normal 車体取引ガイド
-              %li.footer-cell__normal メルカリあんしん・あんぜん宣言
-              %li.footer-cell__normal 偽ブランド品撲滅への取り組み
-              %li.footer-cell__normal メルカリボックス
-          .footer-cell-full-width
-            %h2.footer-cell-full-width__head プライバシーと利用規約
-            .footer-cell-full-width__cell-wrapper
-              .footer-cell-full-width__cell-wrapper__cell-left
-                %ul
-                  %li.footer-cell-full-width__cell-wrapper__cell-left__top-text-normal プライバシーポリシー
-                  %li.footer-cell-full-width__cell-wrapper__cell-left__normal メルカリ利用規約
-                  %li.footer-cell-full-width__cell-wrapper__cell-left__normal あんしんスマホサポート制度に関する利用規約
-                  %li.footer-cell-full-width__cell-wrapper__cell-left__normal コンプライアンスポリシー
-              .footer-cell-full-width__cell-wrapper__cell-right
-                %ul
-                  %li.footer-cell-full-width__cell-wrapper__cell-right__top-text-normal 個人データの安全管理に係る基本方針
-                  %li.footer-cell-full-width__cell-wrapper__cell-right__normal 特定商取引に関する表記
-                  %li.footer-cell-full-width__cell-wrapper__cell-right__normal 資金決済法に基づく表示
-                  %li.footer-cell-full-width__cell-wrapper__cell-right__normal 法令遵守と犯罪抑止のために
-                  %li.footer-cell-full-width__cell-wrapper__cell-right__normal 返品・返金ポリシー
-          .fotter-cell-lang
-            %h2.footer-cell__head 国
-            %ul
-              %li.footer-head-jp 日本
-              %li.footer-head-us United Status
-        .footer-bottom
-          = link_to root_path class:"footer-logo-link" do
-            - image_tag "logo-white.svg", class: "footer-logo-link-image"
-          %span.footer-copyrifght © 2019 Mercari
-      = link_to root_path, class: "footer-sell-btn" do
-        .footer-sell-btn__text 出品
-        = fa_icon "camera", class: "camera-icon"
+= render partial: './shared/new-header'
+.pay-page-single-main
+  .pay-conatainer
+    %h2.pay-conatainer__head
+      支払い方法
+    %form.pay-conatainer__inner
+      %input{type: "hidden",method: "POST"}
+      .pay-conatainer__inner__content
+        .pay-conatainer__inner__content__form__card-number
+          %label.pay-conatainer__inner__content__form__card-number__number-label
+            カード番号
+          %span.pay-conatainer__inner__content__form__card-number__require
+            必須
+          %input{placeholder: "半角数字のみ", maxlength:"16", class: "pay-conatainer__inner__content__form__card-number__default"}
+        .pay-conatainer__inner__content__form
+          %label.pay-conatainer__inner__content__form__card-number__expiration-date-label
+            有効期限
+          %span.pay-conatainer__inner__content__form__card-number__require
+            必須
+          .pay-conatainer__inner__content__form__select-wrap
+            .pay-conatainer__inner__content__form__select-wrap__select-month
+              %select{name: "month", class: "select-default"}
+                %option{value: "0"}--
+                %option{value: "1"}1
+                %option{value: "2"}2
+                %option{value: "3"}3
+                %option{value: "4"}4
+                %option{value: "5"}5
+                %option{value: "6"}6
+                %option{value: "7"}7
+                %option{value: "8"}8
+                %option{value: "9"}9
+                %option{value: "10"}10
+                %option{value: "11"}11
+                %option{value: "12"}12
+              %i.fa.fa-chevron-down
+              %span.pay-conatainer__inner__content__form__select-wrap__text-month
+                月
+            .pay-conatainer__inner__content__form__select-wrap__select-month
+              %select{name: "year", class: "select-default"}
+                %option{value: "0"}--
+                %option{value: "19"}19
+                %option{value: "20"}20
+                %option{value: "21"}21
+                %option{value: "22"}22
+                %option{value: "23"}23
+                %option{value: "24"}24
+                %option{value: "25"}25
+                %option{value: "26"}26
+                %option{value: "27"}27
+                %option{value: "28"}28
+                %option{value: "29"}29
+                %option{value: "30"}30
+                %option{value: "31"}31
+              %i.fa.fa-chevron-down
+              %span.pay-conatainer__inner__content__form__select-wrap__text-month
+                年
+            .pay-conatainer__inner__content__form__select-wrap__year
+              
+        .pay-conatainer__inner__content__form
+          %label.pay-conatainer__inner__content__form__card-number__securty-label
+            セキュリティコード
+          %span.pay-conatainer__inner__content__form__card-number__require
+            必須
+          %input{placeholder: "カード背面4桁もしくは3桁の番号", maxlength:"4", class: "pay-conatainer__inner__content__form__card-number__default"}
+      .pay-conatainer__inner__content
+        %input{type: "hidden", method: "POST"}
+        %button{type: "submit", class:"nextbtn-red"}
+          次へ進む
+= render partial: './shared/new-footer'
