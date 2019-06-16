@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     post "users/sign_up/address" => "users/registrations#address"
     post "users/sign_up/credit" => "users/registrations#credit"
     post "users/sign_up/confirm" => "users/registrations#confirm"
-
+    post "users"   => "registrations#create"
   end
    root 'items#index'
 end
