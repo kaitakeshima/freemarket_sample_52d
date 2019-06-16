@@ -12,6 +12,13 @@
           %span.pay-conatainer__inner__content__form__card-number__require
             必須
           %input{placeholder: "半角数字のみ", maxlength:"16", class: "pay-conatainer__inner__content__form__card-number__default"}
+          .pay-conatainer__inner__content__form__card-number__card-logs
+            = image_tag("Visa.svg.png", class: "card-img-visa")
+            = image_tag("mastercard.jpg", class: "card-img-master")
+            = image_tag("saison.png", class: "card-img-saison")
+            = image_tag("american.png", class: "card-img-american")
+            = image_tag("diners.png", class: "card-img-diners")
+            = image_tag("discover.jpg", class: "card-img")
         .pay-conatainer__inner__content__form
           %label.pay-conatainer__inner__content__form__card-number__expiration-date-label
             有効期限
