@@ -1,0 +1,14 @@
+= render partial: "shared/topheader"
+= render partial: "shared/pankuzukari"
+
+.ohako
+  = render partial: "shared/mypageside"
+  .logoutbox
+    %form.logoutbox__form{action: :"https://www.mercari.com/jp/logout/", method: :"POST", novalidate: :"novalidate"}
+      .logoutbox__form__content
+        %button.logoutbox__form__content__btn{type: :"submit"} ログアウト
+        %input{name: :"__csrf_value", type: :"hidden", value: :"d9163badd600f0759504f3c3d03fe90dc77553d7088130fd36fa09442be89f9495ac622fcdb8d50c719900926f76df4a48027fd1afba1c82a96b2020dff2aff06"}/
+
+
+
+= render partial: "shared/topfooter"

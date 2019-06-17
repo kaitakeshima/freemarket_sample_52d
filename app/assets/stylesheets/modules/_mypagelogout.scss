@@ -1,0 +1,21 @@
+.logoutbox{
+  height: 179px;
+  width: 700px;
+  float: left;
+  margin-left: 40px;
+  margin-top: 40px;
+  background-color: white;
+  text-align: center;
+  padding: 64px;
+  &__form{
+    &__content{
+      &__btn{
+        width: 320px;
+        height: 50px;
+        background-color: red;
+        color: white;
+        font-size: 14px;
+      }
+    }
+  }
+}
