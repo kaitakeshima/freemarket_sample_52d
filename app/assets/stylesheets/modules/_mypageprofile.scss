@@ -1,0 +1,61 @@
+.profilebox{
+  width: 700px;
+  height: 570px;
+  float: left;
+  margin-left: 40px; 
+  padding-top: 40px;
+  &__head{
+    height: 50px;
+    width: 700px;
+    background-color: white;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 50px;
+  }
+  &__avname{
+    height: 156px;
+    background-image: url("user-bg.jpg"); 
+    text-align: center;
+    padding: 50px;
+
+      
+      &__av{
+        display: inline; 
+      }
+      &__name{
+        display: inline-block;
+        width: 250px;
+        height: 50px;
+        border-radius: 10px;
+        padding: 14px 10px 16px 10px;
+        font-size: 20px;
+        border: 1px solid #c0c0c0;
+        text-align: center;
+      }
+    
+  }
+  &__content{
+    height: 362px;
+    width: 700px;
+    background-color: white;
+    padding:40px 15px 0px; 
+    &__text{
+      height: 218px;
+      width: 668px;
+      border: 1px solid #c0c0c0;
+      font-size: 18px;
+      padding: 10px;
+    }
+    &__btn{
+      height: 50px;
+      width: 668px;
+      background-color: red;
+      color: white;
+      margin-top: 25px;
+      font-size: 15px;
+
+    }
+
+  }
+}
