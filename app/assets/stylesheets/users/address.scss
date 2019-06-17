@@ -1,0 +1,119 @@
+body {
+  position: relative;
+  min-height: 100%;
+  background: #f5f5f5;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  font-size: 14px;
+  color: #333;
+  line-height: 1;
+  display: block;
+}
+
+.member-main {
+  display: block;
+  &__container {
+    width: 700px;
+    margin: 0 auto;
+    background: #fff;
+    &__head {
+      padding: 32px 16px;
+      font-size: 22px;
+      line-height: 1.5;
+      text-align: center;
+      font-weight: 600;
+    }
+    &__form {
+      padding: 40px 16px;
+      border-top: 1px solid #f5f5f5;
+      &__top {
+        max-width: 320px;
+        margin: 0 auto;
+        .form-group {
+          margin: 40px 0 0;
+          label {
+            font-weight: 600;
+            display: inline-block;
+          }
+          &__form-require {
+            background: #ea352d;
+            margin: 0 0 0 8px;
+            padding: 2px 4px;
+            border-radius: 2px;
+            color: #fff;
+            font-size: 12px;
+            vertical-align: top;
+          }
+          &__form-any{
+            background: #ccc;
+            margin: 0 0 0 8px;
+            padding: 2px 4px;
+            border-radius: 2px;
+            color: #fff;
+            font-size: 12px;
+            vertical-align: top;
+          }
+          &__input-default {
+            width: 100%;
+            margin: 8px 0 0;
+            padding: 10px 16px 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background: #fff;
+            line-height: 1.5;
+            font-size: 16px;
+          }
+          &__sub-head {
+            font-size: 16px;
+            font-weight: 600;
+          }
+          &__prefecture {
+            .select-wrap {
+              width: calc(30% - 17px);
+              position: relative;
+              display: inline-block;
+              margin: 8px 0 0;
+              background: #fff;
+              &__default {
+                padding: 0 10px;
+                width: 354px;
+                position: relative;
+                z-index: 2;
+                height: 48px;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+                font-size: 16px;
+                cursor: pointer;
+                -webkit-appearance: none;
+                outline: 0;
+                background-color: #fff
+              }
+              i {
+                position: absolute;
+                left: 320px;
+                top: 50%;
+                z-index: 2;
+                color: #888;
+                font-size: 20px;
+                -webkit-transform: translate(0, -50%);
+                transform: translate(0, -50%);
+              }
+              span {
+                margin: 0 2px;
+              }
+            }
+          }
+        }
+        &__btn {
+          margin: 40px 0 0;
+          background: #ea352d;
+          border: 1px solid #ea352d;
+          color: #fff;
+          display: block;
+          width: 100%;
+          line-height: 48px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
