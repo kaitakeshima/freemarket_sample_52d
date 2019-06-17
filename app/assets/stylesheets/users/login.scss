@@ -1,0 +1,128 @@
+body {
+  position: relative;
+  min-height: 100%;
+  font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+  font-size: 14px;
+  color: rgb(51, 51, 51);
+  line-height: 1;
+  background: rgb(245, 245, 245);
+}
+
+a {
+  text-decoration: none;
+}
+
+.login-main {
+  display: block;
+  &__container {
+    background-color: white;
+    height: 144px;
+    width: 456px;
+    margin: 0 auto;
+    &__head{
+      text-align: center;
+      font-size: 14px;
+      color: #333333;
+      padding: 40px 64px;
+    }
+  }
+  &__inner {
+    background-color: white;
+    border-top: solid 1px #eeeeee;
+    width: 456px;
+    margin: 0 auto;
+    padding: 32px 0;
+    &__content {
+      &__mail {
+        display: block;
+        margin: 8px 0 0;
+        border: 1px solid #0099e8;
+        background: #0099e8;
+        color: #fff;
+        line-height: 40px;
+      }
+    &__facebook {
+      background-color: white;
+      position: relative;
+      background-color: #385185;
+      width: 320px;
+      height: 50px;
+      margin: 15px auto;
+      &__icon {
+        text-align: center;
+        color: white;
+        line-height: 50px;
+        font-size: 14px;
+        }
+        .fa {
+          position: absolute;
+          top: 10px;
+          left:14px;
+          font-size: 28px;
+          color: white;
+        }
+      }
+    &__google {
+      background-color: white;
+      position: relative;
+      background-color: white;
+      width: 320px;
+      height: 50px;
+      margin: 15px auto;
+      &__icon {
+        text-align: center;
+        line-height: 50px;
+        color: #000;
+        border: 0.5px solid #808080;
+        font-size: 14px;
+        .image {
+          position: absolute;
+          top: 14px;
+          left: 14px;
+          width: 22px;
+          height: 22px;
+          }
+        }
+      }      
+    }
+  }
+  form {
+    background-color: white;
+    width: 456px;
+    margin: 0 auto;
+    .login-form-inner {
+      padding: 24px 64px 32px;
+      &__form-group {
+        margin: 24px 0 0;
+        &__input {
+          width: 88%;
+          height:28px;
+          padding: 10px 16px 8px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+          background: #fff;
+          line-height: 1.5;
+          font-size: 16px;
+        }
+      }
+      &__btn {
+        margin: 24px 0 0;
+        background: #ea352d;
+        border: 1px solid #ea352d;
+        color: #fff;
+        display: block;
+        width: 100%;
+        line-height: 48px;
+        font-size: 14px;transition: all ease-out .3s;
+        cursor: pointer;
+        text-align: center;
+      }
+      a {
+        display: block;
+        margin: 40px 0 0;
+        color: #0099e8;
+        text-decoration: none;
+      }
+    }
+  }
+}
