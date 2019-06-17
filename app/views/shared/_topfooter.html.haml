@@ -48,3 +48,10 @@
           %ul
             %li.footer-head-jp 日本
             %li.footer-head-us United Status
+      .footer-bottom
+        = link_to root_path class:"footer-logo-link" do
+          - image_tag "logo-white.svg", class: "footer-logo-link-image"
+        %span.footer-copyrifght © 2019 Mercari
+      = link_to root_path, class: "footer-sell-btn" do
+        .footer-sell-btn__text 出品
+        = fa_icon "camera", class: "camera-icon"

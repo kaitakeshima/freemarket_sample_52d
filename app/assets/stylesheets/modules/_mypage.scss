@@ -81,19 +81,19 @@
           }
         }
       }
+      &__kounyuu{
+        height: 72px;
+        width: 700px;
+        background-color: #fafafa;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 0 16px;
+        margin-top:40px;  
+        line-height: 70px;
+      }
     }
 }
-.mycontent__user__kounyuu{
-  height: 72px;
-  width: 700px;
-  background-color: #fafafa;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 0 16px;
-  margin-top:40px;  
-  line-height: 70px;
 
-}
 .tabs {
   margin-top: 50px;
   padding-bottom: 40px;
@@ -102,7 +102,6 @@
   width: 700px;
   margin: 0 auto;}
 
-/*タブのスタイル*/
 .tab_item {
   width: calc(100%/2);
   height: 70px;
