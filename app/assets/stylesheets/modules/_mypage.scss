@@ -1,0 +1,192 @@
+.ohako{
+  background-color: whitesmoke;
+  width: 100%;
+  height: 1350px;
+  margin: auto;
+}
+.sidebar{
+  padding-top: 40px;
+  margin-left: 15%;
+  width: 280px;
+  float: left;
+  font-size: 14px;
+  &__nav{
+    margin:0;
+    padding:0;
+    &__list{
+      &__ichi{
+        display: block;
+        padding: 16px;
+        background: #fff;
+        color: #333;
+        line-height:16px;
+        border-bottom: 1px solid #eee;
+        &:hover {
+          opacity: 0.7;
+          background-color: #fdfdfd;
+            .fa{
+              transform: translate(50%,0);
+              transition: all ease-out .2s;
+              color: #000;
+              }
+            }
+            .fa-angle-right{
+            float: right;
+            font-size:25px;
+            color: #ccc;
+            margin-top: -5px;
+            }
+      }      
+    }
+    &__head{
+      padding-top: 30px;
+    }
+  }
+}
+.mycontent{
+  height: 1200px;
+  width: 700px;
+  float: left;
+  margin-left: 40px; 
+  padding-top: 40px;
+    &__user{
+      &__header{
+        background-image: url("user-bg.jpg");
+        height: 200px;
+        width: 700px;
+        &__icon{
+          width: 700px;
+          height: 111px;
+          padding-top: 40px;
+          text-align: center;
+          &__av{
+            border-radius: 50%;
+          }
+          &__name{
+            color: #000;
+            margin: auto;
+            padding-top: 10px;
+            font-weight: bold;
+          }
+          &__num{
+            color: #000;
+            padding-top: 15px;
+            &__rate{
+              display: inline-block;
+              margin-right:15px; 
+            }
+            &__suu{
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+}
+.mycontent__user__kounyuu{
+  height: 72px;
+  width: 700px;
+  background-color: #fafafa;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 16px;
+  margin-top:40px;  
+  line-height: 70px;
+
+}
+.tabs {
+  margin-top: 50px;
+  padding-bottom: 40px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 700px;
+  margin: 0 auto;}
+
+/*タブのスタイル*/
+.tab_item {
+  width: calc(100%/2);
+  height: 70px;
+  background-color: #eee;
+  line-height: 70px;
+  font-size: 16px;
+  text-align: center;
+  color: #565656;
+  display: block;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  border: 1px solid pink;
+}
+.tab_item:hover {
+  opacity: 0.75;
+}
+
+input[name="tab_item"] {
+  display: none;
+}
+
+.tab_content {
+  display: none;
+  padding: 40px 40px 0;
+  clear: both;
+  overflow: hidden;
+  background-color: white;
+  height: 80px;
+  text-align: center;
+  color: #c0c0c0;
+  font-size: 17px;
+
+}
+
+#all:checked ~ #all_content,
+#programming:checked ~ #programming_content{
+  display: block;
+}
+
+.tab_torihiki {
+  width: calc(100%/2);
+  height: 70px;
+  background-color: #eee;
+  line-height: 70px;
+  font-size: 16px;
+  text-align: center;
+  color: #565656;
+  display: block;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  border: 1px solid pink;
+}
+.tab_torihiki:hover {
+  opacity: 0.5;
+}
+
+input[name="tab_torihiki"] {
+  display: none;
+}
+
+.tab_cont {
+  display: none;
+  padding: 40px 40px 0;
+  clear: both;
+  overflow: hidden;
+  background-color: white;
+  height: 80px;
+  text-align: center;
+  color: #c0c0c0;
+  font-size: 17px;
+  height: 300px;
+  font-weight: bold;
+  line-height: 200px;
+
+}
+
+#al:checked ~ #al_cont,
+#pro:checked ~ #pro_cont{
+  display: block;
+}
+
+
+
