@@ -1,0 +1,78 @@
+.honnin{
+  height: 1200px;
+  width: 700px;
+  background-color: white;
+  float: left;
+  margin-top: 40px;
+  margin-left: 40px; 
+}
+.honbox{
+  height: 1200px;
+  width: 700px;
+  &__head{
+    border-bottom: 1px solid #eee;
+    height: 50px;
+    width: 700px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 14px 24px;
+  }
+  &__main{
+    padding: 64px;
+    &__head{
+      height: 48px;
+      width: 572px;
+      margin-top: 8px;
+    }
+    &__caution{
+      float: right;
+    }
+    &__formbox{
+      clear: both;
+      margin-top: 40px;
+      &__content{
+        margin-top: 8px;
+      }
+      &__nini{
+        height: 20px;
+        width: 32px;
+        margin-left: 8px;
+        padding: 2px,4px;
+        background-color: #cccccc;
+        color: white;
+        border-radius: 3px;
+        text-align: center;
+      }
+      &__form{
+        height: 48px;
+        width: 572px;
+        border: 1px solid #eee;
+        border-radius:5px;
+        padding: 10px 16px 8px;
+        margin-top: 8px;
+        font-size: 15px; 
+      }
+      &__prefec{
+        height: 48px;
+        width: 572px;
+        border: 1px solid #eee;
+        border-radius:5px;
+        padding: 10px 16px 8px;
+        margin-top: 8px;
+        font-size: 15px; 
+        background-color: white;
+      }
+    }
+    &__btn{
+      height: 50px;
+      width: 572px;
+      margin-top: 40px;
+      background-color: red;
+      font-size: 14px;
+      text-align: center;
+      color: white;
+      margin-bottom: 40px;
+    }    
+  }
+}
