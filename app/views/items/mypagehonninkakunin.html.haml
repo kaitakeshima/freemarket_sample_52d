@@ -1,0 +1,73 @@
+= render partial: "shared/topheader"
+= render partial: "shared/pankuzukari"
+
+.ohako
+  = render partial: "shared/mypageside"
+  .honnin
+    .honbox
+      .honbox__head
+        本人情報の登録
+      .honbox__main
+        = form_with url: root_path,local: true , class: "sampleform" do |f|
+          %p.honbox__main__head
+            お客様の本人情報をご登録ください。<br>
+            登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
+          %a.honbox__main__caution{href: :"root_path"}
+            本人確認書類のアップロードについて&emsp;＞
+          .honbox__main__formbox
+            %label.honbox__main__formbox__label
+              お名前
+            %p.honbox__main__formbox__content
+              大橋      
+          .honbox__main__formbox
+            %label.honbox__main__formbox__label
+              お名前カナ
+            %p.honbox__main__formbox__content
+              オオハシ
+          .honbox__main__formbox
+            %label.honbox__main__formbox__label
+              生年月日
+            %p.honbox__main__formbox__content
+              1990/01/01
+          .honbox__main__formbox
+            %label.honbox__main__formbox__label
+              郵便番号
+            %span.honbox__main__formbox__nini
+              任意
+            = f.text_field :keyword, class: 'honbox__main__formbox__form', placeholder: '例）1234567'
+          .honbox__main__formbox
+            %label.honbox__main__formbox__label
+              都道府県
+            %span.honbox__main__formbox__nini
+              任意
+            %select.honbox__main__formbox__prefec
+              <option value="--">--</option>
+              <option value="1">北海道</option>
+              <option value="2">青森県</option>
+              <option value="3">岩手県</option>
+              <option value="4">宮城県</option>
+          .honbox__main__formbox
+            %label.honbox__main__formbox__label
+              市区町村
+            %span.honbox__main__formbox__nini
+              任意
+            = f.text_field :keyword, class: 'honbox__main__formbox__form', placeholder: '例) 横浜市緑区'
+          .honbox__main__formbox
+            %label.honbox__main__formbox__label
+              番地
+            %span.honbox__main__formbox__nini
+              任意
+            = f.text_field :keyword, class: 'honbox__main__formbox__form', placeholder: '例) 青山1-1-1'
+          .honbox__main__formbox
+            %label.honbox__main__formbox__label
+              建物名
+            %span.honbox__main__formbox__nini
+              任意
+            = f.text_field :keyword, class: 'honbox__main__formbox__form', placeholder: '例) 柳ビル103'
+          %button.honbox__main__btn
+            登録する
+          %a.honbox__main__caution{href: :"root_path"}
+            本人確認書類のアップロードについて&emsp;＞
+
+
+= render partial: "shared/topfooter"
