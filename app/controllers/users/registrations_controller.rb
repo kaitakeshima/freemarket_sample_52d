@@ -10,6 +10,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
   def user_sign_up
   end
+  def newe
+  end
   # POST /resource
   # def create
   #   super

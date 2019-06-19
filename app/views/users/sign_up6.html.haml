@@ -13,6 +13,5 @@
           会員登録が完了しました
       .pay-conatainer__inner__content
         %input{type: "hidden", method: "POST"}
-        %button{type: "submit", class:"nextbtn-red"}
-          メルカリを始める
+        = button_to "メルカリを始める", root_path,method: :get, class:"nextbtn-red"
 = render partial: './shared/new-footer'

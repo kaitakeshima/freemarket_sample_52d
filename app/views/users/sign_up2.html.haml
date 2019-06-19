@@ -143,7 +143,7 @@
           %p.form-group__l-single-text.form-group__text-center 「次へ進む」のボタンを押すことにより、
           = link_to  '利用規約'
           に同意したものとみなします
-        %button.member-main__container__form__bottom__btn 次へ進む
+        = button_to "次へ進む", users_sign_up_address_path,method: :get, class: "member-main__container__form__bottom__btn" 
         .form-group.member-main__container__form__bottom__text-right
           %p
             = link_to '本人情報の登録について' 
