@@ -72,7 +72,7 @@ ActiveRecord::Schema.define(version: 2019_06_19_025233) do
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "buyer_number", null: false
+    t.integer "buyer_number"
     t.string "nickname", null: false
     t.string "image"
     t.string "family_name", null: false
