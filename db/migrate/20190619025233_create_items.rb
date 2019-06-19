@@ -14,6 +14,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.references :brand, foreign_key: true
       t.integer :buyer_number
       t.integer :prefecture, null:false
+      t.string :image, null:false
       t.timestamps
     end
   end

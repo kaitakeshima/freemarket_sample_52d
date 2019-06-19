@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(version: 2019_06_19_025233) do
     t.bigint "brand_id"
     t.integer "buyer_number"
     t.integer "prefecture", null: false
+    t.string "image", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["brand_id"], name: "index_items_on_brand_id"
