@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
   root 'items#index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  devise_for :users
+  devise_scope :user do
+    #deviseで追加するルーティング記載
+  end
+  resources :items
+  resources :users, only: [:show, :destroy] 
+  #その他追加するルーティングはこの下に記載
 end
