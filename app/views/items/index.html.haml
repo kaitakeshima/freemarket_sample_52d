@@ -24,19 +24,27 @@
                     = fa_icon("tag", class: "header-left-icon-logo")
                     %span.header-bold ブランドから探す
           .top-page-list-right
-            %ul.header-user-nav
-              %li.header-info
-                = link_to root_path class: "header-info-link" do
-                  = fa_icon("bell-o ")
-                  %span.header-user-nav-text お知らせ
-              %li.header-to-do
-                = link_to root_path class: "to_do-link" do
-                  = fa_icon("check")
-                  %span.header-user-nav-text やることリスト
-              %li.header-mypage
-                = link_to root_path class: "header-my-page-link" do
-                  = image_tag "mypage-image.png", class: "header-mypage-icon-image"
-                  %span.header-user-nav-text-mypage マイページ
+            -if user_signed_in?
+              %ul.header-user-nav
+                %li.header-info
+                  = link_to root_path class: "header-info-link" do
+                    = fa_icon("bell-o ")
+                    %span.header-user-nav-text お知らせ
+                %li.header-to-do
+                  = link_to root_path class: "to_do-link" do
+                    = fa_icon("check")
+                    %span.header-user-nav-text やることリスト
+                %li.header-mypage
+                  = link_to root_path class: "header-my-page-link" do
+                    = image_tag "mypage-image.png", class: "header-mypage-icon-image"
+                    %span.header-user-nav-text-mypage マイページ
+            -else
+              %ul.header-login-nav
+                %li.header-login-nav__login-button
+                  = link_to "ログイン",  new_user_registration_path, class: "header-login-nav__login-button__text"
+                %li.header-login-nav__registration-button
+                  = link_to "新規会員登録", users_view_sign_up_path, class: "header-login-nav__registration-button__text"
+
     .content-footer
       %section.content-footer__slide-box
         = image_tag "mercaricamp.png", class: "content-footer__slide-box__img"
@@ -44,7 +52,7 @@
         %h2.pickup-container__head
           ピックアップカテゴリー
         %section.item-box-container
-          = link_to root_path do
+          = link_to destroy_user_session_path, method: :delete  do
             %h3.item-box-container__text-center レディース新着アイテム
           .item-box-content
             %section.item-box
