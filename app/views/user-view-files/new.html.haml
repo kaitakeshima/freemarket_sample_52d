@@ -18,7 +18,7 @@
     .new-main__inner__content__google
       = link_to  class:"new-main--link" do
         %p.new-main__inner__content__google__icon
-          = image_tag "google-icon.jpeg", class:"image", alt:"merucari",  size: "20x20" 
+          %div= image_tag asset_path "google-icon.jpeg", class:"image", alt:"merucari",  size: "20x20" 
           Googleで登録
 
 = render partial: './shared/new-footer' 
