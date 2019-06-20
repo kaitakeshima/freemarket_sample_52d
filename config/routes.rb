@@ -23,4 +23,5 @@ Rails.application.routes.draw do
   get 'users/mypage/identification' => 'users#mypage_identification'
   get 'items/show' => 'items#show'
   get 'items/buy_confirmation' => 'items#buy_confirmation'
+  get 'items/test' => 'items#test'
 end
