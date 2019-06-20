@@ -68,15 +68,13 @@ body {
           }
           &__prefecture {
             .select-wrap {
-              width: calc(30% - 17px);
+              width: 100%;
               position: relative;
-              display: inline-block;
               margin: 8px 0 0;
               background: #fff;
               &__default {
                 padding: 0 10px;
-                width: 354px;
-                position: relative;
+                width: 100%;
                 z-index: 2;
                 height: 48px;
                 border-radius: 4px;
@@ -89,7 +87,7 @@ body {
               }
               i {
                 position: absolute;
-                left: 320px;
+                left: 294px;
                 top: 50%;
                 z-index: 2;
                 color: #888;

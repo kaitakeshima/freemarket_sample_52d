@@ -25,31 +25,6 @@ ActiveRecord::Schema.define(version: 2019_06_19_025233) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "installs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "buyer_number", null: false
-    t.string "nickname", null: false
-    t.string "image"
-    t.string "family_name", null: false
-    t.string "first_name", null: false
-    t.string "family_name_kana", null: false
-    t.string "first_name_kana", null: false
-    t.integer "birthday", null: false
-    t.integer "phone_number", null: false
-    t.integer "prefecture", null: false
-    t.string "city"
-    t.string "address"
-    t.string "building"
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_installs_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_installs_on_reset_password_token", unique: true
-  end
-
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.text "discription", null: false
@@ -64,6 +39,7 @@ ActiveRecord::Schema.define(version: 2019_06_19_025233) do
     t.bigint "brand_id"
     t.integer "buyer_number"
     t.integer "prefecture", null: false
+    t.string "image", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["brand_id"], name: "index_items_on_brand_id"

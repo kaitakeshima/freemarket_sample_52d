@@ -1,0 +1,23 @@
+= render partial: './shared/new-header'
+
+.new-main
+  .new-main__container
+    %h2.new-main__container__head
+      新規会員登録
+  .new-main__inner
+    .new-main__inner__content
+      = link_to users_sign_up_member_path  class:"new-main--link" do
+        %p.new-main__inner__content__mail
+          =fa_icon 'envelope-o'
+          メールアドレスで登録
+    .new-main__inner__content__facebook
+      = link_to  class:"new-main--link" do
+        %p.new-main__inner__content__facebook__icon
+          =fa_icon 'facebook-official'
+          Facebookで登録
+    .new-main__inner__content__google
+      = link_to  class:"new-main--link" do
+        %p.new-main__inner__content__google__icon
+          = image_tag "google-icon.jpeg", class:"image", alt:"merucari",  size: "20x20" 
+          Googleで登録
+= render partial: 'shared/new-footer'

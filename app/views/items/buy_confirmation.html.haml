@@ -18,8 +18,7 @@
         .check-contents__container__item__inner__table
           .check-contents__container__item__inner__table__cell  支払い金額
           .check-contents__container__item__inner__table__price  ¥ 300
-        .check-contents__container__item__inner__btn  購入する
-          = link_to  do
+        = button_to "購入する", root_path, method: :get, class: "check-contents__container__item__inner__btn"  
     .check-contents__container__info
       .check-contents__container__info__inner  配送先 
       .check-contents__container__info__text
