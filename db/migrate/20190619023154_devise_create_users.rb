@@ -5,15 +5,15 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
     create_table :users do |t|
       ## Database authenticatable
       t.integer :buyer_number
-      t.string  :nickname, null:false
+      t.string  :nickname
       t.string :image
-      t.string :family_name, null:false
-      t.string :first_name, null:false
-      t.string :family_name_kana, null:false
-      t.string :first_name_kana, null:false
-      t.integer :birthday, null:false
-      t.integer :phone_number, null:false
-      t.integer :prefecture, null:false
+      t.string :family_name
+      t.string :first_name
+      t.string :family_name_kana
+      t.string :first_name_kana
+      t.integer :birthday
+      t.integer :phone_number
+      t.integer :prefecture
       t.string :city
       t.string :address
       t.string :email,              null: false, default: ""
