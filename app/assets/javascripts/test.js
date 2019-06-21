@@ -1,14 +1,15 @@
-$(function() {
-  $('.slider').slick({
-      speed: 800,
-      asNavFor:'.thumb',
-      arrows: false, 
+$(document).on('turbolinks:load',function(){
+  $(function() {
+    $('.slider').slick({
+        speed: 800,
+        asNavFor:'.thumb',
+        arrows: false, 
+    });
+    $('.thumb').slick({
+      asNavFor:'.slider',
+      focusOnSelect: true,
+      slidesToShow:5,
+      slidesToScroll:1
+    });
   });
-  $('.thumb').slick({
-    asNavFor:'.slider',
-    focusOnSelect: true,
-    slidesToShow:5,
-    slidesToScroll:1
-  });
-
 });
