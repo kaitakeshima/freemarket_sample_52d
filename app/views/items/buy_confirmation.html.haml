@@ -18,7 +18,6 @@
         .check-contents__container__item__inner__table
           .check-contents__container__item__inner__table__cell  支払い金額
           .check-contents__container__item__inner__table__price  ¥ 300
-        = button_to "購入する", root_path, method: :get, class: "check-contents__container__item__inner__btn"
         = form_tag(action: :pay, method: :post ) do
           %script.payjp-button{:src => "https://checkout.pay.jp", :type => "text/javascript" ,"data-text" => "購入する" ,"data-key" => ENV['PAYJP_PUBLIC_KEY'] }
     .check-contents__container__info
