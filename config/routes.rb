@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'items#index'
   devise_for :users do 
+
   end 
   # devise_scope :user do
   #   post 'users/sign_up/member' => 'users/registrations#new'
@@ -8,7 +9,7 @@ Rails.application.routes.draw do
   #   #deviseで追加するルーティング記載
   # end
   resources :users, only: [:destroy] do
-    resources :phones, only: [:new]
+    resources :phones, only: [:new, :create]
     resources :houses, only: [:new, :create]
     resources :credits, only: [:new, :create]
   end

@@ -6,7 +6,7 @@ class PhonesController < ApplicationController
     
     @phone = Phone.new(phone_params)
     if @phone.save
-      redirect_to 
+      redirect_to new_user_house_path(current_user)
     else
       redirect_to new_user_registration_path
     end
