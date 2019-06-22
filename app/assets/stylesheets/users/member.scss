@@ -80,7 +80,7 @@ a {
               width: 76px;
               margin: 8px 0 0;
               background: #fff;
-              &__default {
+              &__default1 {
                 padding: 0 10px;
                 width: 100%;
                 position: relative;
@@ -94,6 +94,34 @@ a {
                 outline: 0;
                 background-color: #fff
               }
+              &__default2 {
+                padding: 0 10px;
+                width: 100%;
+                position: relative;
+                z-index: 2;
+                height: 48px;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+                font-size: 16px;
+                cursor: pointer;
+                -webkit-appearance: none;
+                outline: 0;
+                background-color: #fff
+              }
+              &__default3 {
+                padding: 0 10px;
+                width: 100%;
+                position: relative;
+                z-index: 2;
+                height: 48px;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+                font-size: 16px;
+                cursor: pointer;
+                -webkit-appearance: none;
+                outline: 0;
+                background-color: #fff
+              }              
               i {
                 position: absolute;
                 right: 16px;
