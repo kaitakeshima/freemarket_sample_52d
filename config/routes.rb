@@ -28,4 +28,5 @@ Rails.application.routes.draw do
   get 'items/show' => 'items#show'
   get 'items/buy_confirmation' => 'items#buy_confirmation'
   get 'items/test' => 'items#test'
+  get 'items/buy_done' => 'items#buy_done'
 end
