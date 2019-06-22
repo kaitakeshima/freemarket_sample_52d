@@ -57,6 +57,8 @@ group :development do
   gem 'rubocop', require: false
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'pry-rails'
+  gem 'pry'
 end
 
 group :test do
@@ -81,3 +83,4 @@ gem 'devise'
 gem 'carrierwave'
 gem 'payjp'
 gem 'dotenv-rails'
+gem 'active_hash'
