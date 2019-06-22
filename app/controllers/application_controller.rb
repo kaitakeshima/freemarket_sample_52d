@@ -3,7 +3,13 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   protect_from_forgery with: :exception
   def after_sign_in_path_for(resource)
-    users_sign_up_phone_path
+    if session[:aa] == 01
+      flash[:notice] = "新規登録完了しました。次に名前を入力してください" 
+      users_sign_up_phone_path
+    else 
+      flash[:notice] = "ログインに成功しました" 
+      root_url  
+    end
   end
   private
 

@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
-  def user_sign_up
+  def sign_up1
+    session[:aa] = 01
+  end
+  def sign_up3 
+    session.delete(:aa)
   end
 end
