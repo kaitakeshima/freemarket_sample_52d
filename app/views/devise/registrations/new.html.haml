@@ -37,11 +37,11 @@
           .form-group
             %label 姓カナ (全角)
             %span.form-group__form-require 必須
-            = f.text_field :family_name_kana, class: "form-group__input-default", placeholder: "例) ヤマダ"
+            = f.text_field :family_name_kana, class: "form-group__input-default", placeholder: "例) ヤマダ",  pattern: "[ァ-ヴー\s ]+"    
           .form-group
             %label 名カナ (全角)
             %span.form-group__form-require 必須
-            = f.text_field  :first_name_kana, class: "form-group__input-default", placeholder: "例) アヤ"
+            = f.text_field  :first_name_kana, class: "form-group__input-default", placeholder: "例) アヤ", pattern: "[ァ-ヴー\s ]+"    
           .form-group
             %label 生年月日
             %span.form-group__form-require 必須
