@@ -1,0 +1,19 @@
+= render partial: './shared/new-header'
+= form_for @phone, url: phones_path  do |f|
+  .phone-main
+    .phone-main__container
+      %h2.phone-main__container__head 電話番号の確認
+      .phone-main__container__inner
+        .phone-main__container__inner__content
+          .phone-main__container__inner__content__form-group
+            %label 携帯電話の番号
+            = f.text_field :number, class: "phone-main__container__inner__content__form-group__input", placeholder: "携帯電話の番号を入力",  maxlength: "13", pattern: "[0-9]{11,13}" 
+          %p 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
+          = button_to "SMSを送信する",users_sign_up_address_path,method: :get  ,class: "phone-main__container__inner__content__btn" 
+          %p ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
+          .phone-main__container__inner__content__form-group.phone-main__container__inner__content__text-right
+            = f.hidden_field :user_id, value: current_user.id
+            = link_to '電話番号の確認が必要な理由'
+            =fa_icon 'angle-right'
+
+  = render partial: './shared/new-footer'
