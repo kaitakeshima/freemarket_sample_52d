@@ -43,7 +43,7 @@
             %span.pay-conatainer__inner__content__form__card-number__require
               必須
             =  f.text_field  :securyty_code, maxlength:"4", placeholder: "カード背面4桁もしくは3桁の番号", class: "pay-conatainer__inner__content__form__card-number__default"
-            = = f.hidden_field :user_id, value: current_user.id
+            =  f.hidden_field :user_id, value: current_user.id
         .pay-conatainer__inner__content
 
           = button_to "次へ進む", users_sign_up_done_path, method: :get ,class:"nextbtn-red"
