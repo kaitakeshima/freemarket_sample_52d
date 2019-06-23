@@ -1,17 +1,27 @@
 Rails.application.routes.draw do
   root 'items#index'
-  devise_for :users
+  devise_for :users do 
+
+  end 
   # devise_scope :user do
   #   post 'users/sign_up/member' => 'users/registrations#new'
   #   get 'users/sign_up/phone' => 'users/registrations#'
   #   #deviseで追加するルーティング記載
   # end
+
+  resources :users, only: [:destroy] do
+    resources :phones, only: [:new, :create]
+    resources :houses, only: [:new, :create]
+    resources :credits, only: [:new, :create]
+  end
+  resources :phones, only: [:create]
   resources :items, only: [:new] do
     collection do
       post 'pay' 
     end
   end
   resources :users, only: [:destroy] 
+
   #その他追加するルーティングはこの下に記載
   get 'users/sign_up/new' => 'users#sign_up1' 
   get 'users/sign_up/member' => 'users#sign_up2'
