@@ -5,7 +5,7 @@ class HousesController < ApplicationController
   def create
     @house = House.new(house_params)
     if @house.save
-      redirect_to root_path
+      redirect_to new_user_credit_path(current_user)
     else
       redirect_to new_user_phone_path
     end

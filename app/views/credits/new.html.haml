@@ -1,0 +1,52 @@
+= render partial: './shared/new-header'
+= form_for @credit, url:  user_credits_path do |f|
+  .pay-page-single-main
+    .pay-conatainer
+      %h2.pay-conatainer__head
+        支払い方法
+      .pay-conatainer__inner
+        .pay-conatainer__inner__content
+          .pay-conatainer__inner__content__form__card-number
+            %label.pay-conatainer__inner__content__form__card-number__number-label
+              カード番号
+            %span.pay-conatainer__inner__content__form__card-number__require
+              必須
+            = f.text_field :card_number, placeholder: "半角数字のみ", maxlength:"16", class: "pay-conatainer__inner__content__form__card-number__default"
+            .pay-conatainer__inner__content__form__card-number__card-logs
+              = image_tag("Visa.svg.png", class: "card-img-visa")
+              = image_tag("mastercard.jpg", class: "card-img-master")
+              = image_tag("saison.png", class: "card-img-saison")
+              = image_tag("american.png", class: "card-img-american")
+              = image_tag("diners.png", class: "card-img-diners")
+              = image_tag("discover.jpg", class: "card-img")
+          .pay-conatainer__inner__content__form
+            %label.pay-conatainer__inner__content__form__card-number__expiration-date-label
+              有効期限
+            %span.pay-conatainer__inner__content__form__card-number__require
+              必須
+            .pay-conatainer__inner__content__form__select-wrap
+              .pay-conatainer__inner__content__form__select-wrap__select-month
+                = f.select :expiration_month, [["--", nil],["1",1],["2",2],["3",3],["4",4],["5",5],["6",6],["7",7],["8",8],["9",9],["10",10],["11",11],["12",12] ], {}, class: "select-default"
+                %i.fa.fa-chevron-down
+                %span.pay-conatainer__inner__content__form__select-wrap__text-month
+                  月
+              .pay-conatainer__inner__content__form__select-wrap__select-month
+                = f.select :expiration_year, [ ["--",nil], ["19",1], ["20", 2], ["21",3],["22",4],["23",5],["24",6], ["25",7],["26",8],["27",9],["28",10],["29",11],["30",12], ["31",13],["32",14]], {}, class: "select-default"
+                %i.fa.fa-chevron-down
+                %span.pay-conatainer__inner__content__form__select-wrap__text-month
+                  年
+              .pay-conatainer__inner__content__form__select-wrap__year
+                
+          .pay-conatainer__inner__content__form
+            .pay-conatainer__inner__content__form__card-number__securty-label
+              セキュリティコード
+            %span.pay-conatainer__inner__content__form__card-number__require
+              必須
+            =  f.text_field  :securyty_code, maxlength:"4", placeholder: "カード背面4桁もしくは3桁の番号", class: "pay-conatainer__inner__content__form__card-number__default"
+            = = f.hidden_field :user_id, value: current_user.id
+        .pay-conatainer__inner__content
+
+          = button_to "次へ進む", users_sign_up_done_path, method: :get ,class:"nextbtn-red"
+          
+          
+= render partial: './shared/new-footer'
