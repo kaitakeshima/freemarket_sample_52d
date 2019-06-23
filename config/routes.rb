@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   root 'items#index'
-  devise_for :users do 
-
-  end 
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks', registrations: 'users/registrations' }
   # devise_scope :user do
   #   post 'users/sign_up/member' => 'users/registrations#new'
   #   get 'users/sign_up/phone' => 'users/registrations#'
