@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   def index
     session[:aa] = 00
+    # @items = Item.all.order('id DESC').limit(4)
   end
   def detail
   end
