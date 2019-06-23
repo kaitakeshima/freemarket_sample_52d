@@ -34,6 +34,7 @@ Rails.application.routes.draw do
   get 'users/mypage/destroy' => 'users#mypage_session_destroy'
   get 'users/mypage/profile' => 'users#profile'
   get 'users/mypage/credit' => 'users#credit'
+  get 'users/mypage/mypagecardtouroku' => 'users#mypagecardtouroku'
   get 'users/mypage/identification' => 'users#mypage_identification'
   get 'items/show' => 'items#show'
   get 'items/buy_confirmation' => 'items#buy_confirmation'
