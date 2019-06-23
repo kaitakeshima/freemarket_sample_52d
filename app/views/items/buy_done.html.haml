@@ -1,8 +1,13 @@
 = render partial: './shared/new-header'
 .check-contents
   .check-contents__container
+    .check-contents__container__done
+      .check-contents__container__done__red
+        発送をお待ちください
+      .check-contents__container__done__black
+        出品者からの発送通知をお待ちください
     %h2 
-    .check-contents__container__head 購入内容の確認
+    .check-contents__container__head 購入が完了しました
     .check-contents__container__item
       .check-contents__container__item__inner
         .check-contents__container__item__inner__image 
@@ -17,9 +22,8 @@
           .check-contents__container__item__inner__buy-accordion__toggle  ポイントはありません
         .check-contents__container__item__inner__table
           .check-contents__container__item__inner__table__cell  支払い金額
-          .check-contents__container__item__inner__table__price  ¥ 300
-        = form_tag(action: :pay, method: :post ) do
-          %script.payjp-button{:src => "https://checkout.pay.jp", :type => "text/javascript" ,"data-text" => "購入する" ,"data-key" => ENV['PAYJP_PUBLIC_KEY'] }
+          .check-contents__container__item__inner__table__price  ¥ 300 
+
     .check-contents__container__info
       .check-contents__container__info__inner  配送先 
       .check-contents__container__info__text
@@ -27,8 +31,7 @@
         .check-contents__container__info__adress  大阪府 大阪市中央区博労町１町目７−９プレサンス心斎橋ブライト５０３号室
         .check-contents__container__info__name  吉田 優作
         .check-contents__container__info__fix
-          = link_to  do
-            %span  変更する
+
     .check-contents__container__user-info
       .check-contents__container__user-info__inner
         %h3  支払い方法
@@ -38,6 +41,8 @@
         .check-contents__container__user-info__inner__figure 
           = image_tag "master-card.svg", class:"image", alt:"merucari",  size: "34x20"
         .check-contents__container__user-info__inner__fix
-          = link_to  do
-            %span  変更する
+        .done
+          = link_to root_path do
+            %span マイページに戻る
+
 = render partial: './shared/new-footer'

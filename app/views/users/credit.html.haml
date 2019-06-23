@@ -1,26 +1,28 @@
 = render partial: "shared/topheader"
 = render partial: "shared/pankuzukari"
 
-.ohako
-  .ohako__content
-    .ohako__content__container
-      %h2.ohako__content__container__head 支払い方法
-      .ohako__content__container__inner
-        %section
-          .ohako__content__container__inner__content
-            %h3.ohako__content__container__inner__content__head クレジットカード一覧
-        %section.ohako__content__container__inner__card
-          .ohako__content__container__inner__card__content
-            .ohako__content__container__inner__card__content__button 
-              = fa_icon 'credit-card'
-              = link_to 'クレジットカードを追加する'
+.oobako
+  .ohako
+    = render partial: "shared/mypageside"
+    .ohako__content
+      .ohako__content__container
+        %h2.ohako__content__container__head 支払い方法
+        .ohako__content__container__inner
+          %section
+            .ohako__content__container__inner__content
+              %h3.ohako__content__container__inner__content__head クレジットカード一覧
+          %section.ohako__content__container__inner__card
+            .ohako__content__container__inner__card__content
+              .ohako__content__container__inner__card__content__button 
+                = fa_icon 'credit-card'
+                = link_to 'クレジットカードを追加する'
 
-        .ohako__content__container__inner__regist
-          = link_to '支払い方法について'
-          = fa_icon 'angle-right'
+          .ohako__content__container__inner__regist
+            = link_to '支払い方法について'
+            = fa_icon 'angle-right'
             
 
-  = render partial: "shared/mypageside"
+  
 
 
 
