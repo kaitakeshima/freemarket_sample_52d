@@ -10,6 +10,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
   def user_sign_up
   end
+  
   def newe
   end
   # POST /resource
@@ -63,15 +64,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super(resource)
   # end
   def create
-    #binding.pry
-     if params[:user][:password] == "" #sns登録なら
+     if params[:user][:password] == "" 
        params[:user][:password] = "Devise.friendly_token.first(6)" #deviseのパスワード自動生成機能を使用
        params[:user][:password_confirmation] = "Devise.friendly_token.first(6)"
        super
-       # binding.pry
        sns = SnsCredential.update(user_id:  @user.id)
-     else #email登録なら
-       # binding.pry
+     else 
        super
      end
    end

@@ -11,6 +11,7 @@ class User < ApplicationRecord
   validates :first_name_kana, presence: true
   validates :city, presence: true
   validates :birthday, presence: true
+  validates :password, presence: true
 
   def self.find_oauth(auth)
     uid = auth.uid

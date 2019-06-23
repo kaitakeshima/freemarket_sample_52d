@@ -16,7 +16,7 @@
           =fa_icon 'facebook-official'
           Facebookで登録
     .new-main__inner__content__google
-      = link_to  class:"new-main--link" do
+      = link_to user_google_oauth2_omniauth_authorize_path class:"new-main--link" do
         %p.new-main__inner__content__google__icon
           = image_tag "google.jpg", class:"image", alt:"merucari",  size: "20x20" 
           Googleで登録
