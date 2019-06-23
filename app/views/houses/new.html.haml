@@ -8,7 +8,7 @@
           .form-group
             %label 郵便番号
             %span.form-group__form-require 必須
-            = f.text_field :postalcode, class: "form-group__input-default",placeholder: "例) 123-4567"
+            = f.text_field :postalcode, class: "form-group__input-default",placeholder: "例) 123-4567", maxlength: "8",  pattern: "[0-9]{3}-[0-9]{4}"
           .form-group
             %label 都道府県
             %span.form-group__form-require 必須

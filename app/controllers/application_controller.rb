@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   def after_sign_in_path_for(resource)
     if session[:aa] == 01
-      flash[:notice] = "新規登録完了しました。次に電話番号を入力してください" 
+      flash[:notice] = "ユーザー新規登録完了しました。次に電話番号を入力してください" 
       new_user_phone_path(current_user)
     else 
       flash[:notice] = "ログインに成功しました" 

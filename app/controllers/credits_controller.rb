@@ -7,7 +7,7 @@ class CreditsController < ApplicationController
     if @credit.save
       redirect_to users_sign_up_done_path
     else
-      redirect_to new_user_credit_path
+      render action: :new
     end
   end
   private

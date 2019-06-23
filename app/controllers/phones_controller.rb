@@ -3,12 +3,11 @@ class PhonesController < ApplicationController
     @phone = Phone.new
   end
   def create
-    
     @phone = Phone.new(phone_params)
     if @phone.save
       redirect_to new_user_house_path(current_user)
     else
-      redirect_to new_user_registration_path
+      render action: :new
     end
   end
   private

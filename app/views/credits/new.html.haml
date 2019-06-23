@@ -11,7 +11,7 @@
               カード番号
             %span.pay-conatainer__inner__content__form__card-number__require
               必須
-            = f.text_field :card_number, placeholder: "半角数字のみ", maxlength:"16", class: "pay-conatainer__inner__content__form__card-number__default"
+            = f.text_field :card_number, placeholder: "半角数字のみ(16文字)", maxlength:"16", class: "pay-conatainer__inner__content__form__card-number__default", pattern: "[0-9]{16,16}"
             .pay-conatainer__inner__content__form__card-number__card-logs
               = image_tag("Visa.svg.png", class: "card-img-visa")
               = image_tag("mastercard.jpg", class: "card-img-master")

@@ -7,7 +7,7 @@ class HousesController < ApplicationController
     if @house.save
       redirect_to new_user_credit_path(current_user)
     else
-      redirect_to new_user_phone_path
+      render action: :new
     end
   end
   private
