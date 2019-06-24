@@ -28,4 +28,4 @@
 
 /.DS_Store
 /.env
-/.secrets.yml
+config/secrets.yml
