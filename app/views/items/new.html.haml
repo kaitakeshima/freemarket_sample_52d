@@ -4,6 +4,7 @@
   .sell-container#sell-container
     %h2.sell-container__item-info  商品の情報を入力
     = form_with model: @item, local: true, class: "sell-form" do |f|
+      =f.hidden_field :status, value: "1"
       .sell-form__upload
         %h3.sell-form__upload--head
           出品画像
