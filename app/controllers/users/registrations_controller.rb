@@ -10,6 +10,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
   def user_sign_up
   end
+  
   def newe
   end
   # POST /resource
@@ -62,4 +63,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+  def create
+     if params[:user][:password] == "" 
+       params[:user][:password] = "Devise.friendly_token.first(6)" #deviseのパスワード自動生成機能を使用
+       params[:user][:password_confirmation] = "Devise.friendly_token.first(6)"
+       super
+       sns = SnsCredential.update(user_id:  @user.id)
+     else 
+       super
+     end
+   end
 end

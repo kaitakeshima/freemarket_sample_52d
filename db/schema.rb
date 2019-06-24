@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_22_101424) do
+ActiveRecord::Schema.define(version: 2019_06_23_105050) do
 
   create_table "brands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -57,16 +57,13 @@ ActiveRecord::Schema.define(version: 2019_06_22_101424) do
     t.integer "delivery_days", null: false
     t.integer "price", null: false
     t.integer "size"
-    t.bigint "category_id"
     t.bigint "user_id", null: false
-    t.bigint "brand_id"
+    t.string "brand"
     t.integer "buyer_number"
     t.integer "prefecture", null: false
     t.string "image", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["brand_id"], name: "index_items_on_brand_id"
-    t.index ["category_id"], name: "index_items_on_category_id"
     t.index ["user_id"], name: "index_items_on_user_id"
   end
 
@@ -76,6 +73,15 @@ ActiveRecord::Schema.define(version: 2019_06_22_101424) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_phones_on_user_id"
+  end
+
+  create_table "sns_credentials", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "provider"
+    t.string "uid"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_sns_credentials_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -104,8 +110,7 @@ ActiveRecord::Schema.define(version: 2019_06_22_101424) do
 
   add_foreign_key "credits", "users"
   add_foreign_key "houses", "users"
-  add_foreign_key "items", "brands"
-  add_foreign_key "items", "categories"
   add_foreign_key "items", "users"
   add_foreign_key "phones", "users"
+  add_foreign_key "sns_credentials", "users"
 end
