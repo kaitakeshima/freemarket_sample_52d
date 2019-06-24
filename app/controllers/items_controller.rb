@@ -3,6 +3,11 @@ class ItemsController < ApplicationController
     session[:aa] = 00
     # @items = Item.all.order('id DESC').limit(4)
   end
+  
+  def new
+    @item = Item.new
+  end
+
   def detail
   end
   def buy_confirmation
