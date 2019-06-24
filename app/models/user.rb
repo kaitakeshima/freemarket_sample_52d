@@ -30,13 +30,6 @@ class User < ApplicationRecord
 
     else
       user = User.where(email: auth.info.email).first
-    end
-  
-  def users.oauth(auth)
-    uid = auth.uid
-    provider = auth.provider
-    snscredential = SnsCredential.where(uid: uid, provider: provider).first
-
       if user.present?
         sns = SnsCredential.new(
           uid: uid,
