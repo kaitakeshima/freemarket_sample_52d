@@ -17,3 +17,14 @@
 //= require turbolinks
 //= require_tree .
 
+$(function(){
+  $("#input-price").on("keyup", function(){
+    var input = $('#input-price').val();
+    var fee = Math.floor(input * 0.1);
+    var income = input - fee;
+    $("#price-fee").html("¥ " + fee)
+    $("#price-income").html("¥ " + income)
+  });
+
+});
+
