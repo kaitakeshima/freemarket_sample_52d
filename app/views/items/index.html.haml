@@ -55,264 +55,123 @@
           = link_to  new_user_registration_path, method: :delete  do
             %h3.item-box-container__text-center レディース新着アイテム
           .item-box-content
-            %section.item-box
-              = link_to items_show_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ケイトスペード ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-            %section.item-box
-              = link_to  new_user_registration_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ログインリンク
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-            %section.item-box
-              = link_to items_test_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ここテストリンク
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
+            - @items.each do |item|
+              %section.item-box
+                = link_to items_show_path  do
+                  %figure.item-box__content-photo
+                    = image_tag item.image.url, class: :"item-box__content-photo__img"
+                  .item-box__content-body
+                    %h3.item-box__content-body__item-name 
+                      = item.name
+                    .item-box__content-body__num
+                      .item-box__content-body__num__price
+                        %p.item-box__content-body__num__price__text 
+                          = "¥#{item.price}"
+                      %div
+                        %p.item-box__content-body__tax (税込)
           = link_to root_path do
             .item-box-content-view
               %p.item-box-content-view-all
                 全ての商品を見る
                 %section.item-box-container
+
           = link_to root_path do
             %h3.item-box-container__text-center メンズ 新着アイテム
           .item-box-content
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ケイトスペード ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
+            - @items.each do |item|
+              %section.item-box
+                = link_to items_show_path  do
+                  %figure.item-box__content-photo
+                    = image_tag item.image.url, class: :"item-box__content-photo__img"
+                  .item-box__content-body
+                    %h3.item-box__content-body__item-name 
+                      = item.name
+                    .item-box__content-body__num
+                      .item-box__content-body__num__price
+                        %p.item-box__content-body__num__price__text 
+                          = "¥#{item.price}"
+                      %div
+                        %p.item-box__content-body__tax (税込)
           = link_to root_path do
             .item-box-content-view
               %p.item-box-content-view-all
                 全ての商品を見る
                 %section.item-box-container
+
           = link_to root_path do
             %h3.item-box-container__text-center ベビー・キッズ 新着アイテム
           .item-box-content
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ケイトスペード ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
+            - @items.each do |item|
+              %section.item-box
+                = link_to items_show_path  do
+                  %figure.item-box__content-photo
+                    = image_tag item.image.url, class: :"item-box__content-photo__img"
+                  .item-box__content-body
+                    %h3.item-box__content-body__item-name 
+                      = item.name
+                    .item-box__content-body__num
+                      .item-box__content-body__num__price
+                        %p.item-box__content-body__num__price__text 
+                          = "¥#{item.price}"
+                      %div
+                        %p.item-box__content-body__tax (税込)
           = link_to root_path do
             .item-box-content-view
               %p.item-box-content-view-all
                 全ての商品を見る
+                %section.item-box-container
+
         %section.item-box-container
           = link_to root_path do
             %h3.item-box-container__text-center コスメ・香水・美容 新着アイテム
           .item-box-content
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ケイトスペード ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
+            - @items.each do |item|
+              %section.item-box
+                = link_to items_show_path  do
+                  %figure.item-box__content-photo
+                    = image_tag item.image.url, class: :"item-box__content-photo__img"
+                  .item-box__content-body
+                    %h3.item-box__content-body__item-name 
+                      = item.name
+                    .item-box__content-body__num
+                      .item-box__content-body__num__price
+                        %p.item-box__content-body__num__price__text 
+                          = "¥#{item.price}"
+                      %div
+                        %p.item-box__content-body__tax (税込)
           = link_to root_path do
             .item-box-content-view
               %p.item-box-content-view-all
                 全ての商品を見る
+                %section.item-box-container
+
+            
         %h2.pickup-container__head
           ピックアップブランド
         %section.item-box-container
           = link_to root_path do
             %h3.item-box-container__text-center シャネル 新着アイテム
           .item-box-content
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ケイトスペード ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
-            %section.item-box
-              = link_to root_path  do
-                %figure.item-box__content-photo
-                  = image_tag "image-sample01.jpg",class:"item-box__content-photo__img"
-                .item-box__content-body
-                  %h3.item-box__content-body__item-name ショルダーバッグ
-                  .item-box__content-body__num
-                    .item-box__content-body__num__price
-                      %p.item-box__content-body__num__price__text ¥ 2900
-                    %div
-                      %p.item-box__content-body__tax (税込)
+            - @items.each do |item|
+              %section.item-box
+                = link_to items_show_path  do
+                  %figure.item-box__content-photo
+                    = image_tag item.image.url, class: :"item-box__content-photo__img"
+                  .item-box__content-body
+                    %h3.item-box__content-body__item-name 
+                      = item.name
+                    .item-box__content-body__num
+                      .item-box__content-body__num__price
+                        %p.item-box__content-body__num__price__text 
+                          = "¥#{item.price}"
+                      %div
+                        %p.item-box__content-body__tax (税込)
           = link_to root_path do
             .item-box-content-view
               %p.item-box-content-view-all
                 全ての商品を見る
+                %section.item-box-container
+
       .app-banner
         = image_tag "banar-image.png", class: "app-banar-img"
       %footer.footer-top-page
