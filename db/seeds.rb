@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+lady = Category.create(:name => "レディース")
+mens = Category.create(:name => "メンズ")
+lady_tops = lady.children.create(:name => "ジャケット/アウター")
+mens_leg = mens.children.create(:name => "レッグウェア")
+lady_tops.children.create([{:name => "Tシャツ(半袖/袖なし)"}, {:name => "Tシャツ/カットソー(七分/長袖)"}])
+mens_socks = mens_leg.children.create(:name => "靴下")

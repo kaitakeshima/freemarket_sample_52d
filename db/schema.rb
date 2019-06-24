@@ -57,16 +57,13 @@ ActiveRecord::Schema.define(version: 2019_06_22_101424) do
     t.integer "delivery_days", null: false
     t.integer "price", null: false
     t.integer "size"
-    t.bigint "category_id"
     t.bigint "user_id", null: false
-    t.bigint "brand_id"
+    t.string "brand"
     t.integer "buyer_number"
     t.integer "prefecture", null: false
     t.string "image", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["brand_id"], name: "index_items_on_brand_id"
-    t.index ["category_id"], name: "index_items_on_category_id"
     t.index ["user_id"], name: "index_items_on_user_id"
   end
 
@@ -104,8 +101,6 @@ ActiveRecord::Schema.define(version: 2019_06_22_101424) do
 
   add_foreign_key "credits", "users"
   add_foreign_key "houses", "users"
-  add_foreign_key "items", "brands"
-  add_foreign_key "items", "categories"
   add_foreign_key "items", "users"
   add_foreign_key "phones", "users"
 end

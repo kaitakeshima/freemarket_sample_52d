@@ -19,7 +19,7 @@ Rails.application.routes.draw do
     end
   end
   resources :users, only: [:destroy] 
-
+  resources :categories, only: [:index]
   #その他追加するルーティングはこの下に記載
   get 'users/sign_up/new' => 'users#sign_up1' 
   get 'users/sign_up/member' => 'users#sign_up2'
