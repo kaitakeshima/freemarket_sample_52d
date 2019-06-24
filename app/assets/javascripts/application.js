@@ -26,5 +26,37 @@ $(function(){
     $("#price-income").html("¥ " + income)
   });
 
+  $("#select-category-a").change(function() {
+    var select_val = $("#select-category-a").val();
+    if( select_val > 0 ) {
+      $('.sell-form-box__group__div__select-wrap-b').css('display', 'block');
+    }
+    else {
+      $('.sell-form-box__group__div__select-wrap-b').css('display', 'none');
+    }
+  });
+
+  $("#select-category-b").change(function() {
+    var select_val = $("#select-category-b").val();
+    if( select_val > 0 ) {
+      $('.sell-form-box__group__div__select-wrap-c').css('display', 'block');
+    }
+    else {
+      $('.sell-form-box__group__div__select-wrap-c').css('display', 'none');
+    }
+  });
+
+  $("#select-category-c").change(function() {
+    var select_val = $("#select-category-c").val();
+    if( select_val > 0 ) {
+      $('#select-size-wrap').css('display', 'block');
+      $('#brand-suggest-wrap').css('display', 'block');
+    }
+    else {
+      $('#select-size-wrap').css('display', 'none');
+      $('#brand-suggest-wrap').css('display', 'none');
+    }
+  });
+
 });
 
