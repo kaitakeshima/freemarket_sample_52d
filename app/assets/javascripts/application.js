@@ -58,5 +58,15 @@ $(function(){
     }
   });
 
+  $("#brand-input").on("keyup", function(){
+    var input = $('#brand-input').val();
+    if (input.length > 0) {
+      $('#brand-suggest').css('display', 'block');
+    }
+    else {
+      $('#brand-suggest').css('display', 'none');
+    }
+  });
+
 });
 
