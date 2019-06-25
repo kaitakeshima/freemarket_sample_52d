@@ -14,10 +14,14 @@ Rails.application.routes.draw do
     resources :credits, only: [:new, :create]
   end
   resources :phones, only: [:create]
-  resources :items, only: [:index, :new, :create] do
+  resources :items, only: [:index, :new, :create, :show] do
     collection do
-      post 'pay' 
+      post 'pay/:id' => 'items#pay', as: 'pay'
     end
+    member do
+      get 'buy'
+      get 'buy_done'
+    end  
   end
   resources :users, only: [:destroy] 
 
@@ -36,7 +40,7 @@ Rails.application.routes.draw do
   get 'users/mypage/mypagecardtouroku' => 'users#mypagecardtouroku'
   get 'users/mypage/identification' => 'users#mypage_identification'
   get 'items/show' => 'items#show'
-  get 'items/buy_confirmation' => 'items#buy_confirmation'
+  # get 'items/buy_confirmation' => 'items#buy_confirmation'
   get 'items/test' => 'items#test'
   get 'items/buy_done' => 'items#buy_done'
 end
