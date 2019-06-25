@@ -7,7 +7,8 @@
       .check-contents__container__item__inner
         .check-contents__container__item__inner__image 
           = image_tag "item.jpg", class:"image", alt:"merucari",  size: "128x128"
-        .check-contents__container__item__inner__name  bobino コード巻き取り
+        .check-contents__container__item__inner__name  
+          = @item.name
         .check-contents__container__item__inner__kingaku
           .check-contents__container__item__inner__kingaku__price
             %p  ¥ 300 
