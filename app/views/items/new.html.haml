@@ -112,7 +112,7 @@
               商品の状態
               %span.require-input  必須
             .sell-form-box__group__select-wrap
-              = f.select :condition, [["---", ""], ["新品、未使用", "1"], ["未使用に近い", "2"], ["目立った傷や汚れなし", "3"], ["やや傷や汚れあり", "4"], ["傷や汚れあり", "5"], ["全体的に状態が悪い", "6"]], {}, {class: "select-default"}
+              = f.select :condition,Item.conditions.keys, {}, class: "select-default"
               %i.icon-arrow-bottom
                 = fa_icon 'chevron-down', class: 'icon'
       .sell-form__content.sell-content
@@ -125,7 +125,7 @@
               配送料の負担
               %span.require-input  必須
             .sell-form-box__group__select-wrap
-              = f.select :delivery_fee, [["---", ""], ["着払い（購入者負担）", "1"], ["送料込み（出品者負担）", "2"]], {}, {class: "select-default"}
+              = f.select :delivery_fee, Item.delivery_fees.keys, {}, {class: "select-default"}
               %i.icon-arrow-bottom
                 = fa_icon 'chevron-down', class: 'icon'
           .sell-form-box__group
@@ -133,7 +133,7 @@
               配送の方法
               %span.require-input  必須
             .sell-form-box__group__select-wrap
-              = f.select :delivery_method, [["---", ""], ["未定", "1"], ["らくらくメルカリ便", "2"]], {}, {class: "select-default"}
+              = f.select :delivery_method, Item.delivery_methods.keys , {}, {class: "select-default"}
               %i.icon-arrow-bottom
                 = fa_icon 'chevron-down', class: 'icon'
           .sell-form-box__group
@@ -141,7 +141,7 @@
               発送元の地域
               %span.require-input  必須
             .sell-form-box__group__select-wrap
-              = f.select :prefecture, [["---", ""], ["北海道", "1"], ["青森", "2"]], {}, {class: "select-default"}
+              = f.select :prefecture, Item.prefectures.keys, {}, {class: "select-default"}
               %i.icon-arrow-bottom
                 = fa_icon 'chevron-down', class: 'icon'
           .sell-form-box__group
@@ -149,7 +149,7 @@
               発送までの日数
               %span.require-input  必須
             .sell-form-box__group__select-wrap
-              = f.select :delivery_days, [["---", ""], ["１〜２日で発送", "1"], ["２〜３日で発送", "2"], ["４〜７日で発送", "3"]], {}, {class: "select-default"}
+              = f.select :delivery_days, Item.delivery_days.keys , {}, {class: "select-default"}
               %i.icon-arrow-bottom
                 = fa_icon 'chevron-down', class: 'icon'
       .sell-form__content.sell-content
@@ -164,7 +164,7 @@
                   価格
                   %span.require-input  必須
                 .sell-form-box__list__price__div--right
-                  .sell-form-box__list__price__div--right--p  ￥　
+                  .sell-form-box__list__price__div--right--p  ￥
                   .sell-form-box__list__price__div__input
                     = f.text_field :price, type: "tel", id: "input-price", class: "sell-form-box__list__price__div__input input-default", placeholder: "例）300", value: ""
             %li.sell-form-box__list__price__1
