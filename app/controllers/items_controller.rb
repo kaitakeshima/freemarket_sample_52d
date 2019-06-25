@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
   def index
     session[:aa] = 00
     @items = Item.all.order('id DESC').limit(4)
+    
   end
   def new
     @item = Item.new
@@ -14,14 +15,31 @@ class ItemsController < ApplicationController
       render action: :new
     end
   end
+  
+  def show
+    @item = Item.find(params[:id])
+
+  end
+
   def detail
   end
   def buy_confirmation
   end
+  
+  def buy
+    @item = Item.find(params[:id])
+  end
+  
+  def buy_done
+    @item = Item.find(params[:id])
+  end  
+
   def pay
+    item = Item.find(params[:id])
     Payjp.api_key = ENV['PAYJP_SECRET_KEY']
-    Payjp::Charge.create(currency: 'jpy', amount: 100, card: params['payjp-token'])
-    redirect_to items_buy_done_path, notice: "支払いが完了しました"
+    Payjp::Charge.create(currency: 'jpy', amount: item.price, card: params['payjp-token'])
+    
+    redirect_to "/items/#{item.id}/buy_done" 
   end
 
   private

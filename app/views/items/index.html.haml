@@ -57,7 +57,7 @@
           .item-box-content
             - @items.each do |item|
               %section.item-box
-                = link_to items_show_path  do
+                = link_to item_path(item), method: :get do
                   %figure.item-box__content-photo
                     = image_tag item.image.url, class: :"item-box__content-photo__img"
                   .item-box__content-body
