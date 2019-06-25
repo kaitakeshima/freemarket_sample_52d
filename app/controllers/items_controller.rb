@@ -21,6 +21,23 @@ class ItemsController < ApplicationController
   end
   def buy_confirmation
   end
+
+  def show
+    @item = Item.find(1)
+  end
+
+  def edit
+    @item = Item.find(params[:id])
+  end
+
+  def update
+    item = Item.find(params[:id])
+    if item.user_id == current_user.id
+      item.update(item_params)
+    else
+      render action:  :edit 
+    end
+  end
   def pay
     Payjp.api_key = ENV['PAYJP_SECRET_KEY']
     Payjp::Charge.create(currency: 'jpy', amount: 100, card: params['payjp-token'])
