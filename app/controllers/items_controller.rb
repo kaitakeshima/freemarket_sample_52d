@@ -18,7 +18,7 @@ class ItemsController < ApplicationController
   
   def show
     @item = Item.find(params[:id])
-    @items = Item.order('id DESC').limit(6)
+    @items = Item.order('id DESC').limit(3)
   end
 
   def detail
