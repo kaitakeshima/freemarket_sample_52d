@@ -264,11 +264,38 @@ h3 {
               color: #333;
               width: 213px;
               height: 220px;
+              position: relative;
               &__img{
                 display: block;
                 vertical-align: middle;
                 width: 213px;
                 height: 220px;
+              }
+              .soldout{
+                // height: 50px;
+                // width: 50px;
+                // background-color: #ff3333;
+                z-index: 1;
+                position: absolute;
+                display: flex;
+                top: 0;
+                left: 0;
+                border-top: 60px solid #ff3333;
+                border-right: 60px solid transparent;
+                border-bottom: 60px solid transparent;
+                border-left: 60px solid #ff3333;
+                &__text{
+                  background-color: #ff3333;
+                  z-index: 2;
+                  transform: rotate(-45deg);
+                  position: absolute;
+                  display: flex;
+                  top: 27px;
+                  left: 7px;
+                  color: white;
+                  font-size: 25px;
+                  font-weight: bold;
+                }
               }
             }
             &__content-body{
