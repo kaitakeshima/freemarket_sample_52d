@@ -167,7 +167,7 @@
                 .sell-form-box__list__price__div--right
                   .sell-form-box__list__price__div--right--p  ￥　
                   .sell-form-box__list__price__div__input
-                    = f.text_field :price, type: "tel", id: "input-price", class: "sell-form-box__list__price__div__input input-default", placeholder: "例）300", value: ""
+                    = f.text_field :price, type: "number", id: "input-price", class: "sell-form-box__list__price__div__input input-default", placeholder: "例）300", value: ""
             %li.sell-form-box__list__price__1
               .sell-form-box__list__price__1--left  販売手数料 （10%）
               #price-fee.sell-form-box__list__price__1--right
@@ -193,7 +193,7 @@
             %span.pointer  加盟店規約
             %span  に同意したことになります。
         = f.submit "出品する", class: "sell-form__sell-btn-box__btn-red"
-        %button.sell-form__sell-btn-box__btn-gray もどる
+        = button_to "もどる", root_path, {method: :get, class: "sell-form__sell-btn-box__btn-gray"}
     .sell-container__overlay
 
 = render partial: './shared/new-footer'
