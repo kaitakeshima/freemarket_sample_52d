@@ -1,8 +1,9 @@
 %nav.karinav
   %ul
-    %li{:itemscope => "", :itemtype => "http://data-vocabulary.org/Breadcrumb"}
-      %a{:href => "https://www.mercari.com/jp/", :itemprop => "url"}
-        %span.navmerkari{:itemprop => "title"} メルカリ  ＞
-      %i.icon-arrow-right
-    %li{:itemscope => "", :itemtype => "http://data-vocabulary.org/Breadcrumb"}
-      %span.navsyousai{:itemprop => "title"} 新品 タグ付き babyGAP ベビーギャップ 襟付き 長袖 カットソー 80
+    %li
+      - case params.values_at :controller, :action
+      - when ['users','mypage']
+        - breadcrumb :user
+      - when ['users','mypage_session_destroy']
+        - breadcrumb :user_logout
+      = breadcrumbs separator: "  ＞  "
