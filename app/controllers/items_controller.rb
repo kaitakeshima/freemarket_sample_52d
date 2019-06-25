@@ -19,7 +19,6 @@ class ItemsController < ApplicationController
   def show
     @item = Item.find(params[:id])
     @items = Item.all.order('id DESC').limit(6)
-    binding.pry
   end
 
   def detail

@@ -6,6 +6,7 @@ class Item < ApplicationRecord
   enum delivery_method:{"未定": 1, "らくらくメルカリ便": 2}
   enum delivery_days:{"１〜２日で発送": 1, "２〜３日で発送": 2, "４〜７日で発送": 3}
   enum size:{"XS": 1, "S": 2, "M": 3, "L": 4, "XL": 5}
+  enum prefecture:{"北海道": 1}
 
   # has_many :images
   # belongs_to :brand
