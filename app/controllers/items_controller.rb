@@ -18,7 +18,6 @@ class ItemsController < ApplicationController
   
   def show
     @item = Item.find(params[:id])
-
   end
 
   def detail
@@ -38,7 +37,8 @@ class ItemsController < ApplicationController
     item = Item.find(params[:id])
     Payjp.api_key = ENV['PAYJP_SECRET_KEY']
     Payjp::Charge.create(currency: 'jpy', amount: item.price, card: params['payjp-token'])
-    
+    item.buyer_number = current_user.id
+    item.save
     redirect_to "/items/#{item.id}/buy_done" 
   end
 
