@@ -58,8 +58,14 @@
             - @items.each do |item|
               %section.item-box
                 = link_to item_path(item), method: :get do
-                  %figure.item-box__content-photo
+                  .item-box__content-photo
                     = image_tag item.image.url, class: :"item-box__content-photo__img"
+                    - if item.buyer_number
+                      .soldout
+                      .soldout__text
+                        SOLD
+                    - else
+                      .none
                   .item-box__content-body
                     %h3.item-box__content-body__item-name 
                       = item.name
@@ -80,9 +86,15 @@
           .item-box-content
             - @items.each do |item|
               %section.item-box
-                = link_to items_show_path  do
-                  %figure.item-box__content-photo
+                = link_to item_path(item), method: :get do
+                  .item-box__content-photo
                     = image_tag item.image.url, class: :"item-box__content-photo__img"
+                    - if item.buyer_number
+                      .soldout
+                      .soldout__text
+                        SOLD
+                    - else
+                      .none
                   .item-box__content-body
                     %h3.item-box__content-body__item-name 
                       = item.name
@@ -103,9 +115,15 @@
           .item-box-content
             - @items.each do |item|
               %section.item-box
-                = link_to items_show_path  do
-                  %figure.item-box__content-photo
+                = link_to item_path(item), method: :get do
+                  .item-box__content-photo
                     = image_tag item.image.url, class: :"item-box__content-photo__img"
+                    - if item.buyer_number
+                      .soldout
+                      .soldout__text
+                        SOLD
+                    - else
+                      .none
                   .item-box__content-body
                     %h3.item-box__content-body__item-name 
                       = item.name
@@ -127,9 +145,15 @@
           .item-box-content
             - @items.each do |item|
               %section.item-box
-                = link_to items_show_path  do
-                  %figure.item-box__content-photo
+                = link_to item_path(item), method: :get do
+                  .item-box__content-photo
                     = image_tag item.image.url, class: :"item-box__content-photo__img"
+                    - if item.buyer_number
+                      .soldout
+                      .soldout__text
+                        SOLD
+                    - else
+                      .none
                   .item-box__content-body
                     %h3.item-box__content-body__item-name 
                       = item.name
@@ -154,9 +178,15 @@
           .item-box-content
             - @items.each do |item|
               %section.item-box
-                = link_to items_show_path  do
-                  %figure.item-box__content-photo
+                = link_to item_path(item), method: :get do
+                  .item-box__content-photo
                     = image_tag item.image.url, class: :"item-box__content-photo__img"
+                    - if item.buyer_number
+                      .soldout
+                      .soldout__text
+                        SOLD
+                    - else
+                      .none
                   .item-box__content-body
                     %h3.item-box__content-body__item-name 
                       = item.name
