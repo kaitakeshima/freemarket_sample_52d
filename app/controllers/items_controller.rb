@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   def index
     session[:aa] = 00
-    @items = Item.all.order('id DESC').limit(4)
+    @items = Item.order('id DESC').limit(4)
     
   end
   def new
@@ -18,7 +18,7 @@ class ItemsController < ApplicationController
   
   def show
     @item = Item.find(params[:id])
-    @items = Item.all.order('id DESC').limit(6)
+    @items = Item.order('id DESC').limit(6)
   end
 
   def detail
