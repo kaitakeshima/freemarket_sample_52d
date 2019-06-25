@@ -1,23 +1,15 @@
 = render partial: "shared/topheader"
-%nav.karinav
-  %ul
-    %li{:itemscope => "", :itemtype => "http://data-vocabulary.org/Breadcrumb"}
-      %a{:href => "https://www.mercari.com/jp/", :itemprop => "url"}
-        %span.navmerkari{:itemprop => "title"} メルカリ  ＞
-      %i.icon-arrow-right
-    %li{:itemscope => "", :itemtype => "http://data-vocabulary.org/Breadcrumb"}
-      %span.navsyousai{:itemprop => "title"} 
-        = @item.name
+= render partial: "shared/pankuzukari"
 .owaku
   .haku
   %section.item
     %h1.item__name
-      = @item.name
+      新品 タグ付き babyGAP ベビーギャップ 襟付き 長袖 カットソー 80
     .item__main
       .item__main__fotos
         .item__main__fotos__ue
           %ul.slider
-            %li= image_tag @item.image.url, :size =>'300x300'
+            %li= image_tag "mersample.jpg", :size =>'300x300'
             %li= image_tag "mersample.jpg", :size =>'300x300'
             %li= image_tag "mersample.jpg", :size =>'300x300'
             %li= image_tag "mersample.jpg", :size =>'300x300'
@@ -33,8 +25,7 @@
         %tr
           %th 出品者
           %td
-            = link_to do
-              = @item.user.nickname
+            %a{:href => "https://www.mercari.com/jp/u/414242538/"} S☆ぬいぐるみまとめ買い割引中‼️
             .item__main__detail__ratings
               .item__main__detail__ratings__user
                 %i.fa.fa-smile-o.fa-lg{:style => "color:red;"}
@@ -61,45 +52,53 @@
         %tr
           %th ブランド
           %td
-            = link_to do
+            %a{:href => "https://www.mercari.com/jp/brand/2330/"}
               %div
-                = @item.brand
+                ベビーギャップ
         %tr
           %th 商品のサイズ
-          %td
-            = @item.size
+          %td 80cm
         %tr
           %th 商品の状態
-          %td
-            = @item.condition
+          %td 新品、未使用
         %tr
           %th 配送料の負担
-          %td
-            = @item.delivery_fee
+          %td 送料込み(出品者負担)
         %tr
           %th 配送の方法
-          %td
-            = @item.delivery_method
+          %td 未定
         %tr
           %th 配送元地域
           %td
-            = link_to do
-              = @item.prefecture
+            %a{:href => "https://www.mercari.com/jp/area/33/"} 岡山県
         %tr
           %th 発送日の目安
-          %td
-            = @item.delivery_days
+          %td 2~3日で発送
     .item__pricebox
-      %span.item__pricebox__price 
-        ¥
-        = @item.price 
+      %span.item__pricebox__price ¥ 2,290
       %span.item__pricebox__tax (税込)
       %span.item__pricebox__shipping 送料込み
     .item__btn
       =link_to "購入画面に進む",items_buy_confirmation_path,   class: "btn-square-pop"
     .item__description
       %p.item__description__inner
-        = @item.discription
+        説明欄・プロフィールを必ずお読みくださいますようにお願い致します(*&gt;ω&lt;*)
+        %br/
+        %br/
+        新品 タグ付き babyGAP ベビーギャップ 襟付き 長袖 カットソー 80 12〜18Mです。
+        %br/
+        %br/
+        \#Sギャップ80サイズ出品一覧
+        %br/
+        %br/
+        神経質な方は入札をご遠慮下さい。
+        %br/
+        %br/
+        見落としなどあるかもしれませんが、ご了承いただける方のみお願いいたします。
+        %br/
+        %br/
+        \#カバーオール #ギャップ #gap #長袖カットソー #襟付き#カットソー #トップス #長袖 #ロンT #キッズ #女の子
+        %br/
     .item__buttons
       .item__buttons__left
         %button.item__buttons__left__nice{:type => "button"}
@@ -125,11 +124,11 @@
             %span コメントする
   %ul.navitem
     %li.navitem__pre
-      = link_to do
+      %a{:href => "https://item.mercari.com/jp/m81704841881/"}
         %i.icon-arrow-left
         ＜ 金麦 あいあい皿2019 シール120点
     %li.navitem__next
-      = link_to do
+      %a{:href => "https://item.mercari.com/jp/m15749712779/"}
         【新品】マイメロディ＆ピアノちゃん クッキー型2個セット ＞
         %i.icon-arrow-right
   .snsbox
@@ -146,9 +145,8 @@
   .bottomitems
     %section.bottomitems__users
       %h2.bottomitems__users__title
-        = link_to do
-          = @item.user.nickname 
-          さんのその他の出品
+        %a{:href => "https://www.mercari.com/jp/u/414242538/"}
+          S☆ぬいぐるみまとめ買い割引中‼️さんのその他の出品
       .bottomitems__users__contents
         %section.bottomitems__users__contents__content
           %a.bottomitems__users__contents__content__link{:href => "https://item.mercari.com/jp/m99673450604/"}
@@ -297,3 +295,7 @@
 
 = render partial: "shared/topfooter"
         
+        
+        
+
+
