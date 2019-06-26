@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  before_action :set_item, only: [:show,:edit,:update,:destroy, :buy, :buy_done]
   def index
     session[:aa] = 00
     @items = Item.order('id DESC').limit(4)
@@ -17,18 +18,16 @@ class ItemsController < ApplicationController
   end
   
   def show
-    @item = Item.find(params[:id])
     @items = Item.order('id DESC').limit(3)
   end
 
   def edit 
-    @item = Item.find(params[:id])
+
   end
 
   def update
-    item = Item.find(params[:id])
-    if item.user_id == current_user.id
-      item.update(item_params)
+    if @item.user_id == current_user.id
+      @item.update(item_params)
       redirect_to root_path
     else
       render action: :edit
@@ -36,9 +35,8 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    item = Item.find(params[:id])
-    if item.user_id == current_user.id
-      item.destroy
+    if @item.user_id == current_user.id
+      @item.destroy
       redirect_to root_path
     else 
       render action: :show
@@ -51,11 +49,10 @@ class ItemsController < ApplicationController
   end
   
   def buy
-    @item = Item.find(params[:id])
   end
   
   def buy_done
-    @item = Item.find(params[:id])
+   
   end  
 
   def pay
@@ -67,12 +64,12 @@ class ItemsController < ApplicationController
     redirect_to "/items/#{item.id}/buy_done" 
   end
 
-  def delete
-    item
-  end
 
   private
   def item_params
     params.require(:item).permit(:name, :discription, :condition, :delivery_fee, :delivery_method, :delivery_days, :price, :size, :brand, :prefecture, :image, :status).merge(user_id: current_user.id)
+  end
+  def set_item
+    @item = Item.find(params[:id])
   end
 end
