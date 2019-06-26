@@ -33,8 +33,10 @@ class ItemsController < ApplicationController
       if @item.user_id == current_user.id
         @item.update(item_params)
         redirect_to root_path
-      end
+      else
         raise
+      end
+        
     rescue
       redirect_to action: "flash_error"
     end
@@ -45,8 +47,9 @@ class ItemsController < ApplicationController
       if @item.user_id == current_user.id
         @item.destroy
         redirect_to root_path
+      else
+        raise
       end
-      raise
     rescue
       redirect_to action: "flash_error"
     end

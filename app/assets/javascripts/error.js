@@ -7,7 +7,7 @@ $(function(){
   $(window).on('load', function(e){
     debugger
     if ("flash_error" == url){
-    alert("えらーがはっせいしました")
+    alert("エラーが発生しました。")
     }
   })
 })

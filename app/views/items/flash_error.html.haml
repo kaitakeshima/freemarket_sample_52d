@@ -102,7 +102,7 @@
           = link_to "編集画面に進む",edit_item_path(@item) ,   class: "btn-square-pop-half"
           = link_to "この商品を削除","/items/#{@item.id}", method: "delete", class: "btn-square-pop-half"
         - else
-          = link_to "購入画面に進む", "/items/#{@item.id}/buy", class: "btn-square-pop"
+          = link_to "購入画面に進む",buy_item_path(@item) , class: "btn-square-pop"
       - else
         = link_to "購入画面に進む",  new_user_registration_path, class: "btn-square-pop"
     .item__description
