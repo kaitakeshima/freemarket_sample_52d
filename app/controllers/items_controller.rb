@@ -34,8 +34,6 @@ class ItemsController < ApplicationController
       else
         redirect_to action: "flash_error"
       end
-        redirect_to action: "flash_error"
-    end
   end
 
   def destroy
@@ -44,8 +42,6 @@ class ItemsController < ApplicationController
       else
         redirect_to action: "flash_error"
       end
-      redirect_to action: "flash_error"
-    end
   end
   def detail
   end
