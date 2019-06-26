@@ -30,25 +30,20 @@ class ItemsController < ApplicationController
 
   def update
     begin
-      if @item.user_id == current_user.id
-        @item.update(item_params)
+      if @item.update(item_params)
         redirect_to root_path
       else
-        raise
       end
-        
-    rescue
-      redirect_to action: "flash_error"
+      rescue
+        redirect_to action: "flash_error"
     end
   end
 
   def destroy
     begin
-      if @item.user_id == current_user.id
-        @item.destroy
+      if @item.destroy
         redirect_to root_path
       else
-        raise
       end
     rescue
       redirect_to action: "flash_error"
