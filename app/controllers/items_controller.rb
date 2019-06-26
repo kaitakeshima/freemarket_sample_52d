@@ -33,6 +33,7 @@ class ItemsController < ApplicationController
       if @item.update(item_params)
         redirect_to root_path
       else
+        redirect_to action: "flash_error"
       end
       rescue
         redirect_to action: "flash_error"
@@ -44,6 +45,7 @@ class ItemsController < ApplicationController
       if @item.destroy
         redirect_to root_path
       else
+        redirect_to action: "flash_error"
       end
     rescue
       redirect_to action: "flash_error"
