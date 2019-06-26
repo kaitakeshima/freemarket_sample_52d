@@ -21,6 +21,30 @@ class ItemsController < ApplicationController
     @items = Item.order('id DESC').limit(3)
   end
 
+  def edit 
+    @item = Item.find(params[:id])
+  end
+
+  def update
+    item = Item.find(params[:id])
+    if item.user_id == current_user.id
+      item.update(item_params)
+      redirect_to root_path
+    else
+      render action: :edit
+    end
+  end
+
+  def destroy
+    item = Item.find(params[:id])
+    if item.user_id == current_user.id
+      item.destroy
+      redirect_to root_path
+    else 
+      render action: :show
+    end
+  end
+
   def detail
   end
   def buy_confirmation
@@ -41,6 +65,10 @@ class ItemsController < ApplicationController
     item.buyer_number = current_user.id
     item.save
     redirect_to "/items/#{item.id}/buy_done" 
+  end
+
+  def delete
+    item
   end
 
   private
