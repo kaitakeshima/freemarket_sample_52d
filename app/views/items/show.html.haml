@@ -189,7 +189,56 @@
                     %div
                       %p.item-box__content-body__tax (税込)
 
-= render partial: "shared/topfooter"
+.default-container
+  .content-footer
+    .app-banner
+      = image_tag "banar-image.png", class: "app-banar-img"
+    %footer.footer-top-page
+      .footer-box
+        .footer-cell
+          %h2.footer-cell__head メルカリについて
+          %ul
+            %li.footer-cell__footer-top-text-normal 会社概要 (運営会社)
+            %li.footer-cell__normal 採用情報
+            %li.footer-cell__normal プレリリース
+            %li.footer-cell__normal 公式ブログ
+            %li.footer-cell__normal メルカリロゴ利用ガイドライン
+            %li.footer-cell__sns-link
+              = fa_icon 'twitter', class: "twitter-logo"
+            %li.footer-cell__sns-link
+              = fa_icon 'facebook-square', class: "twitter-logo"
+        .footer-cell
+          %h2.footer-cell__head ヘルプ＆ガイド
+          %ul
+            %li.footer-cell__footer-top-text-normal メルカリガイド
+            %li.footer-cell__normal 楽々メルカリ便
+            %li.footer-cell__normal ゆうゆうメルカリ便
+            %li.footer-cell__normal 大型メルカリ便
+            %li.footer-cell__normal 車体取引ガイド
+            %li.footer-cell__normal メルカリあんしん・あんぜん宣言
+            %li.footer-cell__normal 偽ブランド品撲滅への取り組み
+            %li.footer-cell__normal メルカリボックス
+        .footer-cell-full-width
+          %h2.footer-cell-full-width__head プライバシーと利用規約
+          .footer-cell-full-width__cell-wrapper
+            .footer-cell-full-width__cell-wrapper__cell-left
+              %ul
+                %li.footer-cell-full-width__cell-wrapper__cell-left__top-text-normal プライバシーポリシー
+                %li.footer-cell-full-width__cell-wrapper__cell-left__normal メルカリ利用規約
+                %li.footer-cell-full-width__cell-wrapper__cell-left__normal あんしんスマホサポート制度に関する利用規約
+                %li.footer-cell-full-width__cell-wrapper__cell-left__normal コンプライアンスポリシー
+            .footer-cell-full-width__cell-wrapper__cell-right
+              %ul
+                %li.footer-cell-full-width__cell-wrapper__cell-right__top-text-normal 個人データの安全管理に係る基本方針
+                %li.footer-cell-full-width__cell-wrapper__cell-right__normal 特定商取引に関する表記
+                %li.footer-cell-full-width__cell-wrapper__cell-right__normal 資金決済法に基づく表示
+                %li.footer-cell-full-width__cell-wrapper__cell-right__normal 法令遵守と犯罪抑止のために
+                %li.footer-cell-full-width__cell-wrapper__cell-right__normal 返品・返金ポリシー
+        .fotter-cell-lang
+          %h2.footer-cell__head 国
+          %ul
+            %li.footer-head-jp 日本
+            %li.footer-head-us United Status
         
         
         
