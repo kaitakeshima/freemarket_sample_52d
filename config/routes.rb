@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     resources :credits, only: [:new, :create]
   end
   resources :phones, only: [:create]
-  resources :items, only: [:index, :new, :create, :show] do
+  resources :items, only: [:index, :new, :create, :show, :edit, :update, :destroy] do
     collection do
       post 'pay/:id' => 'items#pay', as: 'pay'
     end
