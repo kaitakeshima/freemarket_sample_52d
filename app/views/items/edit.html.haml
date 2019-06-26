@@ -3,7 +3,7 @@
 .main
   .sell-container#sell-container
     %h2.sell-container__item-info  商品の情報を入力
-    = form_with model: @item, local: true, class: "sell-form" do |f|
+    = form_with model: @item, local: true,url: {controller: :items, action: :update}, class: "sell-form" do |f|
       .sell-form__upload
         %h3.sell-form__upload--head
           出品画像
@@ -13,8 +13,9 @@
           .items-container
             .items-container__items
               %ul#preview-img-list.items-container__items__list
-                %li#preview-img-container-1.items-container__items__list__item
+                %li#preview-img-container-1.items-container__items__list__item-edit
                   %figure#preview-img-figure-1.items-container__items__list__item__figure
+                    = image_tag @item.image.url, :id => "#preview-img-1", :class => "items-container__items__list__item__figure--image"
                   -# .items-container__items__list__item__button
                   -#   .items-container__items__list__item__button--edit  編集
                   -#   .items-container__items__list__item__button--delete  削除
@@ -27,6 +28,7 @@
             .items-container__drop-box
               %label.items-container__drop-box__click
                 ドラッグアンドドロップまたはクリックしてファイルをアップロード
+                
                 = f.file_field :image, class: 'items-container__drop-box__click__file-field'
               %pre.items-container__drop-box__visible-pc
                 .items-container__drop-box__visible-pc--p
@@ -194,5 +196,5 @@
         = f.submit "出品する", class: "sell-form__sell-btn-box__btn-red"
         %button.sell-form__sell-btn-box__btn-gray もどる
     .sell-container__overlay
-
+    = image_tag "gorila.png", :id => "#preview-img-1", :class => "items-container__items__list__item__figure--image"
 = render partial: './shared/new-footer'
