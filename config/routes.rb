@@ -17,10 +17,12 @@ Rails.application.routes.draw do
   resources :items, only: [:index, :new, :create, :show, :edit, :update, :destroy] do
     collection do
       post 'pay/:id' => 'items#pay', as: 'pay'
+      
     end
     member do
       get 'buy'
       get 'buy_done'
+      get "flash_error"
     end  
   end
   resources :users, only: [:destroy] 

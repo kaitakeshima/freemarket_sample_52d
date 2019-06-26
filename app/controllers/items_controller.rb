@@ -1,5 +1,8 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:show,:edit,:update,:destroy, :buy, :buy_done]
+  before_action :set_item, only: [:show,:edit,:update,:destroy, :buy, :buy_done, :flash_error]
+  def flash_error  
+    @items = Item.order('id DESC').limit(3)
+  end
   def index
     session[:aa] = 00
     @items = Item.order('id DESC').limit(4)
@@ -26,23 +29,28 @@ class ItemsController < ApplicationController
   end
 
   def update
-    if @item.user_id == current_user.id
-      @item.update(item_params)
-      redirect_to root_path
-    else
-      render action: :edit
+    begin
+      if @item.user_id == current_user.id
+        @item.update(item_params)
+        redirect_to root_path
+      end
+        raise
+    rescue
+      redirect_to action: "flash_error"
     end
   end
 
   def destroy
-    if @item.user_id == current_user.id
-      @item.destroy
-      redirect_to root_path
-    else 
-      render action: :show
+    begin
+      if @item.user_id == current_user.id
+        @item.destroy
+        redirect_to root_path
+      end
+      raise
+    rescue
+      redirect_to action: "flash_error"
     end
   end
-
   def detail
   end
   def buy_confirmation

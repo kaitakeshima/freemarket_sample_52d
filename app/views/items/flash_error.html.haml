@@ -1,0 +1,201 @@
+= render partial: "shared/topheader"
+%nav.karinav
+  %ul
+    %li{itemscope: "", itemtype: "http://data-vocabulary.org/Breadcrumb"}
+      = link_to do
+        %span.navmerkari{itemprop: "title"} メルカリ  ＞
+      %i.icon-arrow-right
+    %li{itemscope: "", itemtype: "http://data-vocabulary.org/Breadcrumb"}
+      %span.navsyousai{itemprop: "title"} 
+        = @item.name
+        
+.owaku
+  .haku
+  %section.item
+    %h1.item__name
+      = @item.name
+    .item__main
+      .item__main__fotos
+        .item__main__fotos__ue
+          %ul.slider
+            %li= image_tag @item.image.url, size:'300x300'
+            %li= image_tag @item.image.url, size:'300x300'
+            %li= image_tag @item.image.url, size:'300x300'
+            %li= image_tag @item.image.url, size:'300x300'
+            %li= image_tag @item.image.url, size:'300x300'
+        .item__main__fotos__shita
+          %ul.thumb
+            %li= image_tag @item.image.url, size:'60x60'
+            %li= image_tag @item.image.url, size:'60x60'
+            %li= image_tag @item.image.url, size:'60x60'
+            %li= image_tag @item.image.url, size:'60x60'
+            %li= image_tag @item.image.url, size:'60x60'
+      %table.item__main__detail
+        %tr
+          %th 出品者
+          %td
+            = link_to do
+              = @item.user.nickname
+            .item__main__detail__ratings
+              .item__main__detail__ratings__user
+                %i.fa.fa-smile-o.fa-lg{style: "color:red;"}
+                %span 2249
+              .item__main__detail__ratings__user
+                %i.fa.fa-meh-o.fa-lg{style: "color:orange;"}
+                %span 7
+              .item__main__detail__ratings__user
+                %i.fa.fa-frown-o.fa-lg{style: "color:blue;"}
+                %span 0
+        %tr
+          %th カテゴリー
+          %td
+            -# = link_to do
+            -#   = @item.categories.name
+            = link_to do
+              .item-detail-table-sub-category
+                %i.icon-arrow-right
+                -# @item.categories.name
+            = link_to do
+              .item-detail-table-sub-sub-category
+                %i.icon-arrow-right
+                -# @item.categories.name
+        %tr
+          %th ブランド
+          %td
+            -# = link_to do
+            -#   %div
+            -#     = @item.brand.name
+        %tr
+          %th 商品のサイズ
+          %td
+            = @item.size
+        %tr
+          %th 商品の状態
+          %td
+            = @item.condition
+        %tr
+          %th 配送料の負担
+          %td
+            = @item.delivery_fee
+        %tr
+          %th 配送の方法
+          %td
+            = @item.delivery_method
+        %tr
+          %th 配送元地域
+          %td
+            = link_to do
+              = @item.prefecture
+        %tr
+          %th 発送日の目安
+          %td
+            = @item.delivery_days
+    .item__pricebox
+      %span.item__pricebox__price
+        ¥
+        = @item.price
+      %span.item__pricebox__tax (税込)
+      %span.item__pricebox__shipping 送料込み
+    .item__btn
+      - if current_user.present?
+        - if @item.user_id == current_user.id
+          = link_to "編集画面に進む",edit_item_path(@item) ,   class: "btn-square-pop-half"
+          = link_to "この商品を削除","/items/#{@item.id}", method: "delete", class: "btn-square-pop-half"
+        - else
+          = link_to "購入画面に進む", "/items/#{@item.id}/buy", class: "btn-square-pop"
+      - else
+        = link_to "購入画面に進む",  new_user_registration_path, class: "btn-square-pop"
+    .item__description
+      %p.item__description__inner
+        = @item.discription
+    .item__buttons
+      .item__buttons__left
+        %button.item__buttons__left__nice{type: "button"}
+          %i.fa.fa-heart-o.fa-lg
+          %span  いいね! 
+          %span.fade-in-down 0
+        %button.item__buttons__left__flag{type: "button"}
+          %i.fa.fa-flag-o.fa-lg
+          %span  不適切な商品の報告 
+      .item__buttons__right
+        = link_to do
+          %i.fa.fa-lock
+          %span あんしん・あんぜんへの取り組み
+  .item2
+    .item2__message
+      .item2__message__box
+        %form.item2__message__box__form
+          %p.item2__message__box__form__caution
+            相手のことを考え丁寧なコメントを心がけましょう。
+            不快な言葉遣いなどは利用制限や退会処分となることがあります。
+          %textarea.item2__message__box__form__main
+          %button.item2__message__box__form__btn
+            %span コメントする
+  %ul.navitem
+    %li.navitem__pre
+      = link_to do
+        %i.icon-arrow-left
+        ＜ 金麦 あいあい皿2019 シール120点
+    %li.navitem__next
+      = link_to do
+        【新品】マイメロディ＆ピアノちゃん クッキー型2個セット ＞
+        %i.icon-arrow-right
+  .snsbox
+    %ul.snsbox__contents
+      %li.snsbox__contents__icons
+        %a.snsbox__contents__icons__icon
+          %i.fa.fa-facebook-square.fa-4x{style: "color:#3B5998"}
+      %li.snsbox__contents__icons
+        %a.snsbox__contents__icons__icon
+          %i.fa.fa-twitter-square.fa-4x
+      %li.snsbox__contents__icons
+        %a.snsbox__contents__icons__icon
+          %i.fa.fa-pinterest-square.fa-4x{style: "color:#CC3333"}
+  .bottomitems
+    %section.bottomitems__users
+      %h2.bottomitems__users__title
+        = link_to do
+          = @item.user.nickname 
+          さんのその他の出品
+      .bottomitems__users__contents
+        .item-box-content
+          - @items.each do |item|
+            %section.item-box
+              = link_to items_show_path  do
+                %figure.item-box__content-photo
+                  = image_tag item.image.url, class: :"item-box__content-photo__img"
+                .item-box__content-body
+                  %h3.item-box__content-body__item-name 
+                    = item.name
+                  .item-box__content-body__num
+                    .item-box__content-body__num__price
+                      %p.item-box__content-body__num__price__text 
+                        = "¥#{item.price}"
+                    %div
+                      %p.item-box__content-body__tax (税込)
+                      
+    %section.bottomitems__sonota
+      %h2.bottomitems__sonota__title
+        = link_to do
+          -# = @item.categories.name
+          その他の商品
+      .bottomitems__sonota__contents
+        .item-box-content
+          - @items.each do |item|
+            %section.item-box
+              = link_to items_show_path  do
+                %figure.item-box__content-photo
+                  = image_tag item.image.url, class: :"item-box__content-photo__img"
+                .item-box__content-body
+                  %h3.item-box__content-body__item-name 
+                    = item.name
+                  .item-box__content-body__num
+                    .item-box__content-body__num__price
+                      %p.item-box__content-body__num__price__text 
+                        = "¥#{item.price}"
+                    %div
+                      %p.item-box__content-body__tax (税込)
+
+= render partial: "shared/topfooter"
+        
+        
