@@ -29,25 +29,21 @@ class ItemsController < ApplicationController
   end
 
   def update
-    begin
       if @item.update(item_params)
         redirect_to root_path
       else
         redirect_to action: "flash_error"
       end
-      rescue
         redirect_to action: "flash_error"
     end
   end
 
   def destroy
-    begin
       if @item.destroy
         redirect_to root_path
       else
         redirect_to action: "flash_error"
       end
-    rescue
       redirect_to action: "flash_error"
     end
   end
