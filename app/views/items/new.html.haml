@@ -167,7 +167,7 @@
                 .sell-form-box__list__price__div--right
                   .sell-form-box__list__price__div--right--p  ￥　
                   .sell-form-box__list__price__div__input
-                    = f.text_field :price, type: "number", id: "input-price", class: "sell-form-box__list__price__div__input input-default", placeholder: "例）300", value: ""
+                    = f.text_field :price, type: "number", min: "1", max: "9999999", id: "input-price", class: "sell-form-box__list__price__div__input input-default", placeholder: "例）300", value: ""
             %li.sell-form-box__list__price__1
               .sell-form-box__list__price__1--left  販売手数料 （10%）
               #price-fee.sell-form-box__list__price__1--right
