@@ -67,10 +67,9 @@
             %p.form-group__l-single-text.form-group__text-center 「次へ進む」のボタンを押すことにより、
             = link_to  '利用規約'
             に同意したものとみなします
-          = button_to "次へ進む", users_sign_up_address_path,method: :get, class: "member-main__container__form__bottom__btn" 
+          = button_to "次へ進む",{controller: "users/registrations",action: "create"}, method: :post , class: "member-main__container__form__bottom__btn" 
           .form-group.member-main__container__form__bottom__text-right
             %p
               = link_to '本人情報の登録について' 
               =fa_icon 'angle-right'
-
   = render partial: './shared/new-footer' 

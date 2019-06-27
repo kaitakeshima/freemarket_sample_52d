@@ -6,7 +6,7 @@
       %h2.login-main__container__head
         アカウントをお持ちでない方はこちら
         .login-main__inner__content
-          = link_to new_user_registration_path, class:"new-main--link" do
+          = link_to {controller: "users", action: "sign_up_first"}, class:"new-main--link" do
             %p.login-main__inner__content__mail
               新規会員登録
 
