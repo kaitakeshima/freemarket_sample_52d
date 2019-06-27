@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    if session[:aa] == 01
+    if session[:aa] == 1
       flash[:notice] = "ユーザー新規登録完了しました。次に電話番号を入力してください" 
       new_user_phone_path(current_user)
     else 

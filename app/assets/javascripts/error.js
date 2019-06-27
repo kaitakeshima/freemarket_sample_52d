@@ -5,7 +5,6 @@ $(function(){
   var $dir2 = $dir1[$dir1.length -1];
   var url = $dir2
   $(window).on('load', function(e){
-    debugger
     if ("flash_error" == url){
     alert("エラーが発生しました。")
     }

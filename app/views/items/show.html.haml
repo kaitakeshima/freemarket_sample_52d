@@ -104,7 +104,7 @@
         - else
           = link_to "購入画面に進む", buy_item_path(@item), class: "btn-square-pop"
       - else
-        = link_to "購入画面に進む",  new_user_registration_path, class: "btn-square-pop"
+        = link_to "購入画面に進む", new_user_session_path , class: "btn-square-pop"
     .item__description
       %p.item__description__inner
         = @item.discription
