@@ -14,24 +14,22 @@ Rails.application.routes.draw do
     resources :credits, only: [:new, :create]
   end
   resources :phones, only: [:create]
-  resources :items, only: [:index, :new, :create, :show] do
+  resources :items, only: [:index, :new, :create, :show, :edit, :update, :destroy] do
     collection do
       post 'pay/:id' => 'items#pay', as: 'pay'
+      
     end
     member do
       get 'buy'
       get 'buy_done'
+      get "flash_error"
     end  
   end
   resources :users, only: [:destroy] 
 
   #その他追加するルーティングはこの下に記載
-  get 'users/sign_up/new' => 'users#sign_up1' 
-  get 'users/sign_up/member' => 'users#sign_up2'
-  get 'users/sign_up/phone' => 'users#sign_up3'
-  get 'users/sign_up/address' => 'users#sign_up4'
-  get 'users/sign_up/card' => 'users#sign_up5'
-  get 'users/sign_up/done' => 'users#sign_up6'
+  get 'users/sign_up/new' => 'users#sign_up_first' 
+  get 'users/sign_up/done' => 'users#sign_up_done'
   get 'users/log_in/show' => 'users#log_in_view'
   get 'users/mypage' => 'users#mypage'
   get 'users/mypage/destroy' => 'users#mypage_session_destroy'

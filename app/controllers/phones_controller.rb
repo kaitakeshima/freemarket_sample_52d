@@ -1,7 +1,9 @@
 class PhonesController < ApplicationController
   def new
     @phone = Phone.new
+    session.delete(:aa)
   end
+
   def create
     @phone = Phone.new(phone_params)
     if @phone.save
@@ -14,4 +16,5 @@ class PhonesController < ApplicationController
   def phone_params
     params.require(:phone).permit(:number, :user_id)
   end
+
 end

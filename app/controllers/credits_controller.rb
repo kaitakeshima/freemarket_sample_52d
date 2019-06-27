@@ -2,6 +2,7 @@ class CreditsController < ApplicationController
   def new
     @credit = Credit.new
   end
+  
   def create
     @credit = Credit.new(credit_params)
     if @credit.save
@@ -10,8 +11,10 @@ class CreditsController < ApplicationController
       render action: :new
     end
   end
+
   private
   def credit_params
     params.require(:credit).permit(:card_number, :expiration_month, :expiration_year, :securyty_code, :user_id)
   end
+
 end

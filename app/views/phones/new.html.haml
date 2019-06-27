@@ -9,7 +9,7 @@
             %label 携帯電話の番号
             = f.text_field :number, class: "phone-main__container__inner__content__form-group__input", placeholder: "携帯電話の番号を入力",  maxlength: "13", pattern: "[0-9]{11,13}",type: "tel"
           %p 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
-          = button_to "SMSを送信する",users_sign_up_address_path,method: :get  ,class: "phone-main__container__inner__content__btn" 
+          = button_to "SMSを送信する",new_user_house_path,method: :get  ,class: "phone-main__container__inner__content__btn" 
           %p ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
           .phone-main__container__inner__content__form-group.phone-main__container__inner__content__text-right
             = f.hidden_field :user_id, value: current_user.id

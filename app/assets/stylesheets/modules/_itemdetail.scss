@@ -446,7 +446,36 @@ table td{
   line-height: 60px;
   font-size: 25px;
 }
-
+.btn-square-pop-half{
+  height: 60px;
+  width: 306px;
+  margin: auto;
+  display: inline-block;
+  color: #FFF;
+  background:red;
+  border-radius: 4px;/*角の丸み*/
+  font-weight: bold;
+  text-align: center;
+  line-height: 60px;
+  font-size: 25px;
+  float: left;
+  border: #333 1px solid;
+}
+.btn-square-pop-half-delete{
+  height: 60px;
+  width: 306px;
+  margin: auto;
+  display: inline-block;
+  color: #FFF;
+  background:red;
+  border-radius: 4px;/*角の丸み*/
+  font-weight: bold;
+  text-align: center;
+  line-height: 60px;
+  font-size: 25px;
+  float: left;
+  border: #333 1px solid;
+}
 .item-box-content{
   width: auto;
   margin: 0 auto;

@@ -1,0 +1,200 @@
+= render partial: './shared/new-header'
+
+.main
+  .sell-container#sell-container
+    %h2.sell-container__item-info  商品の情報を入力
+    = form_with model: @item, local: true,url: {controller: :items, action: :update} ,class: "sell-form" do |f|
+      =f.hidden_field :status, value: "1"
+      .sell-form__upload
+        %h3.sell-form__upload--head
+          出品画像
+          %span.require-input  必須
+        %p.sell-form__upload--p  最大10枚までアップロードできます
+        .sell-form__upload__dropbox-container
+          .items-container
+            .items-container__items
+              %ul#preview-img-list.items-container__items__list
+                %li#preview-img-container-0.items-container__items__list__item-edit
+                  %figure#preview-img-figure-1.items-container__items__list__item__figure
+                    = image_tag @item.image.url, id:  "#preview-img-1", :class => "items-container__items__list__item__figure--image"
+                  -# .items-container__items__list__item__button
+                  -#   .items-container__items__list__item__button--edit  編集
+                  -#   .items-container__items__list__item__button--delete  削除
+                -# %li.items-container__items__list__item
+                -#   %figure.items-container__items__list__item__figure
+                -#     = image_tag "http://flat-icon-design.com/f/f_object_174/s256_f_object_174_0bg.png", class: "items-container__items__list__item__figure--image"
+                -#   .items-container__items__list__item__button
+                -#     .items-container__items__list__item__button--edit  編集
+                -#     .items-container__items__list__item__button--delete  削除
+            .items-container__drop-box
+              %label.items-container__drop-box__click
+                ドラッグアンドドロップまたはクリックしてファイルをアップロード
+                = f.file_field :image, class: 'items-container__drop-box__click__file-field'
+              %pre.items-container__drop-box__visible-pc
+                .items-container__drop-box__visible-pc--p
+      .sell-form__content.sell-content
+        .sell-form__content2
+          .sell-form__content__group
+            %label.sell-form__content__group--label
+              商品名
+              %span.require-input  必須
+            .sell-form__content__group__div
+              = f.text_field :name, class: "sell-form__content__group__div__input input-default", placeholder: "商品名（必須 40文字まで)"
+          .sell-form__content__group
+            %label.sell-form__content__group--label
+              商品の説明
+              %span.require-input  必須
+            = f.text_area :discription, class: "textarea-default", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", rows: "5"
+      .sell-form__content.sell-content
+        %h3.sell-form__content--head  商品の詳細
+        .sell-form__content__sell-form-box
+          .sell-form-box__group
+            %label.sell-form-box__group--label
+              カテゴリー
+              %span.require-input  必須
+            .sell-form-box__group__div
+              .sell-form-box__group__div__select-wrap-a
+                -# = f.select :category1, [["---", ""], ["レディース", "1"], ["メンズ", "2"]], {}, {class: "select-default"}
+                %select#select-category-a.select-default
+                  %option{value: ""} ---
+                  %option{value: "1"} レディース
+                  %option{value: "2"} メンズ
+                  %option{value: "3"} ベビー・キッズ
+                  %option{value: "4"} インテリア・住まい・小物
+                  %option{value: "5"} 本・音楽・ゲーム
+                  %option{value: "6"} おもちゃ・ホビー・グッズ
+                  %option{value: "7"} コスメ・香水・美容
+                  %option{value: "8"} 家電・スマホ・カメラ
+                  %option{value: "9"} スポーツ・レジャー
+                  %option{value: "10"} ハンドメイド
+                  %option{value: "11"} チケット
+                  %option{value: "12"} 自動車・オートバイ
+                  %option{value: "13"} その他
+                %i.icon-arrow-bottom
+                  = fa_icon 'chevron-down', class: 'icon'
+              .sell-form-box__group__div__select-wrap-b
+                %select#select-category-b.select-default
+                  %option{value: ""} ---
+                  %option{value: "20"} トップス
+                  %option{value: "21"} ジャッケット／アウター
+                  %option{value: "23"} パンツ
+                -# = f.select :category2, [["---", ""], ["トップス", "30"]], {}, {class: "select-default"}
+                %i.icon-arrow-bottom
+                  = fa_icon 'chevron-down', class: 'icon'
+              .sell-form-box__group__div__select-wrap-c
+                %select#select-category-c.select-default
+                  %option{value: ""} ---
+                  %option{value: "100"} Tシャツ/カットソー(半袖/袖なし)
+                  %option{value: "101"} Tシャツ/カットソー(七分/半袖)
+                  %option{value: "102"} シャツ
+                -# = f.select :category, [["---", ""], ["Tシャツ/カットソー(半袖/袖なし)", "302"]], {}, {class: "select-default"}
+                %i.icon-arrow-bottom
+                  = fa_icon 'chevron-down', class: 'icon'
+          #select-size-wrap.sell-form-box__group
+            %label.sell-form-box__group--label
+              サイズ
+              %span.require-input  必須
+            .sell-form-box__group__select-wrap
+              = f.select :size, [["---", ""], ["XS", "1"], ["S", "2"], ["M", "3"], ["L", "4"], ["XL", "5"]], {}, {id: "select-size", class: "select-default"}
+              %i.icon-arrow-bottom
+                = fa_icon 'chevron-down', class: "list-pulldown-icon"
+          #brand-suggest-wrap.sell-form-box__suggest-container
+            %label.sell-form-box__suggest-container--label
+              ブランド
+              %span.arbitrary-input  任意
+            .sell-form-box__suggest-container__div
+              = f.text_field :brand, id: "brand-input", class: "sell-form-box__suggest-container__div__input input-default", placeholder: "例）シャネル", value: ""
+              #brand-suggest.sell-form-box__suggest-container__div__brand-box
+                %ul.sell-form-box__suggest-container__div__brand-box__list#brand-suggest-list
+                  %li.sell-form-box__suggest-container__div__brand-box__list--brand#suggest-1 アークテリクス
+                  %li.sell-form-box__suggest-container__div__brand-box__list--brand#suggest-2 アーバン　リサーチ
+                  %li.sell-form-box__suggest-container__div__brand-box__list--brand#suggest-3 アディダス
+          .sell-form-box__group
+            %label.sell-form-box__group--label
+              商品の状態
+              %span.require-input  必須
+            .sell-form-box__group__select-wrap
+              = f.select :condition, [["---", ""], ["新品、未使用", "1"], ["未使用に近い", "2"], ["目立った傷や汚れなし", "3"], ["やや傷や汚れあり", "4"], ["傷や汚れあり", "5"], ["全体的に状態が悪い", "6"]], {}, {class: "select-default"}
+              %i.icon-arrow-bottom
+                = fa_icon 'chevron-down', class: 'icon'
+      .sell-form__content.sell-content
+        %h3.sell-form__content--head
+          配送について
+          .sell-form__content--question  ？
+        .sell-form__content__sell-form-box
+          .sell-form-box__group
+            %label.sell-form-box__group--label
+              配送料の負担
+              %span.require-input  必須
+            .sell-form-box__group__select-wrap
+              = f.select :delivery_fee, [["---", ""], ["着払い（購入者負担）", "1"], ["送料込み（出品者負担）", "2"]], {}, {class: "select-default"}
+              %i.icon-arrow-bottom
+                = fa_icon 'chevron-down', class: 'icon'
+          .sell-form-box__group
+            %label.sell-form-box__group--label
+              配送の方法
+              %span.require-input  必須
+            .sell-form-box__group__select-wrap
+              = f.select :delivery_method, [["---", ""], ["未定", "1"], ["らくらくメルカリ便", "2"]], {}, {class: "select-default"}
+              %i.icon-arrow-bottom
+                = fa_icon 'chevron-down', class: 'icon'
+          .sell-form-box__group
+            %label.sell-form-box__group--label
+              発送元の地域
+              %span.require-input  必須
+            .sell-form-box__group__select-wrap
+              = f.select :prefecture, [["---", ""], ["北海道", "1"], ["青森", "2"]], {}, {class: "select-default"}
+              %i.icon-arrow-bottom
+                = fa_icon 'chevron-down', class: 'icon'
+          .sell-form-box__group
+            %label.sell-form-box__group--label
+              発送までの日数
+              %span.require-input  必須
+            .sell-form-box__group__select-wrap
+              = f.select :delivery_days, [["---", ""], ["１〜２日で発送", "1"], ["２〜３日で発送", "2"], ["４〜７日で発送", "3"]], {}, {class: "select-default"}
+              %i.icon-arrow-bottom
+                = fa_icon 'chevron-down', class: 'icon'
+      .sell-form__content.sell-content
+        %h3.sell-form__content--head
+          販売価格(300〜9,999,999)
+          .sell-form__content--question  ？
+        .sell-form__content__sell-form-box
+          %ul.sell-form-box__list
+            %li.sell-form-box__list__price
+              .sell-form-box__list__price__div
+                %label.sell-form-box__list__price__div--left
+                  価格
+                  %span.require-input  必須
+                .sell-form-box__list__price__div--right
+                  .sell-form-box__list__price__div--right--p  ￥　
+                  .sell-form-box__list__price__div__input
+                    = f.text_field :price, type: "number", id: "input-price", class: "sell-form-box__list__price__div__input input-default", placeholder: "例）300", value: ""
+            %li.sell-form-box__list__price__1
+              .sell-form-box__list__price__1--left  販売手数料 （10%）
+              #price-fee.sell-form-box__list__price__1--right
+            %li.sell-form-box__list__price__2
+              .sell-form-box__list__price__2--left  販売利益
+              #price-income.sell-form-box__list__price__2--right
+      
+      .sell-form__modal{role: "dialog", tabindex: "-1"}
+        .sell-form__modal__modal-inner
+      .sell-form__sell-btn-box.sell-content
+        .sell-form__sell-btn-box__div
+          %p
+            %span.pointer 禁止されている出品
+            %span 、
+            %span.pointer 行為
+            %span を必ずご確認ください。
+          %p
+            %span  またブランド品でシリアルナンバー等がある場合はご記載ください。
+            %span.pointer  偽ブランドの販売
+            %span  は犯罪であり処罰される可能性があります。
+          %p
+            %span  また、出品をもちまして
+            %span.pointer  加盟店規約
+            %span  に同意したことになります。
+        = f.submit "出品する", class: "sell-form__sell-btn-box__btn-red"
+        = button_to "もどる", root_path, {method: :get, class: "sell-form__sell-btn-box__btn-gray"}
+    .sell-container__overlay
+
+= render partial: './shared/new-footer'
