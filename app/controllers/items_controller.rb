@@ -7,7 +7,6 @@ class ItemsController < ApplicationController
   def index
     session[:aa] = 00
     @items = Item.order('id DESC').limit(4)
-    
   end
 
   def new
@@ -32,19 +31,19 @@ class ItemsController < ApplicationController
   end
 
   def update
-      if @item.update(item_params)
-        redirect_to root_path
-      else
-        redirect_to action: "flash_error"
-      end
+    if @item.update(item_params)
+      redirect_to root_path
+    else
+      redirect_to action: "flash_error"
+    end
   end
 
   def destroy
-      if @item.destroy
-        redirect_to root_path
-      else
-        redirect_to action: "flash_error"
-      end
+    if @item.destroy
+      redirect_to root_path
+    else
+      redirect_to action: "flash_error"
+    end
   end
 
   def detail
@@ -78,5 +77,5 @@ class ItemsController < ApplicationController
   def set_item
     @item = Item.find(params[:id])
   end
-  
+
 end
