@@ -16,5 +16,6 @@ class HousesController < ApplicationController
   def house_params
     params.require(:house).permit(:postalcode, :prefecture,:city, :address, :building, :user_id)
   end
-  
+
 end
+

@@ -9,4 +9,5 @@
         .logoutbox__form__content
           = button_to "ログアウト",  destroy_user_session_path , method: :delete , class: "logoutbox__form__content__btn"
           %input{name: :"__csrf_value", type: :"hidden", value: :"d9163badd600f0759504f3c3d03fe90dc77553d7088130fd36fa09442be89f9495ac622fcdb8d50c719900926f76df4a48027fd1afba1c82a96b2020dff2aff06"}/
+
 = render partial: "shared/topfooter"
