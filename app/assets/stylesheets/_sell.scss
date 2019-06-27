@@ -166,12 +166,13 @@ label {
       }
       &__brand-box {
         width: 100%;
-        border: 1px gray;
+        border: 1px solid #ccc;
+        max-height: 120px;
+        overflow: scroll;
         &__list {
           &--brand {
-            height: 48px;
             width: 100%;
-            padding: 10px 16px 8p;
+            padding: 10px 16px;
             font-size: 16px;
             box-sizing: border-box;
           }
