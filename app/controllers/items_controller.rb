@@ -3,14 +3,17 @@ class ItemsController < ApplicationController
   def flash_error  
     @items = Item.order('id DESC').limit(3)
   end
+
   def index
     session[:aa] = 00
     @items = Item.order('id DESC').limit(4)
     
   end
+
   def new
     @item = Item.new
   end
+
   def create
     @item = Item.new(item_params)
     if @item.save
@@ -43,8 +46,10 @@ class ItemsController < ApplicationController
         redirect_to action: "flash_error"
       end
   end
+
   def detail
   end
+
   def buy_confirmation
   end
   
@@ -69,7 +74,9 @@ class ItemsController < ApplicationController
   def item_params
     params.require(:item).permit(:name, :discription, :condition, :delivery_fee, :delivery_method, :delivery_days, :price, :size, :brand, :prefecture, :image, :status).merge(user_id: current_user.id)
   end
+
   def set_item
     @item = Item.find(params[:id])
   end
+  
 end

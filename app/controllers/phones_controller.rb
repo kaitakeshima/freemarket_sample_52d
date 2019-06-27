@@ -2,6 +2,7 @@ class PhonesController < ApplicationController
   def new
     @phone = Phone.new
   end
+
   def create
     @phone = Phone.new(phone_params)
     if @phone.save
@@ -10,8 +11,10 @@ class PhonesController < ApplicationController
       render action: :new
     end
   end
+
   private
   def phone_params
     params.require(:phone).permit(:number, :user_id)
   end
+  
 end
