@@ -102,14 +102,21 @@
               ブランド
               %span.arbitrary-input  任意
             .sell-form-box__suggest-container__div
-              = f.text_field :brand, id: "brand-input", class: "sell-form-box__suggest-container__div__input input-default", placeholder: "例）シャネル", value: ""
-              #brand-suggest.sell-form-box__suggest-container__div__brand-box
-                %ul.sell-form-box__suggest-container__div__brand-box__list#brand-suggest-list
-                  %li.sell-form-box__suggest-container__div__brand-box__list--brand#suggest-1 アークテリクス
-                  %li.sell-form-box__suggest-container__div__brand-box__list--brand#suggest-2 イッセイ ミヤケ
-                  %li.sell-form-box__suggest-container__div__brand-box__list--brand#suggest-3 ウィルソン
-                  %li.sell-form-box__suggest-container__div__brand-box__list--brand#suggest-4 エンポリオ アルマーニ
-                  %li.sell-form-box__suggest-container__div__brand-box__list--brand#suggest-5 オニツカ タイガー
+              =f.text_field :brand, autocomplete: "on", list: "brand-list", id: "brand-input", class: "sell-form-box__suggest-container__div__input input-default", placeholder: "例）シャネル", value: ""
+              %datalist#brand-list
+                %option{value: "アークテリクス"}
+                %option{value: "イッセイ ミヤケ"}
+                %option{value: "ウィルソン"}
+                %option{value: "エンポリオ アルマーニ"}
+                %option{value: "オニツカ タイガー"}
+              -# = f.text_field :brand, id: "brand-input", class: "sell-form-box__suggest-container__div__input input-default", placeholder: "例）シャネル", value: ""
+              -# #brand-suggest.sell-form-box__suggest-container__div__brand-box
+              -#   %ul.sell-form-box__suggest-container__div__brand-box__list#brand-suggest-list
+              -#     %li.sell-form-box__suggest-container__div__brand-box__list--brand#suggest-1 アークテリクス
+              -#     %li.sell-form-box__suggest-container__div__brand-box__list--brand#suggest-2 イッセイ ミヤケ
+              -#     %li.sell-form-box__suggest-container__div__brand-box__list--brand#suggest-3 ウィルソン
+              -#     %li.sell-form-box__suggest-container__div__brand-box__list--brand#suggest-4 エンポリオ アルマーニ
+              -#     %li.sell-form-box__suggest-container__div__brand-box__list--brand#suggest-5 オニツカ タイガー
           .sell-form-box__group
             %label.sell-form-box__group--label
               商品の状態
