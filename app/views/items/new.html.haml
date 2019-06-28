@@ -53,22 +53,22 @@
               %span.require-input  必須
             .sell-form-box__group__div
               .sell-form-box__group__div__select-wrap-a
-                -# = f.select :category1, [["---", ""], ["レディース", "1"], ["メンズ", "2"]], {}, {class: "select-default"}
-                %select#select-category-a.select-default
-                  %option{value: ""} ---
-                  %option{value: "1"} レディース
-                  %option{value: "2"} メンズ
-                  %option{value: "3"} ベビー・キッズ
-                  %option{value: "4"} インテリア・住まい・小物
-                  %option{value: "5"} 本・音楽・ゲーム
-                  %option{value: "6"} おもちゃ・ホビー・グッズ
-                  %option{value: "7"} コスメ・香水・美容
-                  %option{value: "8"} 家電・スマホ・カメラ
-                  %option{value: "9"} スポーツ・レジャー
-                  %option{value: "10"} ハンドメイド
-                  %option{value: "11"} チケット
-                  %option{value: "12"} 自動車・オートバイ
-                  %option{value: "13"} その他
+                = f.select :category, [["---", ""], ["レディース", "1"], ["メンズ", "2"], ["ベビー・キッズ", "3"], ["コスメ・香水・美容", "4"]], {}, {class: "select-default", id: "select-category-a"}
+                -# %datalist#select-category-a.select-default
+                -#   %option{value: ""} ---
+                -#   %option{value: "1"} レディース
+                -#   %option{value: "2"} メンズ
+                -#   %option{value: "3"} ベビー・キッズ
+                -#   %option{value: "4"} コスメ・香水・美容
+                  -# %option{value: "5"} 本・音楽・ゲーム
+                  -# %option{value: "6"} おもちゃ・ホビー・グッズ
+                  -# %option{value: "7"} インテリア・住まい・小物
+                  -# %option{value: "8"} 家電・スマホ・カメラ
+                  -# %option{value: "9"} スポーツ・レジャー
+                  -# %option{value: "10"} ハンドメイド
+                  -# %option{value: "11"} チケット
+                  -# %option{value: "12"} 自動車・オートバイ
+                  -# %option{value: "13"} その他
                 %i.icon-arrow-bottom
                   = fa_icon 'chevron-down', class: 'icon'
               .sell-form-box__group__div__select-wrap-b
