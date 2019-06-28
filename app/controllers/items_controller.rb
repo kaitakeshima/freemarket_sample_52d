@@ -23,7 +23,7 @@ class ItemsController < ApplicationController
   end
   
   def show
-    @items = Item.order('id DESC').limit(3)
+    @items = Item.where(user_id: @item.user_id).order('id DESC').limit(3)
   end
 
   def edit 
