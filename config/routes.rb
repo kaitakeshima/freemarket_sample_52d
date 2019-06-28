@@ -1,33 +1,27 @@
 Rails.application.routes.draw do
   root 'items#index'
+
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks', registrations: 'users/registrations' }
- 
-  # devise_scope :user do
-  #   post 'users/sign_up/member' => 'users/registrations#new'
-  #   get 'users/sign_up/phone' => 'users/registrations#'
-  #   #deviseで追加するルーティング記載
-  # end
 
   resources :users, only: [:destroy] do
     resources :phones, only: [:new, :create]
     resources :houses, only: [:new, :create]
     resources :credits, only: [:new, :create]
   end
+
   resources :phones, only: [:create]
-  resources :items, only: [:index, :new, :create, :show, :edit, :update, :destroy] do
+
+  resources :items do
     collection do
       post 'pay/:id' => 'items#pay', as: 'pay'
-      
     end
     member do
       get 'buy'
       get 'buy_done'
       get "flash_error"
-    end  
+    end
   end
-  resources :users, only: [:destroy] 
 
-  #その他追加するルーティングはこの下に記載
   get 'users/sign_up/new' => 'users#sign_up_first' 
   get 'users/sign_up/done' => 'users#sign_up_done'
   get 'users/log_in/show' => 'users#log_in_view'
@@ -37,8 +31,4 @@ Rails.application.routes.draw do
   get 'users/mypage/credit' => 'users#credit'
   get 'users/mypage/mypagecardtouroku' => 'users#mypagecardtouroku'
   get 'users/mypage/identification' => 'users#mypage_identification'
-  get 'items/show' => 'items#show'
-  # get 'items/buy_confirmation' => 'items#buy_confirmation'
-  get 'items/test' => 'items#test'
-  get 'items/buy_done' => 'items#buy_done'
 end

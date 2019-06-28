@@ -1,0 +1,67 @@
+.tisanahako{
+  height: 400px;
+  width: 700px;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+.syuppinbox{
+  width: 700px;
+
+  background-color: #fafafa;
+  &__head{
+    height: 72px;
+    padding: 0 16px;
+    font-size: 16px;
+    line-height: 70px;
+    font-weight: bold;
+  }
+  &__menu{
+    display: flex;
+    height: 74px;
+    &__1{
+      width: 33%;
+      background-color: white;
+      height:74px;
+      text-align: center;
+      line-height: 70px;
+      font-weight: bold;
+      border-top: solid 2px red; 
+      font-size: 16px;
+    }
+    &__2{
+      width: 33%;
+      background-color: #eee;
+      height:74px;
+      text-align: center;
+      line-height: 70px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    &__3{
+      width: 34%;
+      background-color: #eee;
+      height:74px;
+      text-align: center;
+      line-height: 70px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+  &__content{
+    height: 85px;
+    width: 700px;
+    padding: 16px;
+    display: flex;
+    background-color: white;
+    &__item{
+      background-color: red;
+      height: 50px;
+      width: 50px;
+      margin-right: 30px;
+    }
+    &__name{
+      line-height: 50px;
+
+    }
+  }
+}
