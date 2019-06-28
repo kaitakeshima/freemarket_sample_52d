@@ -1,6 +1,17 @@
 class HousesController < ApplicationController
   def new
-    @house = House.new
+    if user_signed_in?
+      if session[:aa] == 2
+        @house = House.new
+        session[:aa] = 3
+      else
+        redirect_back(fallback_location: root_path)
+        flash[:alert] = "予期しないアクセスが発生しました"
+      end
+    else
+      redirect_back(fallback_location: root_path)
+      flash[:alert] = "予期しないアクセスが発生しました"
+    end
   end
 
   def create
