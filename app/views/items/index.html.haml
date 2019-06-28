@@ -35,7 +35,7 @@
                     = fa_icon("check")
                     %span.header-user-nav-text やることリスト
                 %li.header-mypage
-                  = link_to users_mypage_path,method: :get, class: "header-my-page-link" do
+                  = link_to user_path(current_user),method: :get, class: "header-my-page-link" do
                     = image_tag "mypage-image.png", class: "header-mypage-icon-image"
                     %span.header-user-nav-text-mypage マイページ
             -else
