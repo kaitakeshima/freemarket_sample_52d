@@ -16,6 +16,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.integer :prefecture, null:false
       t.string :image, null:false
       t.integer :status
+      t.integer :category
       t.timestamps
     end
   end
