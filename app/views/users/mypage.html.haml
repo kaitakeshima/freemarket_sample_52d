@@ -12,7 +12,7 @@
               .mycontent__user__header__icon__av
                 = image_tag "user_noimage.png", size: :'60x60'
               %p.mycontent__user__header__icon__name
-                大橋
+                = current_user.nickname
               .mycontent__user__header__icon__num
                 .mycontent__user__header__icon__num__rate
                   評価&emsp;&emsp;
