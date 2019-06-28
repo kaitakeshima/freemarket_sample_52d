@@ -97,14 +97,17 @@
       %span.item__pricebox__tax (税込)
       %span.item__pricebox__shipping 送料込み
     .item__btn
-      - if current_user.present?
-        - if @item.user_id == current_user.id
-          = link_to "編集画面に進む",edit_item_path(@item) ,   class: "btn-square-pop-half"
-          = link_to "この商品を削除","/items/#{@item.id}", method: "delete", class: "btn-square-pop-half-delete"
-        - else
-          = link_to "購入画面に進む", buy_item_path(@item), class: "btn-square-pop"
+      - if @item.buyer_number
+        .btn-square-ppp 売り切れ!!!
       - else
-        = link_to "購入画面に進む", new_user_session_path , class: "btn-square-pop"
+        - if current_user.present?
+          - if @item.user_id == current_user.id
+            = link_to "編集画面に進む",edit_item_path(@item) ,   class: "btn-square-pop-half"
+            = link_to "この商品を削除","/items/#{@item.id}", method: "delete", class: "btn-square-pop-half-delete"
+          - else
+            = link_to "購入画面に進む", buy_item_path(@item), class: "btn-square-pop"
+        - else
+          = link_to "購入画面に進む", new_user_session_path , class: "btn-square-pop"
     .item__description
       %p.item__description__inner
         = @item.discription
