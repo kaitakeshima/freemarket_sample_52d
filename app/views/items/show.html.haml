@@ -1,14 +1,15 @@
 = render partial: "shared/topheader"
+
 %nav.karinav
-  %ul
-    %li{itemscope: "", itemtype: "http://data-vocabulary.org/Breadcrumb"}
+  %ul.karinav__list
+    %li.karinav__list--breadcrumbs{itemscope: "", itemtype: "http://data-vocabulary.org/Breadcrumb"}
       = link_to do
         %span.navmerkari{itemprop: "title"} メルカリ  ＞
       %i.icon-arrow-right
-    %li{itemscope: "", itemtype: "http://data-vocabulary.org/Breadcrumb"}
+    %li.karinav__list--breadcrumbs{itemscope: "", itemtype: "http://data-vocabulary.org/Breadcrumb"}
       %span.navsyousai{itemprop: "title"} 
         = @item.name
-        
+
 .owaku
   .haku
   %section.item
