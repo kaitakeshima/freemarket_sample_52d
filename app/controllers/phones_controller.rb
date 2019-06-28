@@ -1,7 +1,17 @@
 class PhonesController < ApplicationController
   def new
-    @phone = Phone.new
-    session.delete(:aa)
+    if user_signed_in?
+      if session[:aa] == 1
+      @phone = Phone.new
+      session[:aa] = 2
+      else
+        redirect_back(fallback_location: root_path)
+        flash[:alert] = "予期しないアクセスが発生しました"
+      end
+    else
+      redirect_back(fallback_location: root_path)
+      flash[:alert] = "予期しないアクセスが発生しました"
+    end
   end
 
   def create
