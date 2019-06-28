@@ -1,6 +1,11 @@
 class CreditsController < ApplicationController
   def new
+    if session[:aa] == 3
     @credit = Credit.new
+    session[:aa] == 0
+    else
+      redirect_back(fallback_location: root_path)
+      flash[:alert] = "予期しないアクセスを検出しました"
   end
   
   def create

@@ -27,7 +27,16 @@ class ItemsController < ApplicationController
   end
 
   def edit 
-
+    if user_signed_in?
+      if @item.user_id == current_user.id
+      else
+      redirect_back(fallback_location: root_path)
+      flash[:alert] = "予期しないアクセスが発生しました"
+      end
+    else
+      redirect_back(fallback_location: root_path)
+      flash[:alert] = "予期しないアクセスが発生しました"
+    end
   end
 
   def update
@@ -53,10 +62,29 @@ class ItemsController < ApplicationController
   end
   
   def buy
+    if user_signed_in?
+      if @item.buyer_number == nil
+      else
+        redirect_back(fallback_location: root_path)
+        flash[:alert] = "予期しないアクセスが発生しました"
+      end
+    else
+      redirect_back(fallback_location: root_path)
+      flash[:alert] = "予期しないアクセスが発生しました"
+    end
   end
   
   def buy_done
-   
+    if user_signed_in?
+    if current_user.id == @item.buyer_number
+    else
+      redirect_back(fallback_location: root_path)
+      flash[:alert] = "予期しないアクセスが発生しました"
+    end
+    else
+      redirect_back(fallback_location: root_path)
+      flash[:alert] = "予期しないアクセスが発生しました"
+    end
   end  
 
   def pay
