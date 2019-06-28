@@ -54,21 +54,6 @@
             .sell-form-box__group__div
               .sell-form-box__group__div__select-wrap-a
                 = f.select :category, [["---", ""], ["レディース", "1"], ["メンズ", "2"], ["ベビー・キッズ", "3"], ["コスメ・香水・美容", "4"]], {}, {class: "select-default", id: "select-category-a"}
-                -# %datalist#select-category-a.select-default
-                -#   %option{value: ""} ---
-                -#   %option{value: "1"} レディース
-                -#   %option{value: "2"} メンズ
-                -#   %option{value: "3"} ベビー・キッズ
-                -#   %option{value: "4"} コスメ・香水・美容
-                  -# %option{value: "5"} 本・音楽・ゲーム
-                  -# %option{value: "6"} おもちゃ・ホビー・グッズ
-                  -# %option{value: "7"} インテリア・住まい・小物
-                  -# %option{value: "8"} 家電・スマホ・カメラ
-                  -# %option{value: "9"} スポーツ・レジャー
-                  -# %option{value: "10"} ハンドメイド
-                  -# %option{value: "11"} チケット
-                  -# %option{value: "12"} 自動車・オートバイ
-                  -# %option{value: "13"} その他
                 %i.icon-arrow-bottom
                   = fa_icon 'chevron-down', class: 'icon'
               .sell-form-box__group__div__select-wrap-b
@@ -109,14 +94,6 @@
                 %option{value: "ウィルソン"}
                 %option{value: "エンポリオ アルマーニ"}
                 %option{value: "オニツカ タイガー"}
-              -# = f.text_field :brand, id: "brand-input", class: "sell-form-box__suggest-container__div__input input-default", placeholder: "例）シャネル", value: ""
-              -# #brand-suggest.sell-form-box__suggest-container__div__brand-box
-              -#   %ul.sell-form-box__suggest-container__div__brand-box__list#brand-suggest-list
-              -#     %li.sell-form-box__suggest-container__div__brand-box__list--brand#suggest-1 アークテリクス
-              -#     %li.sell-form-box__suggest-container__div__brand-box__list--brand#suggest-2 イッセイ ミヤケ
-              -#     %li.sell-form-box__suggest-container__div__brand-box__list--brand#suggest-3 ウィルソン
-              -#     %li.sell-form-box__suggest-container__div__brand-box__list--brand#suggest-4 エンポリオ アルマーニ
-              -#     %li.sell-form-box__suggest-container__div__brand-box__list--brand#suggest-5 オニツカ タイガー
           .sell-form-box__group
             %label.sell-form-box__group--label
               商品の状態
