@@ -7,12 +7,20 @@ class ApplicationController < ActionController::Base
     if session[:aa] == 1
       flash[:notice] = "ユーザー新規登録完了しました。次に電話番号を入力してください" 
       new_user_phone_path(current_user)
-    else 
+    else
       flash[:notice] = "ログインに成功しました" 
       root_url  
     end
   end
-
+    def after_update_path_for(resource)
+      binding.pry
+      if session[:aa] == 9
+        flash[:notice] = "アカウント情報を変更しました。"
+        edit_user_registration_path
+      else
+        edit_user_registration_path
+      end
+    end
   private
 
   def production?

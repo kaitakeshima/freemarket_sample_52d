@@ -13,6 +13,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   
   def newe
   end
+  def edit
+    session[:aa] = 9
+  end
   # POST /resource
   # def create
   #   super
