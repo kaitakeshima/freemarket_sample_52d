@@ -15,7 +15,7 @@ class HousesController < ApplicationController
   end
 
   def create
-    binding.pry
+  
     @house = House.new(house_params)
     if @house.save
       if session[:aa] == 7
@@ -25,7 +25,7 @@ class HousesController < ApplicationController
         redirect_to redirect_to new_user_credit_path(current_user)
       end
     else
-      binding.pry
+    
       if session[:aa] == 7 
         redirect_back(fallback_location: root_path)
         flash[:alert] = "ユーザー情報保存の際エラーが発生しました"
@@ -40,9 +40,9 @@ class HousesController < ApplicationController
     @house = House.find_by(id: params[:id])
     if @house.update(house_params)
       redirect_to  mypage_identification_user_path(current_user)
-      binding.pry
+
     else
-      binding.pry
+
     end
   end
   private
