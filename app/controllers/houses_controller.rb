@@ -15,14 +15,36 @@ class HousesController < ApplicationController
   end
 
   def create
+    binding.pry
     @house = House.new(house_params)
     if @house.save
-      redirect_to new_user_credit_path(current_user)
+      if session[:aa] == 7
+        redirect_to mypage_identification_user_path(current_user)
+        session[:aa] == 8
+      else
+        redirect_to redirect_to new_user_credit_path(current_user)
+      end
     else
-      render action: :new
+      binding.pry
+      if session[:aa] == 7 
+        redirect_back(fallback_location: root_path)
+        flash[:alert] = "ユーザー情報保存の際エラーが発生しました"
+      else
+        render action: :new
+        flash[:alert] = "ユーザー情報保存の際エラーが発生しました"
+      end
     end
   end
 
+  def update
+    @house = House.find_by(id: params[:id])
+    if @house.update(house_params)
+      redirect_to  mypage_identification_user_path(current_user)
+      binding.pry
+    else
+      binding.pry
+    end
+  end
   private
   def house_params
     params.require(:house).permit(:postalcode, :prefecture,:city, :address, :building, :user_id)

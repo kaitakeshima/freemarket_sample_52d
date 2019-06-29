@@ -88,7 +88,7 @@
           メール/パスワード
           = fa_icon 'angle-right', class: 'migiya'
       %li
-        = link_to users_mypage_identification_path,class: "sidebar__nav__list__ichi"  do
+        = link_to mypage_identification_user_path(current_user) ,class: "sidebar__nav__list__ichi"  do
           本人情報
           = fa_icon 'angle-right', class: 'migiya'
       %li
