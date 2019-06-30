@@ -2,7 +2,7 @@
   %nav.sidebar__nav
     %ul.sidbar__nav__list
       %li
-        = link_to root_path,class: "sidebar__nav__list__ichi"  do
+        = link_to users_mypage_path,class: "sidebar__nav__list__ichi"  do
           マイページ
           = fa_icon 'angle-right', class: 'icon'
       %li
@@ -18,11 +18,11 @@
           いいね！一覧
           = fa_icon 'angle-right', class: 'migiya'
       %li
-        = link_to root_path,class: "sidebar__nav__list__ichi"  do
+        = link_to new_item_path,class: "sidebar__nav__list__ichi"  do
           出品する
           = fa_icon 'angle-right', class: 'migiya'
       %li
-        = link_to root_path,class: "sidebar__nav__list__ichi"  do
+        = link_to users_mypage_syuppin_path,class: "sidebar__nav__list__ichi"  do
           出品した商品-出品中
           = fa_icon 'angle-right', class: 'migiya'
       %li
