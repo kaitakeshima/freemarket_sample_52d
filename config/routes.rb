@@ -31,4 +31,5 @@ Rails.application.routes.draw do
   get 'users/mypage/credit' => 'users#credit'
   get 'users/mypage/mypagecardtouroku' => 'users#mypagecardtouroku'
   get 'users/mypage/identification' => 'users#mypage_identification'
+  get 'users/mypage/syuppin' => 'users#mypage_syuppin'
 end
