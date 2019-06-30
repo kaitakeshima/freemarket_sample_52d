@@ -1,0 +1,23 @@
+= render partial: "shared/topheader"
+= render partial: "shared/pankuzukari"
+
+.oobako
+  .ohako
+    = render partial: "shared/mypageside"
+    .tisanahako
+      .syuppinbox
+        = form_with model: @item, local: true, class: "change-form" do |f|
+          .change-form--info
+            = @item.id
+            = @item.name
+          = link_to "商品の編集", edit_item_path(@item), class: "change-form--edit btn-red"
+          .change-form--p  or
+          -if @item.status == nil
+            = f.hidden_field :status, value: 1
+            = f.submit "出品を再開する", class: "change-form--on-sale-btn btn-red"
+          -elsif @item.status == 1
+            = f.hidden_field :status, value: nil
+            = f.submit "出品を一旦停止する", class: "change-form--sale-stop-btn btn-gray"
+          = link_to "この商品を削除する", "/items/#{@item.id}", method: "delete", class: "change-box--delete-btn btn-gray"
+
+= render partial: "shared/topfooter"

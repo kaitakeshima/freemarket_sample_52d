@@ -6,7 +6,7 @@ class ItemsController < ApplicationController
 
   def index
     session[:aa] = 00
-    @items = Item.order('id DESC').limit(4)
+    @items = Item.where(status: 1).order('id DESC').limit(4)
   end
 
   def new
@@ -96,6 +96,9 @@ class ItemsController < ApplicationController
     redirect_to "/items/#{item.id}/buy_done" 
   end
 
+  def change_status
+    @item = Item.find(params[:id])
+  end
 
   private
   def item_params
