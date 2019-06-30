@@ -4,9 +4,9 @@
   margin-top: 40px;
   margin-left: 40px;
 }
+
 .syuppinbox{
   width: 700px;
-
   background-color: #fafafa;
   &__head{
     height: 72px;
@@ -50,18 +50,53 @@
   &__content{
     height: 85px;
     width: 700px;
-    padding: 16px;
-    display: flex;
     background-color: white;
-    &__item{
-      background-color: red;
-      height: 50px;
-      width: 50px;
-      margin-right: 30px;
-    }
-    &__name{
-      line-height: 50px;
-
+    border-bottom: #f5f5f5 solid 1px;
+    &__link{
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      &__item{
+        display: inline-block;
+        margin-right: 30px;
+      }
+      &__name{
+        display: inline-block;
+      }
+      &__on-sale {
+        display: inline-block;
+        background: #0099e8;
+        margin-right: 10px;
+        padding: 5px 6px;
+        border-radius: 2px;
+        font-size: 12px;
+        color: #fff;
+        font-weight: bold;
+        margin-left: auto;
+      }
+      &__sale-stop {
+        display: inline-block;
+        background: #ea352d;
+        margin-right: 10px;
+        padding: 5px 6px;
+        border-radius: 2px;
+        font-size: 12px;
+        color: #fff;
+        font-weight: bold;
+        margin-left: auto;
+      }
+      &__icon {
+        display: inline-block;
+        font-weight: bold;
+        size: 20px;
+      }
     }
   }
+}
+
+.img-fit {
+  display: block;
+  object-fit: contain;
+  height: 50px;
+  width: 50px;
 }
