@@ -1,0 +1,43 @@
+.change-form {
+  padding: 24px 24px 0 24px;
+  overflow:hidden;
+  &--info {
+    margin-bottom: 24px;
+  }
+  &--p {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+}
+
+.btn-red {
+  color: #fff;
+  outline: 0;
+  justify-content:space-around;
+  line-height: 48px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  width: 100%;
+  margin-bottom: 24px;
+  background: #ea352d;
+  border: 1px solid #ea352d;
+}
+
+.btn-gray {
+  color: #fff;
+  outline: 0;
+  justify-content:space-around;
+  line-height: 48px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  width: 100%;
+  margin-bottom: 24px;
+  background: #aaa;
+  border: 1px solid #aaa;
+}
