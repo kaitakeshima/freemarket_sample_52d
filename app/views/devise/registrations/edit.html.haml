@@ -1,36 +1,32 @@
-%h2
-  Edit #{resource_name.to_s.humanize}
-= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  - if devise_mapping.confirmable? && resource.pending_reconfirmation?
-    %div
-      Currently waiting confirmation for: #{resource.unconfirmed_email}
-  .field
-    = f.label :password
-    %i (leave blank if you don't want to change it)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-    - if @minimum_password_length
-      %br/
-      %em
-        = @minimum_password_length
-        characters minimum
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .field
-    = f.label :current_password
-    %i (we need your current password to confirm your changes)
-    %br/
-    = f.password_field :current_password, autocomplete: "current-password"
-  .actions
-    = f.submit "Update"
-%h3 Cancel my account
-%p
-  Unhappy? #{button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}
-= link_to "Back", :back
+= render partial: "shared/topheader"
+= render partial: "shared/pankuzukari"
+.oobako
+  .ohako
+    = render partial: "shared/mypageside"
+    .user-edit-l-content
+      .user-edit-l-content__l-chapter-container
+        %h4.user-edit-l-content__l-chapter-container__l-chapter-head
+          メール/パスワード
+        = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: "user-edit-form" }, ) do |f|
+          .l-content-user-box
+            .l-content-user-box__form-group
+              = f.label "メールアドレス", class: "l-content-user-box__form-group__email_label"
+              = f.text_field :email, value: current_user.email,placeholder: "PC・携帯どちらでも可", class: "l-content-user-box__form-group__email-field"
+              %p.l-content-user-box__form-group__form-info-text
+                メールアドレスを変更すると確認メールが送信されます。メール内のURLをクリックすると変更完了です。
+            .l-content-user-box__form-group-password
+              = f.label "現在のパスワード", class: "l-content-user-box__form-group-password__current-password-label"
+              = f.password_field :current_password, autocomplete: "current-password", placeholder: "6文字以上", class: "l-content-user-box__form-group-password__current-password-field"
+              = f.label "新しいパスワード", class: "l-content-user-box__form-group-password__password-label"
+              = f.password_field :password, autocomplete: "new-password", placeholder: "6文字以上", class: "l-content-user-box__form-group-password__password-field"
+              = f.label "新しいパスワード確認", class: "l-content-user-box__form-group-password__password-confirmation-label"
+              = f.password_field :password_confirmation, autocomplete: "new-password",placeholder: "6文字以上", class: "l-content-user-box__form-group-password__password-confirmation-field"
+              %p.l-content-user-box__form-group-password__form-info-text
+                パスワードを設定したい場合は上記をすべて入力してください。（設定しない場合は空欄)
+              = f.submit "変更する", class: "l-content-user-box__form-group-password__btn-red"
+= render partial: "shared/topfooter"
+
+
+
+
+

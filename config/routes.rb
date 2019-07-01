@@ -3,13 +3,19 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks', registrations: 'users/registrations' }
 
-  resources :users, only: [:destroy] do
+  resources :users, only: [:destroy, :show] do
     resources :phones, only: [:new, :create]
     resources :houses, only: [:new, :create]
     resources :credits, only: [:new, :create]
+    member do 
+      get "mypage_pofile"
+      get "mypage_identification"
+      get "mypage_identification_update"
+    end
   end
 
   resources :phones, only: [:create]
+  resources :houses, only: [:update, :create]
 
   resources :items do
     collection do
@@ -21,7 +27,6 @@ Rails.application.routes.draw do
       get "flash_error"
     end
   end
-
   get 'users/sign_up/new' => 'users#sign_up_first' 
   get 'users/sign_up/done' => 'users#sign_up_done'
   get 'users/log_in/show' => 'users#log_in_view'

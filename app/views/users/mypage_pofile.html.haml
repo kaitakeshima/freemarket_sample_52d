@@ -11,7 +11,7 @@
         .profilebox__avname
           .profilebox__avname__av
             = image_tag "user_noimage.png", size: :'60x60' 
-          %input.profilebox__avname__name{name: :"nickname", placeholder: :"例)AYA☆セール中", type: :"text", value: :"大橋"}/
+          %input.profilebox__avname__name{name: :"nickname", placeholder: :"例)AYA☆セール中", type: :"text", value: current_user.nickname}/
         .profilebox__content
           %textarea.profilebox__content__text{name: :"introduction", placeholder: :"例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪"}
           %input{name: :"after_save_callback", type: :"hidden", value: :"https://www.mercari.com/jp/mypage/profile/"}/

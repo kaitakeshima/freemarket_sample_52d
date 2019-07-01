@@ -38,7 +38,7 @@
               %span 
                 = current_user.city 
           .honbox__main__formbox
-            = form_for @address  do |f|
+            = form_for(@address, url: house_path(@address)) do |f|
               %label.honbox__main__formbox__label
               郵便番号
               %span.honbox__main__formbox__nini
