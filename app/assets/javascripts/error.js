@@ -10,7 +10,6 @@ $(function(){
     alert("エラーが発生しました。")
     }else{}
     if(  location.href == "http://localhost:3000/" && "http://localhost:3000/" != document.referrer  ){
-
       var referrer = document.referrer
       sessionStorage.setItem("referrer", referrer)
       if (sessionStorage.getItem("one_more_before_referrer") == sessionStorage.getItem("referrer") ) {
@@ -18,7 +17,6 @@ $(function(){
 
       }else{
         sessionStorage.setItem("one_more_before_referrer", one_more_before_referrer) 
-
         var one_more_before_referrer = document.referrer
         sessionStorage.setItem("one_more_before_referrer", one_more_before_referrer)
       }
