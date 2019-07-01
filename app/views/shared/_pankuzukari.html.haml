@@ -1,9 +1,15 @@
 %nav.karinav
-  %ul
-    %li
+  %ul.karinav__list
+    %li.karinav__list--breadcrumbs
       - case params.values_at :controller, :action
       - when ['users','mypage']
         - breadcrumb :user
       - when ['users','mypage_session_destroy']
         - breadcrumb :user_logout
+      - when ['users','profile']
+        - breadcrumb :user_profile
+      - when ['users','credit']
+        - breadcrumb :user_credit
+      - when ['users','mypage_identification']
+        - breadcrumb :user_identification
       = breadcrumbs separator: "  ＞  "

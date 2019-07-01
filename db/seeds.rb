@@ -25,15 +25,17 @@ Item.create!(
   {
     name: 'お花',
     discription: '中国製',
-    condition: '2',
-    delivery_fee: '1', 
-    delivery_method: '1', 
-    delivery_days: '1', 
-    price: '9970', 
-    size: '2', 
-    user_id: '1', 
+    condition: 1,
+    delivery_fee: 1, 
+    delivery_method: 1, 
+    delivery_days: 1, 
+    price: 9970, 
+    size: 1, 
+    user_id: 1, 
     brand: 'デ◯ズニー', 
-    prefecture: '1', 
-    image: open("#{Rails.root}/db/dummy_img/1.jpg")
+    prefecture: 1, 
+    image: open("#{Rails.root}/db/dummy_img/1.jpg"),
+    status: 1,
+    category: 1
   }
 )

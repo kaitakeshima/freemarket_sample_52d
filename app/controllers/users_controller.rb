@@ -54,5 +54,8 @@ class UsersController < ApplicationController
       redirect_back(fallback_location: root_path)
       flash[:alert] = "予期しないアクセスが発生しました"
     end
+  
+  def mypage_syuppin
+    @items = Item.where(user_id: current_user.id)
   end
 end

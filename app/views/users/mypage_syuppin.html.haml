@@ -15,11 +15,17 @@
             取引中
           .syuppinbox__menu__3
             売却済み
-        .syuppinbox__content
-          .syuppinbox__content__item
-          .syuppinbox__content__name
-            ハサミ
-        
-
+        - @items.map do |item|
+          .syuppinbox__content
+            = link_to "/users/mypage/change_status/#{item.id}", class: "syuppinbox__content__link" do
+              .syuppinbox__content__link__item
+                = image_tag "#{item.image}", class: "img-fit"
+              .syuppinbox__content__link__name
+                = item.name
+              - if item.status == 1
+                .syuppinbox__content__link__on-sale  出品中
+              - elsif item.status == nil
+                .syuppinbox__content__link__sale-stop  公開停止
+              .syuppinbox__content__link__icon  ＞
 
 = render partial: "shared/topfooter"

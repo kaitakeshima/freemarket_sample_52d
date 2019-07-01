@@ -4,25 +4,23 @@
   background: #fff;
   border-top: 1px solid #eee;
   box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
-    ul{
-      margin: 0px 147.5px;
-      color: #333333;
-      padding: 16px 0px;
-      li{
-        display: inline-block;
-        .navmerkari{
-          color: #333333;
-          font-size: 14px;
-        }
-        .navsyousai{
-          font-size: 14px;
-          font-weight: bold;
-          
-        }
+  &__list{
+    width: 1020px;
+    margin: 0 auto;
+    color: #333333;
+    padding: 16px 0px;
+    &--breadcrumbs{
+      display: inline-block;
+      .navmerkari{
+        color: #333333;
+        font-size: 14px;
       }
-
+      .navsyousai{
+        font-size: 14px;
+        font-weight: bold;
+      }
     }
-  
+  }
 }
 .owaku{
   color: #333333;
