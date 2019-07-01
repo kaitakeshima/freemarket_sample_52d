@@ -42,20 +42,7 @@ $(function(){
       var one_more_before_referrer = document.referrer
       sessionStorage.setItem("one_more_before_referrer", one_more_before_referrer)
     }
-    if(location.href == "http://3.113.81.197/" && (document.referrer == "" || document.referrer == "http://3.113.81.197/" )){
-      var reload_index = $(function() {
-        if (sessionStorage.getItem("counter") == null){
-          sessionStorage.setItem("counter", 0);
-        }else{}
-        var counter = sessionStorage.getItem("counter")
-        if (counter == 0){
-          sessionStorage.setItem("counter", 1);
-          setInterval(location.reload(), 1);
-        }else{sessionStorage.setItem("counter", 0)
-      }
-      });
-      reload_index
-    }else{}
+
     if(location.href == "http://3.113.81.197/" && "http://3.113.81.197/" == document.referrer ){
       var referrer = document.referrer
       sessionStorage.setItem("now_referrer", referrer)
@@ -90,21 +77,6 @@ $(function(){
       var one_more_before_referrer = document.referrer
       sessionStorage.setItem("one_more_before_referrer", one_more_before_referrer)
     }
-
-    if(location.href == "http://3.113.81.197/" && (document.referrer == "" || document.referrer == "http://3.113.81.197/" )){
-      var reload_index = $(function() {
-        if (sessionStorage.getItem("counter") == null){
-          sessionStorage.setItem("counter", 0);
-        }else{}
-        var counter = sessionStorage.getItem("counter")
-        if (counter == 0){
-          sessionStorage.setItem("counter", 1);
-          setInterval(location.reload(), 1);
-        }else{sessionStorage.setItem("counter", 0)
-      }
-      });
-      reload_index
-    }else{}
   });
 
   $(".btn-square-pop-half-delete").on('click', function(){
