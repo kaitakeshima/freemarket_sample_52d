@@ -22,7 +22,7 @@ class HousesController < ApplicationController
         redirect_to mypage_identification_user_path(current_user)
         session[:aa] == 8
       else
-        redirect_to redirect_to new_user_credit_path(current_user)
+        redirect_to new_user_credit_path(current_user)
       end
     else
     
