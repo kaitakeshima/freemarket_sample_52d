@@ -22,4 +22,5 @@ class Item < ApplicationRecord
   validates :price, presence: true
   validates :prefecture, presence: true
   validates :image, presence: true
+  validates :category, presence: true
 end
