@@ -60,4 +60,7 @@ class UsersController < ApplicationController
   def mypage_syuppin
     @items = Item.where(user_id: current_user.id)
   end
+  def change_status
+    @item = Item.find(params[:id])
+  end
 end
