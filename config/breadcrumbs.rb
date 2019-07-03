@@ -13,7 +13,7 @@ crumb :user_logout do
 end
 
 crumb :user_profile do
-  link 'プロフィール', users_mypage_profile_path
+  link 'プロフィール', mypage_pofile_user_path
   parent :user
 end
 
@@ -24,5 +24,15 @@ end
 
 crumb :user_identification do
   link '本人情報', users_mypage_identification_path
+  parent :user
+end
+
+crumb :user_syuppin do
+  link '出品した商品', users_mypage_syuppin_path
+  parent :user
+end
+
+crumb :user_edit do
+  link 'メール/パスワード', edit_user_registration_path
   parent :user
 end
