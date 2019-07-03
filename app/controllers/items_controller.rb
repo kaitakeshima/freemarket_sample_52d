@@ -29,6 +29,7 @@ class ItemsController < ApplicationController
   def edit 
     if user_signed_in?
       if @item.user_id == current_user.id
+
       else
       redirect_back(fallback_location: root_path)
       flash[:alert] = "予期しないアクセスが発生しました"
@@ -43,7 +44,7 @@ class ItemsController < ApplicationController
     if @item.update(item_params)
       redirect_to root_path
     else
-      redirect_to action: "flash_error"
+
     end
   end
 
