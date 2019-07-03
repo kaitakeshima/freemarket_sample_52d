@@ -100,9 +100,7 @@ class ItemsController < ApplicationController
     item.save
     redirect_to "/items/#{item.id}/buy_done" 
   end
-
-
-
+  
   private
   def item_params
     params.require(:item).permit(:name, :discription, :condition, :delivery_fee, :delivery_method, :delivery_days, :price, :size, :brand, :prefecture, :image, :status, :category).merge(user_id: current_user.id)
