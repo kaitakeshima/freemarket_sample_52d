@@ -8,12 +8,15 @@ class UsersController < ApplicationController
           @address = House.find_by(user_id: current_user.id)
           session[:aa] = 6
       else
-        redirect_back(fallback_location: root_path)
-        flash[:alert] = "予期しないアクセスが発生しました"
+        if  "mypage"  == params[:id]
+        else
+          redirect_back(fallback_location: root_path)
+          flash[:alert] = "先にログインして下さい"
+        end
       end
     else
       redirect_back(fallback_location: root_path)
-      flash[:alert] = "予期しないアクセスが発生しました"
+      flash[:alert] = "先にログインして下さい"
     end
   end
   def mypage_identification
