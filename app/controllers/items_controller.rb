@@ -101,9 +101,7 @@ class ItemsController < ApplicationController
     redirect_to "/items/#{item.id}/buy_done" 
   end
 
-  def change_status
-    @item = Item.find(params[:id])
-  end
+
 
   private
   def item_params

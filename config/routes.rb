@@ -37,5 +37,5 @@ Rails.application.routes.draw do
   get 'users/mypage/mypagecardtouroku' => 'users#mypagecardtouroku'
   get 'users/mypage/identification' => 'users#mypage_identification'
   get 'users/mypage/syuppin' => 'users#mypage_syuppin'
-  get 'users/mypage/change_status/:id' => 'items#change_status'
+  get 'users/mypage/change_status/:id' => 'users#change_status'
 end
