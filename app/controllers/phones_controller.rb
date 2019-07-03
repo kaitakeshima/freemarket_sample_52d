@@ -19,7 +19,6 @@ class PhonesController < ApplicationController
     if @phone.save
       redirect_to new_user_house_path(current_user)
     else
-      render action: :new
     end
   end
   private

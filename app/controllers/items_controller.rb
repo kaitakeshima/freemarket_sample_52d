@@ -20,7 +20,6 @@ class ItemsController < ApplicationController
       flash[:notice] = "出品が完了しました"
     else
       render action: :new
-      flash[:alert] = "商品情報が正しくありません"
     end
   end
   
@@ -47,7 +46,6 @@ class ItemsController < ApplicationController
       redirect_to root_path
       flash[:notice] = "編集が完了しました"
     else
-      flash[:alert] = "商品情報が正しくありません"
       render  action: :edit
     end
   end

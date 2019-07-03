@@ -25,14 +25,7 @@ class HousesController < ApplicationController
         redirect_to new_user_credit_path(current_user)
       end
     else
-    
-      if session[:aa] == 7 
-        redirect_back(fallback_location: root_path)
-        flash[:alert] = "ユーザー情報保存の際エラーが発生しました"
-      else
-        render action: :new
-        flash[:alert] = "ユーザー情報保存の際エラーが発生しました"
-      end
+      render action: :new
     end
   end
 

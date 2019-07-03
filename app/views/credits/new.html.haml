@@ -1,4 +1,7 @@
 = render partial: './shared/new-header'
+- if @credit.errors.any?
+  .errorsbox
+    %h2.error-message= "#{@credit.errors.full_messages.count}件のエラーが発生しました。"
 = form_for @credit, url:  user_credits_path do |f|
   .pay-page-single-main
     .pay-conatainer

@@ -1,4 +1,7 @@
 = render partial: './shared/new-header'
+- if @item.errors.any?
+  .errorsbox
+    %h2.error-message= "#{@item.errors.full_messages.count}件のエラーが発生しました。"
 .main
   .sell-container#sell-container
     %h2.sell-container__item-info  商品の情報を入力
