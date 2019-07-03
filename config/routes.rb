@@ -29,10 +29,8 @@ Rails.application.routes.draw do
   end
   get 'users/sign_up/new' => 'users#sign_up_first' 
   get 'users/sign_up/done' => 'users#sign_up_done'
-  get 'users/log_in/show' => 'users#log_in_view'
   get 'users/mypage' => 'users#mypage'
   get 'users/mypage/destroy' => 'users#mypage_session_destroy'
-  get 'users/mypage/profile' => 'users#profile'
   get 'users/mypage/credit' => 'users#credit'
   get 'users/mypage/mypagecardtouroku' => 'users#mypagecardtouroku'
   get 'users/mypage/identification' => 'users#mypage_identification'
