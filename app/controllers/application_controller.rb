@@ -13,7 +13,6 @@ class ApplicationController < ActionController::Base
     end
   end
     def after_update_path_for(resource)
-      binding.pry
       if session[:aa] == 9
         flash[:notice] = "アカウント情報を変更しました。"
         edit_user_registration_path

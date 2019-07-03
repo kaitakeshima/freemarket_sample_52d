@@ -17,8 +17,10 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     if @item.save
       redirect_to root_path
+      flash[:notice] = "出品が完了しました"
     else
       render action: :new
+      flash[:alert] = "商品情報が正しくありません"
     end
   end
   
@@ -43,8 +45,10 @@ class ItemsController < ApplicationController
   def update
     if @item.update(item_params)
       redirect_to root_path
+      flash[:notice] = "編集が完了しました"
     else
-
+      flash[:alert] = "商品情報が正しくありません"
+      render  action: :edit
     end
   end
 
