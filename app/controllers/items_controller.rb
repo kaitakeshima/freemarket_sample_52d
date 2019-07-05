@@ -7,6 +7,11 @@ class ItemsController < ApplicationController
   def index
     session[:aa] = 00
     @items = Item.where(status: 1).order('id DESC').limit(4)
+    @ladys = Item.where(status: 1,category: 1).order('id DESC').limit(4)
+    @mens = Item.where(status: 1,category: 2).order('id DESC').limit(4)
+    @babys = Item.where(status: 1,category: 3).order('id DESC').limit(4)
+    @biyous = Item.where(status: 1,category: 4).order('id DESC').limit(4)
+    @shanels =Item.where(status: 1,brand: "シャネル").or(Item.where(brand: "CHANEL")).or(Item.where(brand: "chanel")).or(Item.where(brand: "しゃねる")).order('id DESC').limit(4)
   end
 
   def new

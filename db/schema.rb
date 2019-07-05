@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(version: 2019_06_23_105050) do
     t.integer "prefecture", null: false
     t.string "image", null: false
     t.integer "status"
+    t.integer "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_items_on_user_id"
